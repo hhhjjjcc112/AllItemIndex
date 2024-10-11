@@ -28,7 +28,7 @@ public class PFindArguments {
         @Override
         public String parse(StringReader reader) throws CommandSyntaxException {
 //            int start = reader.getCursor();
-            String str = reader.readString();
+            String str = reader.readUnquotedString();
             if(SUPPORTED_LANGUAGES.contains(str)) {
                 return str;
             }
