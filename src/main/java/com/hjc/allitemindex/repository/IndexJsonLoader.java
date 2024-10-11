@@ -59,6 +59,7 @@ public class IndexJsonLoader {
             ServerCommandSource source = context.getSource();
             var server = source.getServer();
             server.sendMessage(Text.literal("failed to load index.json. Please check if the file exists."));
+            System.err.println("Failed to load index.json. Please check if the file exists.");
         }
     }
 
