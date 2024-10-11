@@ -36,6 +36,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // https://mvnrepository.com/artifact/com.belerweb/pinyin4j
+    implementation group: 'com.belerweb', name: 'pinyin4j', version: '2.5.1'
+
 }
 
 processResources {

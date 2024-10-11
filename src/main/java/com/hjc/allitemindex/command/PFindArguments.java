@@ -59,7 +59,7 @@ public class PFindArguments {
 
         @Override
         public <S> CompletableFuture<Suggestions> listSuggestions(CommandContext<S> context, SuggestionsBuilder builder) {
-            // 获取当前输如内容
+            // 获取当前输入内容
             StringReader reader = new StringReader(builder.getInput());
             reader.setCursor(builder.getStart());
             try {
