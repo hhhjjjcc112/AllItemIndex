@@ -12,12 +12,14 @@ public class AllItemIndex implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        // 注册自定义参数类型，话说有没有可能换到别的地方?
         ArgumentTypeRegistry.registerArgumentType(
                 Identifier.of("allitemindex", "language"),
                 PFindArguments.LanguageArgument.class,
                 ConstantArgumentSerializer.of(PFindArguments.LanguageArgument::new)
         );
 
+        // 注册命令
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
             PFindCommand.register(dispatcher, registryAccess, environment);
         });
