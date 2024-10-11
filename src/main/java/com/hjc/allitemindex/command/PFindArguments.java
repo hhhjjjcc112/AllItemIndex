@@ -7,30 +7,51 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
+import net.fabricmc.fabric.api.command.v2.ArgumentTypeRegistry;
+import net.minecraft.command.argument.serialize.ConstantArgumentSerializer;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-
+import java.util.stream.Collectors;
 
 
 public class PFindArguments {
 
+    /**
+     * 注册所有pf/pfind使用的自定义参数类
+     */
+    public static void registerAll() {
+        LanguageArgument.register();
+    }
 
-    public static class LanguageArgument implements ArgumentType<String> {
-        private static final Set<String> SUPPORTED_LANGUAGES = new HashSet<>(List.of("en", "cn", "pinyin"));
+    public enum Language {
+        en, cn, pinyin, pinyinabbr
+    }
+
+
+    public static class LanguageArgument implements ArgumentType<Language> {
+        // 将枚举类成员映射到字符串集合
+        private static final Set<String> LANGUAGES_STRING_SET = Arrays.stream(Language.values()).map(Enum::name).collect(Collectors.toSet());
         private static final SimpleCommandExceptionType UNSUPPORTED_LANGUAGE_EXCEPTION = new SimpleCommandExceptionType(Text.literal("language not supported"));
 
+        public static void register() {
+            ArgumentTypeRegistry.registerArgumentType(
+                    Identifier.of("allitemindex", "language"),
+                    LanguageArgument.class,
+                    ConstantArgumentSerializer.of(LanguageArgument::new)
+            );
+        }
 
         @Override
-        public String parse(StringReader reader) throws CommandSyntaxException {
+        public Language parse(StringReader reader) throws CommandSyntaxException {
 //            int start = reader.getCursor();
             String str = reader.readUnquotedString();
-            if(SUPPORTED_LANGUAGES.contains(str)) {
-                return str;
+            if(LANGUAGES_STRING_SET.contains(str)) {
+                return Language.valueOf(str);
             }
 //            reader.setCursor(start);
             throw UNSUPPORTED_LANGUAGE_EXCEPTION.createWithContext(reader);
@@ -46,7 +67,7 @@ public class PFindArguments {
                 reader.readString();
                 // 如果这个字符串位于最后，代表用户正在输入，那么就应该显示提示，反之不需要显示提示
                 if(!reader.canRead()) {
-                    for(var lang : SUPPORTED_LANGUAGES) {
+                    for(var lang : LANGUAGES_STRING_SET) {
                         builder.suggest(lang);
                     }
                 }
@@ -57,7 +78,7 @@ public class PFindArguments {
 
         @Override
         public Collection<String> getExamples() {
-            return SUPPORTED_LANGUAGES;
+            return LANGUAGES_STRING_SET;
         }
     }
 }
