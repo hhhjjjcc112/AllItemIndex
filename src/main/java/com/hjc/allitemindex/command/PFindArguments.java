@@ -32,6 +32,15 @@ public class PFindArguments {
         en, cn, pinyin, pinyinabbr
     }
 
+    public Language lang;
+    public String query;
+    public int limit;
+
+    public PFindArguments(Language lang, String query, int limit) {
+        this.lang = lang;
+        this.query = query;
+        this.limit = limit;
+    }
 
     public static class LanguageArgument implements ArgumentType<Language> {
         // 将枚举类成员映射到字符串集合
@@ -51,7 +60,7 @@ public class PFindArguments {
 //            int start = reader.getCursor();
             String str = reader.readUnquotedString();
             if(LANGUAGES_STRING_SET.contains(str)) {
-                return Language.valueOf(str);
+                 Language.valueOf(str);
             }
 //            reader.setCursor(start);
             throw UNSUPPORTED_LANGUAGE_EXCEPTION.createWithContext(reader);

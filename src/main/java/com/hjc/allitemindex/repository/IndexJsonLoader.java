@@ -3,6 +3,7 @@ package com.hjc.allitemindex.repository;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.hjc.allitemindex.model.ItemIndexes;
 import com.hjc.allitemindex.model.ItemInfo;
 import com.mojang.brigadier.context.CommandContext;
 import net.fabricmc.loader.api.FabricLoader;
@@ -29,14 +30,19 @@ public class IndexJsonLoader {
     }
     private static final Path indexFile = root.resolve("index.json");
     // 标识是否加载
-    private static final ItemInfo infos = new ItemInfo();
+    private static final ItemIndexes infos = new ItemIndexes();
     private static boolean loaded = false;
 
     // gson序列化与反序列化器
     private static final Gson gson = new GsonBuilder().serializeNulls().create();
 
 
-    public static ItemInfo getInfos(CommandContext<ServerCommandSource> context) {
+    /**
+     * 获取ItemIndexes对象
+     * @param context 调用时的指令上下文
+     * @return ItemIndexes对象
+     */
+    public static ItemIndexes getIndexesInstance(CommandContext<ServerCommandSource> context) {
         synchronized (IndexJsonLoader.class) {
             if(!loaded) {
                 loaded = loadFromLocal();
@@ -46,6 +52,11 @@ public class IndexJsonLoader {
         }
     }
 
+    /**
+     * 重新加载index.json的内容
+     * @param context 调用时的指令上下文
+     * @return 重新加载是否成功
+     */
     public static boolean reload(CommandContext<ServerCommandSource> context) {
         synchronized (IndexJsonLoader.class) {
             loaded = loadFromLocal();
@@ -64,7 +75,7 @@ public class IndexJsonLoader {
     }
 
     /**
-     *
+     * 从本地加载index.json中的内容
      * @return 加载是否成功
      */
     public static boolean loadFromLocal() {

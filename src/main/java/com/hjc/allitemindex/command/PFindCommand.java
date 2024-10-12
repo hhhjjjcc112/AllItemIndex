@@ -16,6 +16,8 @@ public class PFindCommand {
      * 默认的输出结果数
      */
     private static final int DEFAULT_LIMIT = 5;
+    private static final int MIN_LIMIT = 1;
+    private static final int MAX_LIMIT = 20;
 
     /**
      * 注册pf pfind指令
@@ -28,29 +30,29 @@ public class PFindCommand {
             CommandRegistryAccess registryAccess,
             CommandManager.RegistrationEnvironment environment
     ) {
-        // limit参数在最后
-        var limitArg = CommandManager.argument("limit", IntegerArgumentType.integer(0, 20))
-                .executes(ctx -> {
-                    PFindArguments.Language lang = ctx.getArgument("language", PFindArguments.Language.class);
-                    String query = StringArgumentType.getString(ctx, "query");
-                    int limit = IntegerArgumentType.getInteger(ctx, "limit");
-                    return pFindAction(ctx, lang, query, limit);
-                });
-        // query参数 <limit>
-        var queryArg = CommandManager.argument("query", StringArgumentType.string())
-                .executes(ctx -> {
-                    PFindArguments.Language lang = ctx.getArgument("language", PFindArguments.Language.class);
-                    String query = StringArgumentType.getString(ctx, "query");
-                    return pFindAction(ctx, lang, query, DEFAULT_LIMIT);
-                })
-                .then(limitArg);
-        // language参数 <query> <limit>
-        var languageArg = CommandManager.argument("language", new PFindArguments.LanguageArgument())
-                .then(queryArg);
-        // 指令形式为 /pfind <language> <query> <limit>
-        var command = dispatcher.register(CommandManager.literal("pfind").then(languageArg));
-        // 设置别名
-        dispatcher.register(CommandManager.literal("pf").redirect(command));
+        for(var lang : PFindArguments.Language.values()) {
+            // limit参数在最后
+            var limitArg = CommandManager.argument("limit", IntegerArgumentType.integer(MIN_LIMIT, MAX_LIMIT))
+                    .executes(ctx -> {
+                        String query = StringArgumentType.getString(ctx, "query");
+                        int limit = IntegerArgumentType.getInteger(ctx, "limit");
+                        return pFindAction(ctx, lang, query, limit);
+                    });
+            // query参数 <limit>
+            var queryArg = CommandManager.argument("query", StringArgumentType.string())
+                    .executes(ctx -> {
+                        String query = StringArgumentType.getString(ctx, "query");
+                        return pFindAction(ctx, lang, query, DEFAULT_LIMIT);
+                    })
+                    .then(limitArg);
+            // 指令形式为 /pfind <language> <query> <limit>
+            var command = dispatcher.register(CommandManager.literal("pfind")
+                    .then(CommandManager.literal(lang.name())
+                            .then(queryArg)));
+
+            // 设置别名
+            dispatcher.register(CommandManager.literal("pf").redirect(command));
+        }
     }
 
     // 输入指令后执行的内容，目前是打印参数
