@@ -8,8 +8,6 @@ public class AllItemIndex implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // 注册自定义参数类型
-        PFindArguments.registerAll();
 
         // 注册所有命令
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
