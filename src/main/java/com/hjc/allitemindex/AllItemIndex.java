@@ -1,6 +1,5 @@
 package com.hjc.allitemindex;
 
-import com.hjc.allitemindex.command.PFindArguments;
 import com.hjc.allitemindex.command.PFindCommand;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;

@@ -20,6 +20,13 @@ public class PFindCommand {
     private static final int MAX_LIMIT = 20;
 
     /**
+     * 目前支持的语言枚举
+     */
+    private enum Language {
+        en, cn, pinyin, pinyinabbr
+    }
+
+    /**
      * 注册pf pfind指令
      * @param dispatcher 用于注册、解析和执行命令
      * @param registryAccess 为可能传入特定命令参数的注册表提供抽象方法
@@ -30,17 +37,16 @@ public class PFindCommand {
             CommandRegistryAccess registryAccess,
             CommandManager.RegistrationEnvironment environment
     ) {
-        for(var lang : PFindArguments.Language.values()) {
+        // 对于每种语言lang, 都生成一个/pfind <lang>的指令
+        for(var lang :Language.values()) {
             // limit参数在最后
-            var limitArg = CommandManager.argument("limit", IntegerArgumentType.integer(MIN_LIMIT, MAX_LIMIT))
-                    .executes(ctx -> {
+            var limitArg = CommandManager.argument("limit", IntegerArgumentType.integer(MIN_LIMIT, MAX_LIMIT)).executes(ctx -> {
                         String query = StringArgumentType.getString(ctx, "query");
                         int limit = IntegerArgumentType.getInteger(ctx, "limit");
                         return pFindAction(ctx, lang, query, limit);
                     });
             // query参数 <limit>
-            var queryArg = CommandManager.argument("query", StringArgumentType.string())
-                    .executes(ctx -> {
+            var queryArg = CommandManager.argument("query", StringArgumentType.string()).executes(ctx -> {
                         String query = StringArgumentType.getString(ctx, "query");
                         return pFindAction(ctx, lang, query, DEFAULT_LIMIT);
                     })
@@ -58,7 +64,7 @@ public class PFindCommand {
     // 输入指令后执行的内容，目前是打印参数
     private static int pFindAction(
             CommandContext<ServerCommandSource> context,
-            PFindArguments.Language lang,
+            Language lang,
             String query,
             int limit
     ) {
@@ -84,4 +90,5 @@ public class PFindCommand {
 
         return Command.SINGLE_SUCCESS;
     }
+
 }
