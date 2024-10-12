@@ -1,6 +1,7 @@
 package com.hjc.allitemindex;
 
 import com.hjc.allitemindex.command.PFindCommand;
+import com.hjc.allitemindex.repository.IndexJsonLoader;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
@@ -14,7 +15,7 @@ public class AllItemIndex implements ModInitializer {
             PFindCommand.register(dispatcher, registryAccess, environment);
         });
 
-
+        IndexJsonLoader.initialize();
 
     }
 }

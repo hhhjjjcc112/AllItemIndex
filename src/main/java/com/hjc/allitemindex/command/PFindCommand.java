@@ -1,5 +1,9 @@
 package com.hjc.allitemindex.command;
 
+import com.hjc.allitemindex.algorithm.Similarity;
+import com.hjc.allitemindex.model.ItemIndexes;
+import com.hjc.allitemindex.model.ItemInfo;
+import com.hjc.allitemindex.repository.IndexJsonLoader;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -10,17 +14,28 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class PFindCommand {
 
     /**
      * 默认的输出结果数
      */
     private static final int DEFAULT_LIMIT = 5;
+    /**
+     * 最少输出结果数
+     */
     private static final int MIN_LIMIT = 1;
+    /**
+     * 最多输出结果数
+     */
     private static final int MAX_LIMIT = 20;
 
     /**
-     * 目前支持的语言枚举
+     * 目前支持的语言的枚举
      */
     private enum Language {
         en, cn, pinyin, pinyinabbr
@@ -68,27 +83,45 @@ public class PFindCommand {
             String query,
             int limit
     ) {
-
         // 获取指令的发送者
-        var sender = context.getSource();
+        ServerCommandSource sender = context.getSource();
         // 给指令的发送者返回信息，不广播给管理员
         sender.sendFeedback(() -> Text.literal(String.format("call pfind with %s %s %d", lang, query, limit)), false);
+        // 获取当前的index表
+        ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
+        // 比较函数
+        Comparator<String> comparator = Comparator.comparingInt(s -> Similarity.editDistance(s, query));
+        List<ItemInfo> results;
         switch (lang) {
-            case en -> {
-                // 英文查询
-            }
-            case cn -> {
-                // 中文查询
-            }
-            case pinyin -> {
-                // 拼音全称查询
-            }
-            case pinyinabbr -> {
-                // 拼音缩写查询
-            }
+            // 英文查询
+            case en -> results = minKQueryResults(itemIndexes.enIndex, comparator, limit);
+            // 中文查询
+            case cn -> results = minKQueryResults(itemIndexes.cnIndex, comparator, limit);
+            // 拼音查询
+            case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, comparator, limit);
+            // 拼音全称查询
+            case pinyinabbr -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, comparator, limit);
         }
 
         return Command.SINGLE_SUCCESS;
+    }
+
+    /**
+     * 返回前limit个与query最相似的key对应的value
+     * @param map 包含K key与List<V> value映射关系的map
+     * @param comparator 比较两个key与query相似度的比较器
+     * @param limit 输出的结果数量
+     * @return 前limit个结果
+     * @param <K> 键的类型
+     * @param <V> 值的类型
+     */
+    private static <K ,V> List<V> minKQueryResults(
+            Map<K, List<V>> map,
+            Comparator<K> comparator,
+            int limit
+    ) {
+        Set<K> keys = map.keySet();
+        return keys.stream().sorted(comparator).flatMap(k -> map.get(k).stream()).distinct().limit(limit).toList();
     }
 
 }

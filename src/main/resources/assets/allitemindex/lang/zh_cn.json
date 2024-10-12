@@ -1,0 +1,4 @@
+{
+  "IndexJsonLoader.IndexNotFound": "加载index.json失败. 请检查索引文件是否存在",
+  "IndexJsonLoader.CreateDirectoryFailed": "创建文件夹 %s 失败"
+}

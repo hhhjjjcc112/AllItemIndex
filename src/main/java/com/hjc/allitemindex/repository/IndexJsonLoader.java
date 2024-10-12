@@ -24,7 +24,7 @@ public class IndexJsonLoader {
             try {
                 Files.createDirectories(root);
             } catch (IOException e) {
-                System.err.println("Failed to create directory " + root);
+                System.err.println(Text.translatable("IndexJsonLoader.CreateDirectoryFailed", root));
             }
         }
     }
@@ -69,8 +69,9 @@ public class IndexJsonLoader {
         if(!loaded) {
             ServerCommandSource source = context.getSource();
             var server = source.getServer();
-            server.sendMessage(Text.literal("failed to load index.json. Please check if the file exists."));
-            System.err.println("Failed to load index.json. Please check if the file exists.");
+            source.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound"));
+            server.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound"));
+            System.err.println(Text.translatable("IndexJsonLoader.IndexNotFound"));
         }
     }
 
@@ -78,13 +79,24 @@ public class IndexJsonLoader {
      * 从本地加载index.json中的内容
      * @return 加载是否成功
      */
-    public static boolean loadFromLocal() {
+    private static boolean loadFromLocal() {
         try {
             String content = Files.readString(indexFile, StandardCharsets.UTF_8);
             List<ItemInfo> list = gson.fromJson(content, new TypeToken<List<ItemInfo>>() {}.getType());
+            // 先清除已有的信息
+            infos.clearAll();
+            // 再增加所有信息
+            for(ItemInfo info : list) {
+                infos.add(info);
+            }
             return true;
         } catch (IOException e) {
             return false;
         }
     }
+
+    /**
+     * 加载该类，执行static语句块创建文件夹
+     */
+    public static void initialize() {}
 }
