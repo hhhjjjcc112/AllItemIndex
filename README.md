@@ -5,6 +5,6 @@
 ```
 /pfind <language> <query> <limit>
 ```
-其中language是en, cn, pinyin, pinyin-abbr中的一种, 代表中文, 英文, 拼音全称, 拼音缩写
-query是查询词语, 支持模糊查询
-limit是输出的结果数, 可选, 默认为5
+language是en, cn, pinyin, pinyin-abbr中的一种, 代表中文, 英文, 拼音全称, 拼音缩写 \
+query是查询词语, 支持模糊查询 \
+limit是输出的结果数, 可选, 默认为5 \
