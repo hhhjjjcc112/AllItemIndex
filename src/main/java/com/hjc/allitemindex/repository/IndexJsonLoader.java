@@ -9,6 +9,7 @@ import com.mojang.brigadier.context.CommandContext;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -68,10 +69,7 @@ public class IndexJsonLoader {
     private static void alertIfFailed(CommandContext<ServerCommandSource> context) {
         if(!loaded) {
             ServerCommandSource source = context.getSource();
-            var server = source.getServer();
-            source.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound"));
-            server.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound"));
-            System.err.println(Text.translatable("IndexJsonLoader.IndexNotFound"));
+            source.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound").formatted(Formatting.RED));
         }
     }
 

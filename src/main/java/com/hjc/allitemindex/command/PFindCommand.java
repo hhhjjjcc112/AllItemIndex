@@ -9,9 +9,9 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 
 import java.util.Comparator;
@@ -38,19 +38,15 @@ public class PFindCommand {
      * 目前支持的语言的枚举
      */
     private enum Language {
-        en, cn, pinyin, pinyinabbr
+        en, cn, pinyin, pinyin_abbr
     }
 
     /**
      * 注册pf pfind指令
      * @param dispatcher 用于注册、解析和执行命令
-     * @param registryAccess 为可能传入特定命令参数的注册表提供抽象方法
-     * @param environment 识别命令将要注册到的服务器的类型
      */
     public static void register(
-            CommandDispatcher<ServerCommandSource> dispatcher,
-            CommandRegistryAccess registryAccess,
-            CommandManager.RegistrationEnvironment environment
+            CommandDispatcher<ServerCommandSource> dispatcher
     ) {
         // 对于每种语言lang, 都生成一个/pfind <lang>的指令
         for(var lang :Language.values()) {
@@ -85,8 +81,8 @@ public class PFindCommand {
     ) {
         // 获取指令的发送者
         ServerCommandSource sender = context.getSource();
-        // 给指令的发送者返回信息，不广播给管理员
-        sender.sendFeedback(() -> Text.literal(String.format("call pfind with %s %s %d", lang, query, limit)), false);
+        // 给指令的发送者返回信息
+        sender.sendMessage(Text.literal(String.format("call pfind with %s %s %d", lang, query, limit)));
         // 获取当前的index表
         ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
         // 比较函数
@@ -100,7 +96,12 @@ public class PFindCommand {
             // 拼音查询
             case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, comparator, limit);
             // 拼音全称查询
-            case pinyinabbr -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, comparator, limit);
+            case pinyin_abbr -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, comparator, limit);
+            default -> throw new IllegalStateException("unreachable code");
+        }
+        // 输出结果
+        for(int i = 0;i < results.size();i++) {
+            sender.sendMessage(genText(i + 1, results.get(i)));
         }
 
         return Command.SINGLE_SUCCESS;
@@ -122,6 +123,12 @@ public class PFindCommand {
     ) {
         Set<K> keys = map.keySet();
         return keys.stream().sorted(comparator).flatMap(k -> map.get(k).stream()).distinct().limit(limit).toList();
+    }
+
+    private static Text genText(int index, ItemInfo info) {
+        MutableText text = Text.literal(String.format("%d. %s: ", index, info.ChineseName));
+//        text.append(Text.literal(info.floorLight.cnName).formatted(TextColor.fromRgb()));
+        return text;
     }
 
 }

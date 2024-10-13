@@ -18,13 +18,13 @@ public class ItemInfo {
     @SerializedName("pinyin_abbr")
     public List<String> pinYinFAbbr; // 拼音缩写
     @SerializedName("carpet")
-    public String carpetColor; // 地面地毯颜色
+    public CarpetColor carpetColor; // 地面地毯颜色
     @SerializedName("direction")
-    public String direction; // 方向
+    public Direction direction; // 方向
     @SerializedName("direction_color")
-    public String directionColor; // 对应方向的地毯颜色
+    public CarpetColor directionColor; // 对应方向的地毯颜色
     @SerializedName("light")
-    public String floorLight; // 所在楼层地板的灯光
+    public FloorLight floorLight; // 所在楼层地板的灯光
 
     @Override
     public boolean equals(Object o) {
