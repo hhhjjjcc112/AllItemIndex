@@ -1,9 +1,14 @@
 {
   "IndexJsonLoader.IndexNotFound": "加载index.json失败. 请检查索引文件是否存在",
   "IndexJsonLoader.CreateDirectoryFailed": "创建文件夹 %s 失败",
+  "IndexJsonLoader.JsonFormatError": "错误的json格式, 请检查index.json内容",
   "direction.south": "南方",
   "direction.north": "北方",
   "direction.east": "东方",
   "direction.west": "西方",
-  "pinyin.chineseAndPinyinNotMatch": "中文词语 %s 和拼音 %s 不匹配."
+  "pinyin.chineseAndPinyinNotMatch": "中文词语 %s 和拼音 %s 不匹配.",
+  "pfind.result": "前 %s 个搜索 %s 的结果为:",
+  "pload.reloadAttempt": "正在尝试重新加载index.json",
+  "pload.fail": "重新加载index.json失败",
+  "pload.success": "重新加载index.json成功!"
 }

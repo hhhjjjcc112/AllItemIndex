@@ -89,25 +89,27 @@ public class PFindCommand {
     ) {
         // 获取指令的发送者
         ServerCommandSource sender = context.getSource();
-        // 给指令的发送者返回信息
-        sender.sendMessage(Text.literal(String.format("call pfind with %s %s %d", lang, query, limit)));
+//        // 给指令的发送者返回信息
+//        sender.sendMessage(Text.literal(String.format("call pfind with %s %s %d", lang, query, limit)));
         // 获取当前的index表
         ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
         // 比较函数
-        Comparator<String> comparator = Comparator.comparingInt(s -> Similarity.editDistance(s, query));
+        Comparator<String> comparator = Similarity.getComparator(query.trim());
+        Comparator<String> lowercaseComparator = Similarity.getComparator(query.trim().toLowerCase());
         List<ItemInfo> results;
         switch (lang) {
             // 英文查询
-            case en -> results = minKQueryResults(itemIndexes.enIndex, comparator, limit);
+            case en -> results = minKQueryResults(itemIndexes.enIndex, lowercaseComparator, limit);
             // 中文查询
             case cn -> results = minKQueryResults(itemIndexes.cnIndex, comparator, limit);
             // 拼音查询
-            case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, comparator, limit);
+            case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, lowercaseComparator, limit);
             // 拼音全称查询
-            case pinyin_abbr -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, comparator, limit);
+            case pinyin_abbr -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, lowercaseComparator, limit);
             default -> throw new IllegalStateException("unreachable code");
         }
         // 输出结果
+        sender.sendMessage(Text.translatable("pfind.result", limit, query));
         for(int i = 0;i < results.size();i++) {
             sender.sendMessage(genText(i + 1, results.get(i)));
         }
@@ -130,12 +132,12 @@ public class PFindCommand {
             int limit
     ) {
         Set<K> keys = map.keySet();
-        return keys.stream().sorted(comparator).flatMap(k -> map.get(k).stream()).distinct().limit(limit).toList();
+        return keys.stream().sorted(comparator).peek(System.out::println).flatMap(k -> map.get(k).stream()).peek(System.out::println).distinct().limit(limit).toList();
     }
 
     private static MutableText genText(int index, ItemInfo info) {
         // 编号 + 中文名称
-        MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName));
+        MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName.chineseName));
         // 层灯光
         text.append(Text.translatable(info.floorLight.item.getTranslationKey()).setStyle(info.floorLight.colorStyle));
         text.append(" ");
@@ -161,15 +163,18 @@ public class PFindCommand {
             ) throws CommandSyntaxException {
                 ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
                 Set<String> keys;
+                String input = builder.getRemainingLowerCase();
                 switch(lang) {
                     case en -> keys = itemIndexes.enIndex.keySet();
-                    case cn -> keys = itemIndexes.cnIndex.keySet();
+                    case cn -> keys = itemIndexes.cnKeys;
                     case pinyin -> keys = itemIndexes.pinyinIndex.keySet();
                     case pinyin_abbr -> keys = itemIndexes.pinyinAbbrIndex.keySet();
                     default -> throw new IllegalStateException("unreachable code");
                 }
                 for(var k : keys) {
-                    builder.suggest(k);
+                    if(k.contains(input)) {
+                        builder.suggest(k);
+                    }
                 }
                 return builder.buildFuture();
             }

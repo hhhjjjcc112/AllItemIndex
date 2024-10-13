@@ -12,7 +12,7 @@ public enum CarpetColor {
     @SerializedName("淡蓝") LIGHT_BLUE(Items.LIGHT_BLUE_CARPET, 0x9ac0cd),
     @SerializedName("黄") YELLOW(Items.YELLOW_CARPET, 0xffff00),
     @SerializedName("黄绿") LIME(Items.LIME_CARPET, 0xbfff00),
-    @SerializedName("粉红") PINK(Items.PINK_CARPET, 0xff69b4),
+    @SerializedName("粉") PINK(Items.PINK_CARPET, 0xff69b4),
     @SerializedName("灰") GRAY(Items.GRAY_CARPET, 0x808080),
     @SerializedName("淡灰") LIGHT_GRAY(Items.LIGHT_GRAY_CARPET, 0xd3d3d3),
     @SerializedName("青") CYAN(Items.CYAN_CARPET, 0x00ffff),

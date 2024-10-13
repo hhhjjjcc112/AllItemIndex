@@ -53,7 +53,7 @@ public class PinYin {
         int len = chineseName.length();
         String[] subs = pinYin.split("-");
         if(subs.length != len) {
-            throw new IllegalStateException(Text.translatable("pinyin.chineseAndPinyinNotMatch").getString());
+            throw new IllegalStateException(Text.translatable("pinyin.chineseAndPinyinNotMatch", chineseName, pinYin).getString());
         }
         for(int i = 0; i < len; i++) {
             int c = chineseName.charAt(i);

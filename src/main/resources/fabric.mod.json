@@ -17,13 +17,6 @@
       "com.hjc.allitemindex.AllItemIndex"
     ]
   },
-  "mixins": [
-    "allitemindex.mixins.json",
-    {
-      "config": "allitemindex.client.mixins.json",
-      "environment": "client"
-    }
-  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",

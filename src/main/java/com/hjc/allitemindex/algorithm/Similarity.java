@@ -1,9 +1,27 @@
 package com.hjc.allitemindex.algorithm;
 
+import java.util.Comparator;
+
 public class Similarity {
     // 设定数组第二维的大小
     private static final int MAX_LEN = 1000;
     private static final int[][] dp = new int[2][MAX_LEN];
+
+
+    public static Comparator<String> getComparator(String query) {
+        return (s1, s2) -> {
+            boolean in1 = s1.contains(query), in2 = s2.contains(query);
+            if(in1 && !in2) {
+                return -1;
+            }
+            else if(!in1 && in2) {
+                return 1;
+            }
+            int dis1 = editDistance(s1, query);
+            int dis2 = editDistance(s2, query);
+            return dis1 - dis2;
+        };
+    }
 
     /**
      * 认为插入，删除或替换一个字符为一次编辑，计算两个字符串的编辑距离
@@ -56,9 +74,5 @@ public class Similarity {
             return c;
         }
         return a;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(editDistance("horse", "ros") + " differences");
     }
 }

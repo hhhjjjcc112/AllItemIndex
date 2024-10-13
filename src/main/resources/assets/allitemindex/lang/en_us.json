@@ -1,9 +1,14 @@
 {
   "IndexJsonLoader.IndexNotFound": "failed to load index.json. Please check if the file exists.",
   "IndexJsonLoader.CreateDirectoryFailed": "Failed to create directory %s",
+  "IndexJsonLoader.JsonFormatError": "wrong json format, please check your index.json file.",
   "direction.south": "south",
   "direction.north": "north",
   "direction.east": "east",
   "direction.west": "west",
-  "pinyin.chineseAndPinyinNotMatch": "Chinese word %s and pinyin %s can not match."
+  "pinyin.chineseAndPinyinNotMatch": "Chinese word %s and pinyin %s can not match.",
+  "pfind.result": "the first %s results of %s are:",
+  "pload.reloadAttempt": "trying to reload index.json",
+  "pload.fail": "failed to reload index.json",
+  "pload.success": "reload index.json successfully!"
 }

@@ -2,6 +2,7 @@ package com.hjc.allitemindex.repository;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.hjc.allitemindex.model.ItemIndexes;
 import com.hjc.allitemindex.model.ItemInfo;
@@ -37,7 +38,7 @@ public class IndexJsonLoader {
     private static boolean loaded = false;
 
     // gson序列化与反序列化器
-    private static final Gson gson = new GsonBuilder().serializeNulls().create();
+    private static final Gson gson = new GsonBuilder().create();
 
 
     /**
@@ -48,8 +49,7 @@ public class IndexJsonLoader {
     public static ItemIndexes getIndexesInstance(CommandContext<ServerCommandSource> context) {
         synchronized (IndexJsonLoader.class) {
             if(!loaded) {
-                loaded = loadFromLocal();
-                alertIfFailed(context);
+                loaded = loadFromLocal(context);
             }
             if(loaded) {
                 return indexes;
@@ -65,30 +65,29 @@ public class IndexJsonLoader {
      */
     public static boolean reload(CommandContext<ServerCommandSource> context) {
         synchronized (IndexJsonLoader.class) {
-            loaded = loadFromLocal();
-            alertIfFailed(context);
+            loaded = loadFromLocal(context);
             return loaded;
-        }
-    }
-
-    private static void alertIfFailed(CommandContext<ServerCommandSource> context) {
-        if(!loaded) {
-            ServerCommandSource source = context.getSource();
-            source.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound").formatted(Formatting.RED));
         }
     }
 
     /**
      * 从本地加载index.json中的内容
+     * @param context 调用时的指令上下文
      * @return 加载是否成功
      */
-    private static boolean loadFromLocal() {
+    private static boolean loadFromLocal(CommandContext<ServerCommandSource> context) {
         try {
             String content = Files.readString(indexFile, StandardCharsets.UTF_8);
             infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {}.getType());
             indexes = ItemIndexes.from(infos);
             return true;
+        } catch (JsonSyntaxException e) {
+            ServerCommandSource source = context.getSource();
+            source.sendMessage(Text.translatable("IndexJsonLoader.JsonFormatError").formatted(Formatting.RED));
+            return false;
         } catch (IOException e) {
+            ServerCommandSource source = context.getSource();
+            source.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound").formatted(Formatting.RED));
             return false;
         }
     }

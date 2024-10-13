@@ -8,18 +8,24 @@ import java.util.Set;
 public class ItemIndexes {
     // map的value一定不能为null
     public final Map<String, Set<ItemInfo>> enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex;
+    // 仅仅是为了作为输入补全而加上前后引号
+    public final Set<String> cnKeys;
 
     public ItemIndexes() {
         this.enIndex = new HashMap<>();
         this.cnIndex = new HashMap<>();
         this.pinyinIndex = new HashMap<>();
         this.pinyinAbbrIndex = new HashMap<>();
+        this.cnKeys = new LinkedHashSet<>();
     }
 
     public static ItemIndexes from(Set<ItemInfo> infos) {
         ItemIndexes indexes = new ItemIndexes();
         for (ItemInfo info : infos) {
             indexes.add(info);
+        }
+        for(var key: indexes.cnIndex.keySet()) {
+            indexes.cnKeys.add(String.format("\"%s\"", key));
         }
         return indexes;
     }

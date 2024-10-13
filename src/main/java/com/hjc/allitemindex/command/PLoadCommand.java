@@ -6,6 +6,7 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.text.Text;
 
 public class PLoadCommand {
 
@@ -21,14 +22,22 @@ public class PLoadCommand {
     public static void register(
             CommandDispatcher<ServerCommandSource> dispatcher
     ) {
-        var command = dispatcher.register(CommandManager.literal("pload").requires(ctx -> ctx.hasPermissionLevel(LEAST_PERMISSION_LEVEL)).executes(PLoadCommand::pLoadAction));
-        dispatcher.register(CommandManager.literal("pl").redirect(command));
+        dispatcher.register(CommandManager.literal("pload").requires(ctx -> ctx.hasPermissionLevel(LEAST_PERMISSION_LEVEL)).executes(PLoadCommand::pLoadAction));
+        dispatcher.register(CommandManager.literal("pl").requires(ctx -> ctx.hasPermissionLevel(LEAST_PERMISSION_LEVEL)).executes(PLoadCommand::pLoadAction));
     }
 
     private static int pLoadAction(
             CommandContext<ServerCommandSource> context
     ) {
-        IndexJsonLoader.reload(context);
+        var source = context.getSource();
+        source.sendMessage(Text.translatable("pload.reloadAttempt"));
+        boolean success = IndexJsonLoader.reload(context);
+        if (success) {
+            source.sendMessage(Text.translatable("pload.success"));
+        }
+        else {
+            source.sendMessage(Text.translatable("pload.fail"));
+        }
         return Command.SINGLE_SUCCESS;
     }
 }
