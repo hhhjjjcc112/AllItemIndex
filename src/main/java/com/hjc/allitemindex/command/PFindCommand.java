@@ -9,6 +9,10 @@ import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.suggestion.SuggestionProvider;
+import com.mojang.brigadier.suggestion.Suggestions;
+import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.MutableText;
@@ -18,6 +22,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 
 public class PFindCommand {
 
@@ -57,7 +62,10 @@ public class PFindCommand {
                         return pFindAction(ctx, lang, query, limit);
                     });
             // query参数 <limit>
-            var queryArg = CommandManager.argument("query", StringArgumentType.string()).executes(ctx -> {
+            var queryArg = CommandManager.argument("query", StringArgumentType.string())
+                    // 自动补全提示
+                    .suggests(new QuerySuggestionProvider(lang))
+                    .executes(ctx -> {
                         String query = StringArgumentType.getString(ctx, "query");
                         return pFindAction(ctx, lang, query, DEFAULT_LIMIT);
                     })
@@ -117,7 +125,7 @@ public class PFindCommand {
      * @param <V> 值的类型
      */
     private static <K ,V> List<V> minKQueryResults(
-            Map<K, List<V>> map,
+            Map<K, Set<V>> map,
             Comparator<K> comparator,
             int limit
     ) {
@@ -125,10 +133,46 @@ public class PFindCommand {
         return keys.stream().sorted(comparator).flatMap(k -> map.get(k).stream()).distinct().limit(limit).toList();
     }
 
-    private static Text genText(int index, ItemInfo info) {
-        MutableText text = Text.literal(String.format("%d. %s: ", index, info.ChineseName));
-//        text.append(Text.literal(info.floorLight.cnName).formatted(TextColor.fromRgb()));
+    private static MutableText genText(int index, ItemInfo info) {
+        // 编号 + 中文名称
+        MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName));
+        // 层灯光
+        text.append(Text.translatable(info.floorLight.item.getTranslationKey()).setStyle(info.floorLight.colorStyle));
+        text.append(" ");
+        // 表示方向的地毯
+        text.append(Text.translatable(info.directionColor.item.getTranslationKey()).setStyle(info.directionColor.colorStyle));
+        text.append(" ");
+        // 方向
+        text.append(Text.translatable(info.direction.translationKey));
+        text.append(" ");
+        // 具体位置的地毯
+        text.append(Text.translatable(info.carpetColor.item.getTranslationKey()).setStyle(info.carpetColor.colorStyle));
+
         return text;
     }
+
+
+    private record QuerySuggestionProvider(Language lang) implements SuggestionProvider<ServerCommandSource> {
+
+        @Override
+            public CompletableFuture<Suggestions> getSuggestions(
+                    CommandContext<ServerCommandSource> context,
+                    SuggestionsBuilder builder
+            ) throws CommandSyntaxException {
+                ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
+                Set<String> keys;
+                switch(lang) {
+                    case en -> keys = itemIndexes.enIndex.keySet();
+                    case cn -> keys = itemIndexes.cnIndex.keySet();
+                    case pinyin -> keys = itemIndexes.pinyinIndex.keySet();
+                    case pinyin_abbr -> keys = itemIndexes.pinyinAbbrIndex.keySet();
+                    default -> throw new IllegalStateException("unreachable code");
+                }
+                for(var k : keys) {
+                    builder.suggest(k);
+                }
+                return builder.buildFuture();
+            }
+        }
 
 }

@@ -4,5 +4,6 @@
   "direction.south": "south",
   "direction.north": "north",
   "direction.east": "east",
-  "direction.west": "west"
+  "direction.west": "west",
+  "pinyin.chineseAndPinyinNotMatch": "Chinese word %s and pinyin %s can not match."
 }

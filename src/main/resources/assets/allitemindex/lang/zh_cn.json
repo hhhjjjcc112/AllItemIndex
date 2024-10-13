@@ -4,5 +4,6 @@
   "direction.south": "南方",
   "direction.north": "北方",
   "direction.east": "东方",
-  "direction.west": "西方"
+  "direction.west": "西方",
+  "pinyin.chineseAndPinyinNotMatch": "中文词语 %s 和拼音 %s 不匹配."
 }

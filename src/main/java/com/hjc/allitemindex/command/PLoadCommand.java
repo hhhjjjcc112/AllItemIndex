@@ -10,13 +10,18 @@ import net.minecraft.server.command.ServerCommandSource;
 public class PLoadCommand {
 
     /**
+     * 最低权限要求，至少为管理员
+     */
+    private static final int LEAST_PERMISSION_LEVEL = 2;
+
+    /**
      * 注册/pload和/pl
      * @param dispatcher 用于注册、解析和执行命令
      */
     public static void register(
             CommandDispatcher<ServerCommandSource> dispatcher
     ) {
-        var command = dispatcher.register(CommandManager.literal("pload").executes(PLoadCommand::pLoadAction));
+        var command = dispatcher.register(CommandManager.literal("pload").requires(ctx -> ctx.hasPermissionLevel(LEAST_PERMISSION_LEVEL)).executes(PLoadCommand::pLoadAction));
         dispatcher.register(CommandManager.literal("pl").redirect(command));
     }
 

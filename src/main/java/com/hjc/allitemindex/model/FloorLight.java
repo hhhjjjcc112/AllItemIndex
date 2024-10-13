@@ -3,6 +3,7 @@ package com.hjc.allitemindex.model;
 import com.google.gson.annotations.SerializedName;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.text.Style;
 
 public enum FloorLight {
     @SerializedName("海晶灯")
@@ -18,10 +19,10 @@ public enum FloorLight {
 
 
     public final Item item;
-    public final int rgb;
+    public final Style colorStyle;
 
     FloorLight(Item item, int rgb) {
         this.item = item;
-        this.rgb = rgb;
+        this.colorStyle = Style.EMPTY.withColor(rgb);
     }
 }

@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Set;
+
 public enum Direction {
     @SerializedName("南")
     SOUTH("direction.south"),
@@ -23,7 +25,9 @@ public enum Direction {
         Gson gson = new GsonBuilder().create();
         System.out.println(Direction.SOUTH.name());
         System.out.println(gson.toJson(Direction.SOUTH));
-        System.out.println(gson.toJson(Direction.NORTH));
-        System.out.println(Direction.SOUTH.name());
+
+        var json = "[\"111\", \"111\"]";
+        var set1 = gson.fromJson(json, Set.class);
+        System.out.println(set1.size());
     }
 }

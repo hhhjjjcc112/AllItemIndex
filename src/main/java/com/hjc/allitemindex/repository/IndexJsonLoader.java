@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
+import java.util.Set;
 
 public class IndexJsonLoader {
 
@@ -30,8 +30,10 @@ public class IndexJsonLoader {
         }
     }
     private static final Path indexFile = root.resolve("index.json");
+    private static Set<ItemInfo> infos = null;
+    private static ItemIndexes indexes = null;
+    private static final ItemIndexes EMPTY_INDEXES = new ItemIndexes();
     // 标识是否加载
-    private static final ItemIndexes infos = new ItemIndexes();
     private static boolean loaded = false;
 
     // gson序列化与反序列化器
@@ -49,7 +51,10 @@ public class IndexJsonLoader {
                 loaded = loadFromLocal();
                 alertIfFailed(context);
             }
-            return infos;
+            if(loaded) {
+                return indexes;
+            }
+            return EMPTY_INDEXES;
         }
     }
 
@@ -80,13 +85,8 @@ public class IndexJsonLoader {
     private static boolean loadFromLocal() {
         try {
             String content = Files.readString(indexFile, StandardCharsets.UTF_8);
-            List<ItemInfo> list = gson.fromJson(content, new TypeToken<List<ItemInfo>>() {}.getType());
-            // 先清除已有的信息
-            infos.clearAll();
-            // 再增加所有信息
-            for(ItemInfo info : list) {
-                infos.add(info);
-            }
+            infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {}.getType());
+            indexes = ItemIndexes.from(infos);
             return true;
         } catch (IOException e) {
             return false;

@@ -3,7 +3,7 @@ package com.hjc.allitemindex.model;
 import com.google.gson.annotations.SerializedName;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.text.TextColor;
+import net.minecraft.text.Style;
 
 public enum CarpetColor {
     @SerializedName("白") WHITE(Items.WHITE_CARPET, 0xffffff),
@@ -25,9 +25,9 @@ public enum CarpetColor {
 
     CarpetColor(Item item, int rgb) {
         this.item = item;
-        this.rgb = TextColor.fromRgb(rgb);
+        this.colorStyle = Style.EMPTY.withColor(rgb);
     }
 
     public final Item item;
-    public final TextColor rgb;
+    public final Style colorStyle;
 }
