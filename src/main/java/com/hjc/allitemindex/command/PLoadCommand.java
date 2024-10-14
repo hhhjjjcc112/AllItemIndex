@@ -8,6 +8,8 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
+import static com.hjc.allitemindex.AllItemIndex.USE_CHINESE;
+
 public class PLoadCommand {
 
     /**
@@ -30,13 +32,25 @@ public class PLoadCommand {
             CommandContext<ServerCommandSource> context
     ) {
         var source = context.getSource();
-        source.sendMessage(Text.translatable("pload.reloadAttempt"));
+        if(USE_CHINESE) {
+            source.sendMessage(Text.of("正在尝试重新加载index.json"));
+        } else {
+            source.sendMessage(Text.translatable("pload.reloadAttempt"));
+        }
         boolean success = IndexJsonLoader.reload(context);
         if (success) {
-            source.sendMessage(Text.translatable("pload.success"));
+            if(USE_CHINESE) {
+                source.sendMessage(Text.of("重新加载index.json成功!"));
+            } else {
+                source.sendMessage(Text.translatable("pload.success"));
+            }
         }
         else {
-            source.sendMessage(Text.translatable("pload.fail"));
+            if(USE_CHINESE) {
+                source.sendMessage(Text.of("重新加载index.json失败"));
+            } else {
+                source.sendMessage(Text.translatable("pload.failure"));
+            }
         }
         return Command.SINGLE_SUCCESS;
     }

@@ -24,6 +24,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
+import static com.hjc.allitemindex.AllItemIndex.USE_CHINESE;
+
 public class PFindCommand {
 
     /**
@@ -109,7 +111,12 @@ public class PFindCommand {
             default -> throw new IllegalStateException("unreachable code");
         }
         // 输出结果
-        sender.sendMessage(Text.translatable("pfind.result", limit, query));
+        if(USE_CHINESE) {
+            sender.sendMessage(Text.of(String.format("前 %s 个搜索 %s 的结果为:", limit, query)));
+        }
+        else {
+            sender.sendMessage(Text.translatable("pfind.result", limit, query));
+        }
         for(int i = 0;i < results.size();i++) {
             sender.sendMessage(genText(i + 1, results.get(i)));
         }
@@ -132,7 +139,7 @@ public class PFindCommand {
             int limit
     ) {
         Set<K> keys = map.keySet();
-        return keys.stream().sorted(comparator).peek(System.out::println).flatMap(k -> map.get(k).stream()).peek(System.out::println).distinct().limit(limit).toList();
+        return keys.stream().sorted(comparator).flatMap(k -> map.get(k).stream()).distinct().limit(limit).toList();
     }
 
     private static MutableText genText(int index, ItemInfo info) {
@@ -145,7 +152,12 @@ public class PFindCommand {
         text.append(Text.translatable(info.directionColor.item.getTranslationKey()).setStyle(info.directionColor.colorStyle));
         text.append(" ");
         // 方向
-        text.append(Text.translatable(info.direction.translationKey));
+        if(USE_CHINESE) {
+            text.append(Text.of(info.direction.cn));
+        } else {
+            text.append(Text.translatable(info.direction.translationKey));
+        }
+
         text.append(" ");
         // 具体位置的地毯
         text.append(Text.translatable(info.carpetColor.item.getTranslationKey()).setStyle(info.carpetColor.colorStyle));
@@ -163,7 +175,8 @@ public class PFindCommand {
             ) throws CommandSyntaxException {
                 ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
                 Set<String> keys;
-                String input = builder.getRemainingLowerCase();
+                // 转换为小写
+                String input = builder.getRemainingLowerCase().trim().replace("\"", "");
                 switch(lang) {
                     case en -> keys = itemIndexes.enIndex.keySet();
                     case cn -> keys = itemIndexes.cnKeys;

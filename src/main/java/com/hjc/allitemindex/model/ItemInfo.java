@@ -11,7 +11,7 @@ public class ItemInfo {
     @SerializedName("cn")
     public PinYin chineseName; // 中文名称(非官方?)
     @SerializedName("alias")
-    public Set<PinYin> ChineseAlias; // 中文别称(非官方)
+    public Set<PinYin> chineseAlias; // 中文别称(非官方)
 //    @SerializedName("pinyin")
 //    public List<String> pinYinFull; // 拼音全称
 //    @SerializedName("pinyin_abbr")
@@ -24,4 +24,34 @@ public class ItemInfo {
     public CarpetColor directionColor; // 对应方向的地毯颜色
     @SerializedName("light")
     public FloorLight floorLight; // 所在楼层地板的灯光
+
+    @Override
+    public String toString() {
+        return "ItemInfo{" +
+                "englishName='" + englishName + '\'' +
+                ", chineseName=" + chineseName +
+                ", ChineseAlias=" + chineseAlias +
+                ", carpetColor=" + carpetColor +
+                ", direction=" + direction +
+                ", directionColor=" + directionColor +
+                ", floorLight=" + floorLight +
+                '}';
+    }
+
+    /**
+     * 返回是否存在空值, 包含PinYin类型中的空值
+     * @return 是否存在空值
+     */
+    public boolean anyEmpty() {
+        return englishName == null || chineseName == null || chineseAlias == null || carpetColor == null || direction == null || directionColor == null || floorLight == null || chineseName.anyEmpty() || anyNullInSet() || englishName.isBlank();
+    }
+
+    private boolean anyNullInSet() {
+        for(var pinyin: chineseAlias) {
+            if(pinyin.anyEmpty()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

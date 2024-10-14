@@ -1,5 +1,7 @@
 package com.hjc.allitemindex.model;
 
+import com.hjc.allitemindex.exception.PinYinNotMatchException;
+
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
@@ -19,7 +21,7 @@ public class ItemIndexes {
         this.cnKeys = new LinkedHashSet<>();
     }
 
-    public static ItemIndexes from(Set<ItemInfo> infos) {
+    public static ItemIndexes from(Set<ItemInfo> infos) throws PinYinNotMatchException {
         ItemIndexes indexes = new ItemIndexes();
         for (ItemInfo info : infos) {
             indexes.add(info);
@@ -30,20 +32,28 @@ public class ItemIndexes {
         return indexes;
     }
 
-    public void add(ItemInfo info) {
+    private void add(ItemInfo info) throws PinYinNotMatchException {
         String enKey = info.englishName;
-        insertOrCreate(enIndex, enKey, info);
+        insertOrCreate(enIndex, enKey.toLowerCase(), info);
         // 获取并插入中文名称对应的中文, 拼音全称和拼音缩写
         PinYin cnKey = info.chineseName;
-        insertOrCreate(cnIndex, cnKey.chineseName, info);
-        insertAllOrCreate(pinyinIndex, cnKey.pinYin(), info);
-        insertAllOrCreate(pinyinAbbrIndex, cnKey.pinYinAbbr(), info);
+        insertOrCreate(cnIndex, cnKey.chineseName.toLowerCase(), info);
+        for(var py: cnKey.pinYin()) {
+            insertOrCreate(pinyinIndex, py.toLowerCase(), info);
+        }
+        for(var pyAbbr: cnKey.pinYinAbbr()) {
+            insertOrCreate(pinyinAbbrIndex, pyAbbr.toLowerCase(), info);
+        }
         // 获取并插入中文别名对应的中文, 拼音全称和拼音缩写
-        Set<PinYin> cnAliases = info.ChineseAlias;
+        Set<PinYin> cnAliases = info.chineseAlias;
         for(PinYin cnAlias : cnAliases) {
             insertOrCreate(cnIndex, cnAlias.chineseName, info);
-            insertAllOrCreate(pinyinIndex, cnAlias.pinYin(), info);
-            insertAllOrCreate(pinyinAbbrIndex, cnAlias.pinYinAbbr(), info);
+            for(var py: cnAlias.pinYin()) {
+                insertOrCreate(pinyinIndex, py.toLowerCase(), info);
+            }
+            for(var pyAbbr: cnAlias.pinYinAbbr()) {
+                insertOrCreate(pinyinAbbrIndex, pyAbbr.toLowerCase(), info);
+            }
         }
     }
 
@@ -57,12 +67,6 @@ public class ItemIndexes {
         }
         else {
             set.add(value);
-        }
-    }
-
-    private <K, V> void insertAllOrCreate(Map<K, Set<V>> map, Set<K> keys, V value) {
-        for (K key : keys) {
-            insertOrCreate(map, key, value);
         }
     }
 }

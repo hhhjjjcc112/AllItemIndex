@@ -9,6 +9,7 @@
   "pinyin.chineseAndPinyinNotMatch": "Chinese word %s and pinyin %s can not match.",
   "pfind.result": "the first %s results of %s are:",
   "pload.reloadAttempt": "trying to reload index.json",
-  "pload.fail": "failed to reload index.json",
-  "pload.success": "reload index.json successfully!"
+  "pload.failure": "failed to reload index.json",
+  "pload.success": "reload index.json successfully!",
+  "allitemindex.contactOperators": "an exception has occurred. Please contact server admins for help."
 }

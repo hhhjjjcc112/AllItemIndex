@@ -4,18 +4,24 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+import com.hjc.allitemindex.exception.MyExceptionHandler;
+import com.hjc.allitemindex.exception.PinYinNotMatchException;
+import com.hjc.allitemindex.model.CarpetColor;
+import com.hjc.allitemindex.model.Direction;
 import com.hjc.allitemindex.model.ItemIndexes;
 import com.hjc.allitemindex.model.ItemInfo;
 import com.mojang.brigadier.context.CommandContext;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class IndexJsonLoader {
@@ -78,17 +84,48 @@ public class IndexJsonLoader {
     private static boolean loadFromLocal(CommandContext<ServerCommandSource> context) {
         try {
             String content = Files.readString(indexFile, StandardCharsets.UTF_8);
-            infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {}.getType());
+            infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {
+            }.getType());
+            checkInfos(infos);
             indexes = ItemIndexes.from(infos);
             return true;
+        } catch (NullPointerException e) {
+            MyExceptionHandler.error(context, e, "index.json包含空值");
+        } catch(IllegalArgumentException e) {
+            MyExceptionHandler.error(context, e, "方向和地毯颜色不对应");
+        } catch (PinYinNotMatchException e) {
+            MyExceptionHandler.error(context, e, "拼音解析失败");
         } catch (JsonSyntaxException e) {
-            ServerCommandSource source = context.getSource();
-            source.sendMessage(Text.translatable("IndexJsonLoader.JsonFormatError").formatted(Formatting.RED));
-            return false;
+            MyExceptionHandler.error(context, e, "Json解析失败");
         } catch (IOException e) {
-            ServerCommandSource source = context.getSource();
-            source.sendMessage(Text.translatable("IndexJsonLoader.IndexNotFound").formatted(Formatting.RED));
-            return false;
+            MyExceptionHandler.error(context, e, "index.json文件加载失败");
+        }
+        return false;
+    }
+
+    private static Map<Direction, CarpetColor> correspondingColors = new HashMap<>();
+    static {
+        correspondingColors.put(Direction.NORTH, CarpetColor.WHITE);
+        correspondingColors.put(Direction.SOUTH, CarpetColor.GREEN);
+        correspondingColors.put(Direction.WEST, CarpetColor.BLUE);
+        correspondingColors.put(Direction.EAST, CarpetColor.RED);
+        // 设置不可变
+        correspondingColors = Collections.unmodifiableMap(correspondingColors);
+    }
+
+    /**
+     * 检查加载的infos是否合法, 抛出错误
+     */
+    private static void checkInfos(Set<ItemInfo> infos) throws NullPointerException, IllegalArgumentException {
+        for(var info : infos) {
+            // 存在可能的空值
+            if(info.anyEmpty()) {
+                throw new NullPointerException("itemInfo " + info + " 包含空值");
+            }
+            // 方向和羊毛颜色是否对应(不是, 既然一定对应的话为啥俩都要啊)
+            if(correspondingColors.get(info.direction) != info.directionColor) {
+                throw new IllegalArgumentException("单片" + info.chineseName.chineseName + "的方向和对应地毯颜色不对应, 地毯颜色应为" + correspondingColors.get(info.direction) + ", 实际为" + info.directionColor);
+            }
         }
     }
 

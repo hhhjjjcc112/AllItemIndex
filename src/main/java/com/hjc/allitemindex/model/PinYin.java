@@ -1,7 +1,7 @@
 package com.hjc.allitemindex.model;
 
 import com.google.gson.annotations.SerializedName;
-import net.minecraft.text.Text;
+import com.hjc.allitemindex.exception.PinYinNotMatchException;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -11,6 +11,8 @@ public class PinYin {
     public String chineseName;
     @SerializedName("pinyin")
     public String pinYin;
+
+    private static final char SPLIT_CHAR = '-';
 
     public PinYin(String chineseName, String pinYin) {
         this.chineseName = chineseName;
@@ -27,6 +29,38 @@ public class PinYin {
     @Override
     public int hashCode() {
         return Objects.hash(chineseName, pinYin);
+    }
+
+    @Override
+    public String toString() {
+        return "PinYin{" +
+                "chineseName='" + chineseName + '\'' +
+                ", pinYin='" + pinYin + '\'' +
+                '}';
+    }
+
+    /**
+     * 返回是否存在空值
+     * @return 是否存在空值
+     */
+    public boolean anyEmpty() {
+        return chineseName == null || pinYin == null || chineseName.isBlank() || pinYin.isBlank();
+    }
+
+    /**
+     * 检查拼音和中文是否对应
+     * @return 拼音和中文是否对应
+     */
+    public boolean valid() {
+        int len1 = chineseName.length();
+        int len2 = 0;
+        for (int i = 0; i < pinYin.length(); i++) {
+            char c = pinYin.charAt(i);
+            if(c == SPLIT_CHAR) {
+                len2++;
+            }
+        }
+        return len1 == (len2 + 1);
     }
 
     /**
@@ -47,16 +81,16 @@ public class PinYin {
      * 获取拼音对应的所有拼音缩写
      * @return 拼音对应的所有拼音缩写
      */
-    public Set<String> pinYinAbbr() {
+    public Set<String> pinYinAbbr() throws IllegalStateException {
+        if(!valid()) {
+            throw new PinYinNotMatchException(this);
+        }
         Set<StringBuilder> pinYinAbbr = new HashSet<>();
         pinYinAbbr.add(new StringBuilder());
         int len = chineseName.length();
-        String[] subs = pinYin.split("-");
-        if(subs.length != len) {
-            throw new IllegalStateException(Text.translatable("pinyin.chineseAndPinyinNotMatch", chineseName, pinYin).getString());
-        }
+        String[] subs = pinYin.split(SPLIT_CHAR + "");
         for(int i = 0; i < len; i++) {
-            int c = chineseName.charAt(i);
+            char c = chineseName.charAt(i);
             // 对应位置上是中文字符
             if(CHINESE_MIN <= c && c <= CHINESE_MAX) {
                 String sub = subs[i];
@@ -66,8 +100,8 @@ public class PinYin {
                     Set<StringBuilder> pinyinAbbr1 = new HashSet<>();
                     for(var builder : pinYinAbbr) {
                         // 产生分支
-                        builder.append(sub.charAt(0));
                         pinyinAbbr1.add(new StringBuilder(builder).append(sub2));
+                        builder.append(sub.charAt(0));
                     }
                     pinYinAbbr.addAll(pinyinAbbr1);
                 }

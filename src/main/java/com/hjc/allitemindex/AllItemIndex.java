@@ -7,6 +7,10 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
 public class AllItemIndex implements ModInitializer {
+    /**
+     * 是否不使用翻译键, 直接返回中文
+     */
+    public static final boolean USE_CHINESE = true;
 
     @Override
     public void onInitialize() {
