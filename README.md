@@ -8,3 +8,10 @@
 language是en, cn, pinyin, pinyin-abbr中的一种, 代表中文, 英文, 拼音全称, 拼音缩写 \
 query是查询词语, 支持模糊查询 \
 limit是输出的结果数, 可选, 默认为5 \
+
+# pload/pl
+形式为
+```
+/pload
+```
+该指令只能由管理员调用, 调用时尝试重新加载本地的index.json文件
