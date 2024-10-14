@@ -13,7 +13,6 @@ import com.hjc.allitemindex.model.ItemInfo;
 import com.mojang.brigadier.context.CommandContext;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.ServerCommandSource;
-import net.minecraft.text.Text;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -32,7 +31,7 @@ public class IndexJsonLoader {
             try {
                 Files.createDirectories(root);
             } catch (IOException e) {
-                System.err.println(Text.translatable("IndexJsonLoader.CreateDirectoryFailed", root));
+                System.err.println("创建文件夹失败 " + root);
             }
         }
     }
