@@ -2,10 +2,7 @@ package com.hjc.allitemindex.model;
 
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class ItemIndexes {
     // map的value一定不能为null
@@ -68,5 +65,28 @@ public class ItemIndexes {
         else {
             set.add(value);
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ItemIndexes that)) return false;
+        return Objects.equals(enIndex, that.enIndex) && Objects.equals(cnIndex, that.cnIndex) && Objects.equals(pinyinIndex, that.pinyinIndex) && Objects.equals(pinyinAbbrIndex, that.pinyinAbbrIndex) && Objects.equals(cnKeys, that.cnKeys);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex, cnKeys);
+    }
+
+    @Override
+    public String toString() {
+        return "ItemIndexes{" +
+                "enIndex=" + enIndex +
+                ", cnIndex=" + cnIndex +
+                ", pinyinIndex=" + pinyinIndex +
+                ", pinyinAbbrIndex=" + pinyinAbbrIndex +
+                ", cnKeys=" + cnKeys +
+                '}';
     }
 }

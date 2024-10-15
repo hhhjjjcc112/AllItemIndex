@@ -2,6 +2,7 @@ package com.hjc.allitemindex.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class ItemInfo {
@@ -36,6 +37,18 @@ public class ItemInfo {
                 ", directionColor=" + directionColor +
                 ", floorLight=" + floorLight +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ItemInfo itemInfo)) return false;
+        return Objects.equals(englishName, itemInfo.englishName) && Objects.equals(chineseName, itemInfo.chineseName) && Objects.equals(chineseAlias, itemInfo.chineseAlias) && carpetColor == itemInfo.carpetColor && direction == itemInfo.direction && directionColor == itemInfo.directionColor && floorLight == itemInfo.floorLight;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(englishName, chineseName, chineseAlias, carpetColor, direction, directionColor, floorLight);
     }
 
     /**
