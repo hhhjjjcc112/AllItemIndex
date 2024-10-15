@@ -45,7 +45,7 @@ public class PFindCommand {
      * 目前支持的语言的枚举
      */
     private enum Language {
-        en, cn, pinyin, pinyin_abbr
+        en, cn, pinyin, py, none
     }
 
     /**
@@ -55,6 +55,8 @@ public class PFindCommand {
     public static void register(
             CommandDispatcher<ServerCommandSource> dispatcher
     ) {
+
+        var pFind = CommandManager.literal("pfind");
         // 对于每种语言lang, 都生成一个/pfind <lang>的指令
         for(var lang :Language.values()) {
             // limit参数在最后
@@ -73,13 +75,20 @@ public class PFindCommand {
                     })
                     .then(limitArg);
             // 指令形式为 /pfind <language> <query> <limit>
-            var command = dispatcher.register(CommandManager.literal("pfind")
-                    .then(CommandManager.literal(lang.name())
-                            .then(queryArg)));
+            if(lang != Language.none) {
+                pFind = pFind.then(CommandManager.literal(lang.name()).then(queryArg));
+            }
+            else {
+                pFind = pFind.then(queryArg);
+            }
 
-            // 设置别名
-            dispatcher.register(CommandManager.literal("pf").redirect(command));
         }
+
+        // 注册pfind指令
+        var command = dispatcher.register(pFind);
+
+        // 设置别名
+        dispatcher.register(CommandManager.literal("pf").redirect(command));
     }
 
     // 输入指令后执行的内容，目前是打印参数
@@ -106,7 +115,8 @@ public class PFindCommand {
             // 拼音查询
             case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, lowercaseComparator, limit);
             // 拼音全称查询
-            case pinyin_abbr -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, lowercaseComparator, limit);
+            case py -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, lowercaseComparator, limit);
+            case none -> results = minKQueryResults(itemIndexes.allIndex, lowercaseComparator, limit);
             default -> throw new IllegalStateException("unreachable code");
         }
         // 输出结果
@@ -176,12 +186,12 @@ public class PFindCommand {
                 Set<String> keys;
                 // 转换为小写
                 String input = builder.getRemainingLowerCase().trim().replace("\"", "");
-                System.out.println(input);
                 switch(lang) {
                     case en -> keys = itemIndexes.enIndex.keySet();
                     case cn -> keys = itemIndexes.cnKeys;
                     case pinyin -> keys = itemIndexes.pinyinIndex.keySet();
-                    case pinyin_abbr -> keys = itemIndexes.pinyinAbbrIndex.keySet();
+                    case py -> keys = itemIndexes.pinyinAbbrIndex.keySet();
+                    case none -> keys = itemIndexes.allIndex.keySet();
                     default -> throw new IllegalStateException("unreachable code");
                 }
                 for(var k : keys) {

@@ -1,5 +1,6 @@
 package com.hjc.allitemindex.model;
 
+import com.hjc.allitemindex.util.PinYin;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 import java.util.*;
@@ -9,6 +10,8 @@ public class ItemIndexes {
     public final Map<String, Set<ItemInfo>> enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex;
     // 仅仅是为了作为输入补全而加上前后引号
     public final Set<String> cnKeys;
+    // 全部index
+    public final Map<String, Set<ItemInfo>> allIndex;
 
     public ItemIndexes() {
         this.enIndex = new HashMap<>();
@@ -16,6 +19,7 @@ public class ItemIndexes {
         this.pinyinIndex = new HashMap<>();
         this.pinyinAbbrIndex = new HashMap<>();
         this.cnKeys = new LinkedHashSet<>();
+        this.allIndex = new HashMap<>();
     }
 
     public static ItemIndexes from(Set<ItemInfo> infos) throws BadHanyuPinyinOutputFormatCombination {
@@ -32,25 +36,27 @@ public class ItemIndexes {
     private void add(ItemInfo info) throws BadHanyuPinyinOutputFormatCombination {
         String enKey = info.englishName;
         insertOrCreate(enIndex, enKey, info);
+        insertOrCreate(allIndex, enKey, info);
         // 获取并插入中文名称对应的中文, 拼音全称和拼音缩写
         String cnKey = info.chineseName;
         insertOrCreate(cnIndex, cnKey, info);
-        for(var py: PinYin.toPinYinSet(cnKey)) {
-            insertOrCreate(pinyinIndex, py, info);
-        }
-        for(var pyAbbr: PinYin.toPinYinAbbrSet(cnKey)) {
-            insertOrCreate(pinyinAbbrIndex, pyAbbr, info);
-        }
+        insertOrCreate(allIndex, cnKey, info);
+        // 拼音
+        insertAllOrCreate(pinyinIndex, PinYin.toPinYinSet(cnKey), info);
+        insertAllOrCreate(allIndex, PinYin.toPinYinSet(cnKey), info);
+        // 拼音缩写
+        insertAllOrCreate(pinyinAbbrIndex, PinYin.toPinYinAbbrSet(cnKey), info);
+        insertAllOrCreate(allIndex, PinYin.toPinYinAbbrSet(cnKey), info);
         // 获取并插入中文别名对应的中文, 拼音全称和拼音缩写
         Set<String> cnAliases = info.chineseAlias;
         for(String cnAlias : cnAliases) {
             insertOrCreate(cnIndex, cnAlias, info);
-            for(var py: PinYin.toPinYinSet(cnAlias)) {
-                insertOrCreate(pinyinIndex, py, info);
-            }
-            for(var pyAbbr: PinYin.toPinYinAbbrSet(cnAlias)) {
-                insertOrCreate(pinyinAbbrIndex, pyAbbr, info);
-            }
+
+            insertAllOrCreate(pinyinIndex, PinYin.toPinYinSet(cnAlias), info);
+            insertAllOrCreate(allIndex, PinYin.toPinYinSet(cnAlias), info);
+
+            insertAllOrCreate(pinyinAbbrIndex, PinYin.toPinYinAbbrSet(cnAlias), info);
+            insertAllOrCreate(allIndex, PinYin.toPinYinAbbrSet(cnAlias), info);
         }
     }
 
@@ -65,6 +71,12 @@ public class ItemIndexes {
         else {
             set.add(value);
         }
+    }
+
+    private <K, V> void insertAllOrCreate(Map<K, Set<V>> map, Set<K> keys, V value) {
+       for(K key: keys) {
+           insertOrCreate(map, key, value);
+       }
     }
 
     @Override
