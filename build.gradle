@@ -29,6 +29,11 @@ repositories {
     // for more information about repositories.
 }
 
+configurations {
+    includedLibrary
+    implementation.extendsFrom includedLibrary
+}
+
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -37,10 +42,7 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // https://mvnrepository.com/artifact/com.belerweb/pinyin4j
-    implementation group: 'com.belerweb', name: 'pinyin4j', version: '2.5.1'
-
-
+    includedLibrary('com.belerweb:pinyin4j:2.5.1')
 }
 
 processResources {
@@ -80,6 +82,10 @@ java {
 }
 
 jar {
+    from(configurations.includedLibrary.collect { it.isDirectory() ? it : zipTree(it) }) {
+        include '**'
+    }
+
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}" }
     }
