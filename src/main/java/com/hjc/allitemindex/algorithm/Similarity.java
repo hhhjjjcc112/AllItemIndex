@@ -9,16 +9,20 @@ public class Similarity {
 
 
     public static Comparator<String> getComparator(String query) {
+        String lowerQuery = query.toLowerCase();
         return (s1, s2) -> {
-            boolean in1 = s1.contains(query), in2 = s2.contains(query);
+            // 先转换为小写
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+            boolean in1 = s1.contains(lowerQuery), in2 = s2.contains(lowerQuery);
             if(in1 && !in2) {
                 return -1;
             }
             else if(!in1 && in2) {
                 return 1;
             }
-            int dis1 = editDistance(s1, query);
-            int dis2 = editDistance(s2, query);
+            int dis1 = editDistance(s1, lowerQuery);
+            int dis2 = editDistance(s2, lowerQuery);
             return dis1 - dis2;
         };
     }

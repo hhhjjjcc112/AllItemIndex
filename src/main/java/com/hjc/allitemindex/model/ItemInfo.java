@@ -9,9 +9,9 @@ public class ItemInfo {
     @SerializedName("en")
     public String englishName; // 英文名称(非官方?)
     @SerializedName("cn")
-    public PinYin chineseName; // 中文名称(非官方?)
+    public String chineseName; // 中文名称(非官方?)
     @SerializedName("alias")
-    public Set<PinYin> chineseAlias; // 中文别称(非官方)
+    public Set<String> chineseAlias; // 中文别称(非官方)
 //    @SerializedName("pinyin")
 //    public List<String> pinYinFull; // 拼音全称
 //    @SerializedName("pinyin_abbr")
@@ -43,12 +43,12 @@ public class ItemInfo {
      * @return 是否存在空值
      */
     public boolean anyEmpty() {
-        return englishName == null || chineseName == null || chineseAlias == null || carpetColor == null || direction == null || directionColor == null || floorLight == null || chineseName.anyEmpty() || anyNullInSet() || englishName.isBlank();
+        return englishName == null || chineseName == null || chineseAlias == null || carpetColor == null || direction == null || directionColor == null || floorLight == null || anyNullInSet() || englishName.isBlank() || chineseName.isBlank();
     }
 
     private boolean anyNullInSet() {
-        for(var pinyin: chineseAlias) {
-            if(pinyin.anyEmpty()) {
+        for(var alias: chineseAlias) {
+            if(alias == null || alias.isBlank()) {
                 return true;
             }
         }

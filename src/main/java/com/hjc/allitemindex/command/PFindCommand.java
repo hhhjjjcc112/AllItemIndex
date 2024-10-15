@@ -96,14 +96,13 @@ public class PFindCommand {
         // 获取当前的index表
         ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
         // 比较函数
-        Comparator<String> comparator = Similarity.getComparator(query.trim());
-        Comparator<String> lowercaseComparator = Similarity.getComparator(query.trim().toLowerCase());
+        Comparator<String> lowercaseComparator = Similarity.getComparator(query);
         List<ItemInfo> results;
         switch (lang) {
             // 英文查询
             case en -> results = minKQueryResults(itemIndexes.enIndex, lowercaseComparator, limit);
             // 中文查询
-            case cn -> results = minKQueryResults(itemIndexes.cnIndex, comparator, limit);
+            case cn -> results = minKQueryResults(itemIndexes.cnIndex, lowercaseComparator, limit);
             // 拼音查询
             case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, lowercaseComparator, limit);
             // 拼音全称查询
@@ -144,7 +143,7 @@ public class PFindCommand {
 
     private static MutableText genText(int index, ItemInfo info) {
         // 编号 + 中文名称
-        MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName.chineseName));
+        MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName));
         // 层灯光
         text.append(Text.translatable(info.floorLight.item.getTranslationKey()).setStyle(info.floorLight.colorStyle));
         text.append(" ");
@@ -177,6 +176,7 @@ public class PFindCommand {
                 Set<String> keys;
                 // 转换为小写
                 String input = builder.getRemainingLowerCase().trim().replace("\"", "");
+                System.out.println(input);
                 switch(lang) {
                     case en -> keys = itemIndexes.enIndex.keySet();
                     case cn -> keys = itemIndexes.cnKeys;
@@ -185,7 +185,7 @@ public class PFindCommand {
                     default -> throw new IllegalStateException("unreachable code");
                 }
                 for(var k : keys) {
-                    if(k.contains(input)) {
+                    if(k.toLowerCase().contains(input)) {
                         builder.suggest(k);
                     }
                 }

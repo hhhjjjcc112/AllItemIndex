@@ -1,6 +1,6 @@
 package com.hjc.allitemindex.model;
 
-import com.hjc.allitemindex.exception.PinYinNotMatchException;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -21,7 +21,7 @@ public class ItemIndexes {
         this.cnKeys = new LinkedHashSet<>();
     }
 
-    public static ItemIndexes from(Set<ItemInfo> infos) throws PinYinNotMatchException {
+    public static ItemIndexes from(Set<ItemInfo> infos) throws BadHanyuPinyinOutputFormatCombination {
         ItemIndexes indexes = new ItemIndexes();
         for (ItemInfo info : infos) {
             indexes.add(info);
@@ -32,27 +32,27 @@ public class ItemIndexes {
         return indexes;
     }
 
-    private void add(ItemInfo info) throws PinYinNotMatchException {
+    private void add(ItemInfo info) throws BadHanyuPinyinOutputFormatCombination {
         String enKey = info.englishName;
-        insertOrCreate(enIndex, enKey.toLowerCase(), info);
+        insertOrCreate(enIndex, enKey, info);
         // 获取并插入中文名称对应的中文, 拼音全称和拼音缩写
-        PinYin cnKey = info.chineseName;
-        insertOrCreate(cnIndex, cnKey.chineseName.toLowerCase(), info);
-        for(var py: cnKey.pinYin()) {
-            insertOrCreate(pinyinIndex, py.toLowerCase(), info);
+        String cnKey = info.chineseName;
+        insertOrCreate(cnIndex, cnKey, info);
+        for(var py: PinYin.toPinYinSet(cnKey)) {
+            insertOrCreate(pinyinIndex, py, info);
         }
-        for(var pyAbbr: cnKey.pinYinAbbr()) {
-            insertOrCreate(pinyinAbbrIndex, pyAbbr.toLowerCase(), info);
+        for(var pyAbbr: PinYin.toPinYinAbbrSet(cnKey)) {
+            insertOrCreate(pinyinAbbrIndex, pyAbbr, info);
         }
         // 获取并插入中文别名对应的中文, 拼音全称和拼音缩写
-        Set<PinYin> cnAliases = info.chineseAlias;
-        for(PinYin cnAlias : cnAliases) {
-            insertOrCreate(cnIndex, cnAlias.chineseName, info);
-            for(var py: cnAlias.pinYin()) {
-                insertOrCreate(pinyinIndex, py.toLowerCase(), info);
+        Set<String> cnAliases = info.chineseAlias;
+        for(String cnAlias : cnAliases) {
+            insertOrCreate(cnIndex, cnAlias, info);
+            for(var py: PinYin.toPinYinSet(cnAlias)) {
+                insertOrCreate(pinyinIndex, py, info);
             }
-            for(var pyAbbr: cnAlias.pinYinAbbr()) {
-                insertOrCreate(pinyinAbbrIndex, pyAbbr.toLowerCase(), info);
+            for(var pyAbbr: PinYin.toPinYinAbbrSet(cnAlias)) {
+                insertOrCreate(pinyinAbbrIndex, pyAbbr, info);
             }
         }
     }

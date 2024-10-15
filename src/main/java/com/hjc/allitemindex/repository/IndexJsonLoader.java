@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.hjc.allitemindex.exception.MyExceptionHandler;
-import com.hjc.allitemindex.exception.PinYinNotMatchException;
 import com.hjc.allitemindex.model.CarpetColor;
 import com.hjc.allitemindex.model.Direction;
 import com.hjc.allitemindex.model.ItemIndexes;
@@ -13,6 +12,7 @@ import com.hjc.allitemindex.model.ItemInfo;
 import com.mojang.brigadier.context.CommandContext;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.command.ServerCommandSource;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -92,8 +92,8 @@ public class IndexJsonLoader {
             MyExceptionHandler.error(context, e, "index.json包含空值");
         } catch(IllegalArgumentException e) {
             MyExceptionHandler.error(context, e, "方向和地毯颜色不对应");
-        } catch (PinYinNotMatchException e) {
-            MyExceptionHandler.error(context, e, "拼音解析失败");
+        } catch (BadHanyuPinyinOutputFormatCombination e) {
+            MyExceptionHandler.error(context, e, "拼音计算失败");
         } catch (JsonSyntaxException e) {
             MyExceptionHandler.error(context, e, "Json解析失败");
         } catch (IOException e) {
@@ -123,7 +123,7 @@ public class IndexJsonLoader {
             }
             // 方向和羊毛颜色是否对应(不是, 既然一定对应的话为啥俩都要啊)
             if(correspondingColors.get(info.direction) != info.directionColor) {
-                throw new IllegalArgumentException("单片" + info.chineseName.chineseName + "的方向和对应地毯颜色不对应, 地毯颜色应为" + correspondingColors.get(info.direction) + ", 实际为" + info.directionColor);
+                throw new IllegalArgumentException("单片" + info.chineseName + "的方向和对应地毯颜色不对应, 地毯颜色应为" + correspondingColors.get(info.direction) + ", 实际为" + info.directionColor);
             }
         }
     }
