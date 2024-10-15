@@ -78,9 +78,9 @@ public class PFindCommand {
             if(lang != Language.none) {
                 pFind = pFind.then(CommandManager.literal(lang.name()).then(queryArg));
             }
-            else {
-                pFind = pFind.then(queryArg);
-            }
+//            else {
+//                pFind = pFind.then(queryArg);
+//            }
 
         }
 
