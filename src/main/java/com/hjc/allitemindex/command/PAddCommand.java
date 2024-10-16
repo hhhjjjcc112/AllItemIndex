@@ -88,7 +88,7 @@ public class PAddCommand {
         pAdd.then(pAddItem).then(pAddAlias);
 
         var command = dispatcher.register(pAdd);
-        dispatcher.register(CommandManager.literal("pa").redirect(command));
+        dispatcher.register(CommandManager.literal("pa").requires(ctx -> ctx.hasPermissionLevel(2)).redirect(command));
     }
 
     private static int addItemNew(
