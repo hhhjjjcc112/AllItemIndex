@@ -29,7 +29,7 @@ public class PAddCommand {
      * @param dispatcher 用于注册、解析和执行命令
      */
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        var pAdd = CommandManager.literal("padd");
+        var pAdd = CommandManager.literal("padd").requires(ctx -> ctx.hasPermissionLevel(2));
         var pAddAlias = CommandManager.literal("alias");
         pAddAlias.then(
             CommandManager.argument("alias", StringArgumentType.string())
