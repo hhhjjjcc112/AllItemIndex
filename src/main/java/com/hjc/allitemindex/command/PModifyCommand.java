@@ -19,8 +19,8 @@ public class PModifyCommand {
             context.getSource().sendMessage(Text.literal("PURE MEMORY").formatted(Formatting.AQUA));
             return Command.SINGLE_SUCCESS;
         });
-        var command = dispatcher.register(pModify);
-        dispatcher.register(CommandManager.literal("pm").redirect(command));
+//        var command = dispatcher.register(pModify);
+//        dispatcher.register(CommandManager.literal("pm").redirect(command));
 
     }
 }

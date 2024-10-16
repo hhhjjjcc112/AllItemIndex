@@ -22,6 +22,7 @@ public class ItemInfo {
     @SerializedName("light")
     public FloorLight floorLight; // 所在楼层地板的灯光
 
+
     @Override
     public String toString() {
         return "ItemInfo{" +

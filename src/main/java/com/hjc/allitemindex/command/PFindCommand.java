@@ -3,13 +3,12 @@ package com.hjc.allitemindex.command;
 import com.hjc.allitemindex.algorithm.Similarity;
 import com.hjc.allitemindex.model.ItemIndexes;
 import com.hjc.allitemindex.model.ItemInfo;
-import com.hjc.allitemindex.repository.IndexJsonLoader;
+import com.hjc.allitemindex.repository.IndexJsonManager;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
 import com.mojang.brigadier.suggestion.Suggestions;
 import com.mojang.brigadier.suggestion.SuggestionsBuilder;
@@ -23,8 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-
-import static com.hjc.allitemindex.AllItemIndex.USE_CHINESE;
 
 public class PFindCommand {
 
@@ -45,7 +42,7 @@ public class PFindCommand {
      * 目前支持的语言的枚举
      */
     private enum Language {
-        en, cn, pinyin, py, none
+        py, pinyin, cn, en, none
     }
 
     /**
@@ -55,16 +52,23 @@ public class PFindCommand {
     public static void register(
             CommandDispatcher<ServerCommandSource> dispatcher
     ) {
+//        registerLangVer(dispatcher);
+        registerNoLangVer(dispatcher);
+    }
 
+    private static void registerLangVer(CommandDispatcher<ServerCommandSource> dispatcher) {
         var pFind = CommandManager.literal("pfind");
         // 对于每种语言lang, 都生成一个/pfind <lang>的指令
         for(var lang :Language.values()) {
+            if(lang == Language.none) {
+                continue;
+            }
             // limit参数在最后
             var limitArg = CommandManager.argument("limit", IntegerArgumentType.integer(MIN_LIMIT, MAX_LIMIT)).executes(ctx -> {
-                        String query = StringArgumentType.getString(ctx, "query");
-                        int limit = IntegerArgumentType.getInteger(ctx, "limit");
-                        return pFindAction(ctx, lang, query, limit);
-                    });
+                String query = StringArgumentType.getString(ctx, "query");
+                int limit = IntegerArgumentType.getInteger(ctx, "limit");
+                return pFindAction(ctx, lang, query, limit);
+            });
             // query参数 <limit>
             var queryArg = CommandManager.argument("query", StringArgumentType.string())
                     // 自动补全提示
@@ -75,19 +79,34 @@ public class PFindCommand {
                     })
                     .then(limitArg);
             // 指令形式为 /pfind <language> <query> <limit>
-            if(lang != Language.none) {
-                pFind = pFind.then(CommandManager.literal(lang.name()).then(queryArg));
-            }
-//            else {
-//                pFind = pFind.then(queryArg);
-//            }
-
+            pFind.then(CommandManager.literal(lang.name()).then(queryArg));
         }
 
         // 注册pfind指令
         var command = dispatcher.register(pFind);
 
         // 设置别名
+        dispatcher.register(CommandManager.literal("pf").redirect(command));
+    }
+
+    private static void registerNoLangVer(CommandDispatcher<ServerCommandSource> dispatcher) {
+        var limitArg = CommandManager.argument("limit", IntegerArgumentType.integer(MIN_LIMIT, MAX_LIMIT)).executes(ctx -> {
+            String query = StringArgumentType.getString(ctx, "query");
+            int limit = IntegerArgumentType.getInteger(ctx, "limit");
+            return pFindAction(ctx, Language.none, query, limit);
+        });
+        // query参数 <limit>
+        var queryArg = CommandManager.argument("query", StringArgumentType.string())
+                // 自动补全提示
+                .suggests(new QuerySuggestionProvider(Language.none))
+                .executes(ctx -> {
+                    String query = StringArgumentType.getString(ctx, "query");
+                    return pFindAction(ctx, Language.none, query, DEFAULT_LIMIT);
+                })
+                .then(limitArg);
+        var pFind = CommandManager.literal("pfind").then(queryArg);
+        // 注册pfind指令
+        var command = dispatcher.register(pFind);
         dispatcher.register(CommandManager.literal("pf").redirect(command));
     }
 
@@ -103,7 +122,7 @@ public class PFindCommand {
 //        // 给指令的发送者返回信息
 //        sender.sendMessage(Text.literal(String.format("call pfind with %s %s %d", lang, query, limit)));
         // 获取当前的index表
-        ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
+        ItemIndexes itemIndexes = IndexJsonManager.getIndexesInstance(context);
         // 比较函数
         Comparator<String> lowercaseComparator = Similarity.getComparator(query);
         List<ItemInfo> results;
@@ -120,12 +139,7 @@ public class PFindCommand {
             default -> throw new IllegalStateException("unreachable code");
         }
         // 输出结果
-        if(USE_CHINESE) {
-            sender.sendMessage(Text.of(String.format("前 %s 个搜索 %s 的结果为:", limit, query)));
-        }
-        else {
-            sender.sendMessage(Text.translatable("pfind.result", limit, query));
-        }
+        sender.sendMessage(Text.of(String.format("前 %s 个搜索 %s 的结果为:", limit, query)));
         for(int i = 0;i < results.size();i++) {
             sender.sendMessage(genText(i + 1, results.get(i)));
         }
@@ -161,11 +175,7 @@ public class PFindCommand {
         text.append(Text.translatable(info.directionColor.item.getTranslationKey()).setStyle(info.directionColor.colorStyle));
         text.append(" ");
         // 方向
-        if(USE_CHINESE) {
-            text.append(Text.of(info.direction.cn));
-        } else {
-            text.append(Text.translatable(info.direction.translationKey));
-        }
+        text.append(Text.of(info.direction.cn));
 
         text.append(" ");
         // 具体位置的地毯
@@ -181,8 +191,8 @@ public class PFindCommand {
             public CompletableFuture<Suggestions> getSuggestions(
                     CommandContext<ServerCommandSource> context,
                     SuggestionsBuilder builder
-            ) throws CommandSyntaxException {
-                ItemIndexes itemIndexes = IndexJsonLoader.getIndexesInstance(context);
+            ) {
+                ItemIndexes itemIndexes = IndexJsonManager.getIndexesInstance(context);
                 Set<String> keys;
                 // 转换为小写
                 String input = builder.getRemainingLowerCase().trim().replace("\"", "");
@@ -195,7 +205,7 @@ public class PFindCommand {
                     default -> throw new IllegalStateException("unreachable code");
                 }
                 for(var k : keys) {
-                    if(k.toLowerCase().contains(input)) {
+                    if(k.toLowerCase().startsWith(input)) {
                         builder.suggest(k);
                     }
                 }

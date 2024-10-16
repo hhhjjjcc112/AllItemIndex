@@ -5,7 +5,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.hjc.allitemindex.exception.MyExceptionHandler;
-import com.hjc.allitemindex.model.CarpetColor;
 import com.hjc.allitemindex.model.Direction;
 import com.hjc.allitemindex.model.ItemIndexes;
 import com.hjc.allitemindex.model.ItemInfo;
@@ -18,12 +17,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
-public class IndexJsonLoader {
+public class IndexJsonManager {
 
     private static final Path root = FabricLoader.getInstance().getConfigDir().resolve("allitemindex");
     static {
@@ -52,7 +48,7 @@ public class IndexJsonLoader {
      * @return ItemIndexes对象
      */
     public static ItemIndexes getIndexesInstance(CommandContext<ServerCommandSource> context) {
-        synchronized (IndexJsonLoader.class) {
+        synchronized (IndexJsonManager.class) {
             if(!loaded) {
                 loaded = loadFromLocal(context);
             }
@@ -69,9 +65,44 @@ public class IndexJsonLoader {
      * @return 重新加载是否成功
      */
     public static boolean reload(CommandContext<ServerCommandSource> context) {
-        synchronized (IndexJsonLoader.class) {
+        synchronized (IndexJsonManager.class) {
             loaded = loadFromLocal(context);
             return loaded;
+        }
+    }
+
+    public static boolean addItem(CommandContext<ServerCommandSource> context, ItemInfo info) throws BadHanyuPinyinOutputFormatCombination {
+        synchronized (IndexJsonManager.class) {
+            if(!loaded) {
+                loaded = loadFromLocal(context);
+            }
+            if(loaded && infos.add(info)) {
+                indexes = ItemIndexes.from(infos);
+                return saveToLocal(context);
+            }
+            return false;
+        }
+    }
+
+    public static boolean addAlias(
+            CommandContext<ServerCommandSource> context,
+            String alias,
+            String chineseName
+    ) throws BadHanyuPinyinOutputFormatCombination {
+        synchronized (IndexJsonManager.class) {
+            if(!loaded) {
+                loaded = loadFromLocal(context);
+            }
+            if(loaded) {
+                for(var info: infos) {
+                    if(info.chineseName.equals(chineseName)) {
+                        info.chineseAlias.add(alias);
+                        indexes = ItemIndexes.from(infos);
+                    }
+                }
+                return saveToLocal(context);
+            }
+            return false;
         }
     }
 
@@ -83,8 +114,7 @@ public class IndexJsonLoader {
     private static boolean loadFromLocal(CommandContext<ServerCommandSource> context) {
         try {
             String content = Files.readString(indexFile, StandardCharsets.UTF_8);
-            infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {
-            }.getType());
+            infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {}.getType());
             checkInfos(infos);
             indexes = ItemIndexes.from(infos);
             return true;
@@ -102,14 +132,20 @@ public class IndexJsonLoader {
         return false;
     }
 
-    private static Map<Direction, CarpetColor> correspondingColors = new HashMap<>();
-    static {
-        correspondingColors.put(Direction.NORTH, CarpetColor.WHITE);
-        correspondingColors.put(Direction.SOUTH, CarpetColor.GREEN);
-        correspondingColors.put(Direction.WEST, CarpetColor.BLUE);
-        correspondingColors.put(Direction.EAST, CarpetColor.RED);
-        // 设置不可变
-        correspondingColors = Collections.unmodifiableMap(correspondingColors);
+    /**
+     * 保存infos到本地
+     * @param context 调用时的指令上下文
+     * @return 保存是否成功
+     */
+    private static boolean saveToLocal(CommandContext<ServerCommandSource> context) {
+        try {
+            String content = gson.toJson(infos);
+            Files.writeString(indexFile, content, StandardCharsets.UTF_8);
+            return true;
+        } catch (IOException e) {
+            MyExceptionHandler.error(context, e, "index.json文件保存失败");
+        }
+        return false;
     }
 
     /**
@@ -122,8 +158,8 @@ public class IndexJsonLoader {
                 throw new NullPointerException("itemInfo " + info + " 包含空值");
             }
             // 方向和羊毛颜色是否对应(不是, 既然一定对应的话为啥俩都要啊)
-            if(correspondingColors.get(info.direction) != info.directionColor) {
-                throw new IllegalArgumentException("单片" + info.chineseName + "的方向和对应地毯颜色不对应, 地毯颜色应为" + correspondingColors.get(info.direction) + ", 实际为" + info.directionColor);
+            if(Direction.correspondingColors.get(info.direction) != info.directionColor) {
+                throw new IllegalArgumentException("单片" + info.chineseName + "的方向和对应地毯颜色不对应, 地毯颜色应为" + Direction.correspondingColors.get(info.direction) + ", 实际为" + info.directionColor);
             }
         }
     }

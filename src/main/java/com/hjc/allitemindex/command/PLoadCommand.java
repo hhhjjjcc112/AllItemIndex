@@ -1,14 +1,13 @@
 package com.hjc.allitemindex.command;
 
-import com.hjc.allitemindex.repository.IndexJsonLoader;
+import com.hjc.allitemindex.exception.MyExceptionHandler;
+import com.hjc.allitemindex.repository.IndexJsonManager;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
-
-import static com.hjc.allitemindex.AllItemIndex.USE_CHINESE;
 
 public class PLoadCommand {
 
@@ -32,25 +31,13 @@ public class PLoadCommand {
             CommandContext<ServerCommandSource> context
     ) {
         var source = context.getSource();
-        if(USE_CHINESE) {
-            source.sendMessage(Text.of("正在尝试重新加载index.json"));
-        } else {
-            source.sendMessage(Text.translatable("pload.reloadAttempt"));
-        }
-        boolean success = IndexJsonLoader.reload(context);
+        source.sendMessage(Text.of("正在尝试重新加载index.json"));
+        boolean success = IndexJsonManager.reload(context);
         if (success) {
-            if(USE_CHINESE) {
-                source.sendMessage(Text.of("重新加载index.json成功!"));
-            } else {
-                source.sendMessage(Text.translatable("pload.success"));
-            }
+            source.sendMessage(Text.of("重新加载index.json成功!"));
         }
         else {
-            if(USE_CHINESE) {
-                source.sendMessage(Text.of("重新加载index.json失败"));
-            } else {
-                source.sendMessage(Text.translatable("pload.failure"));
-            }
+            MyExceptionHandler.error(context, new RuntimeException("重新加载index.json失败"), "重新加载index.json失败");
         }
         return Command.SINGLE_SUCCESS;
     }

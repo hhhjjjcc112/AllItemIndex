@@ -10,8 +10,6 @@ import net.minecraft.util.Formatting;
 
 import java.util.logging.Logger;
 
-import static com.hjc.allitemindex.AllItemIndex.USE_CHINESE;
-
 public class MyExceptionHandler {
 
     public static final int VISITORS = 0;
@@ -28,11 +26,7 @@ public class MyExceptionHandler {
         MinecraftServer server = source.getServer();
         // 如果不是管理员, 那么返回如下消息
         if(!source.hasPermissionLevel(OPS)) {
-            if(USE_CHINESE) {
-                source.sendMessage(Text.literal("模组出现错误, 请联系服务器管理员").formatted(Formatting.RED));
-            } else {
-                source.sendMessage(Text.translatable("allitemindex.contactOperators"));
-            }
+            source.sendMessage(Text.literal("模组出现错误, 请联系服务器管理员").formatted(Formatting.RED));
         }
         PlayerManager manager = server.getPlayerManager();
         manager.broadcast(Text.literal("错误: " + message).formatted(Formatting.RED), false);

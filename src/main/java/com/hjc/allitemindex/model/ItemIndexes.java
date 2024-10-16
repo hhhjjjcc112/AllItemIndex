@@ -2,6 +2,7 @@ package com.hjc.allitemindex.model;
 
 import com.hjc.allitemindex.util.PinYin;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -22,7 +23,7 @@ public class ItemIndexes {
         this.allIndex = new HashMap<>();
     }
 
-    public static ItemIndexes from(Set<ItemInfo> infos) throws BadHanyuPinyinOutputFormatCombination {
+    public static @NotNull ItemIndexes from(@NotNull Set<ItemInfo> infos) throws BadHanyuPinyinOutputFormatCombination {
         ItemIndexes indexes = new ItemIndexes();
         for (ItemInfo info : infos) {
             indexes.add(info);
@@ -33,7 +34,7 @@ public class ItemIndexes {
         return indexes;
     }
 
-    private void add(ItemInfo info) throws BadHanyuPinyinOutputFormatCombination {
+    private void add(@NotNull ItemInfo info) throws BadHanyuPinyinOutputFormatCombination {
         String enKey = info.englishName;
         insertOrCreate(enIndex, enKey, info);
         insertOrCreate(allIndex, enKey, info);

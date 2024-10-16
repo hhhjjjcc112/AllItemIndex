@@ -2,6 +2,8 @@ package com.hjc.allitemindex.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Map;
+
 public enum Direction {
     @SerializedName("南")
     SOUTH("direction.south", "南方"),
@@ -11,6 +13,13 @@ public enum Direction {
     EAST("direction.east", "东方"),
     @SerializedName("西")
     WEST("direction.west", "西方");
+
+    public static final Map<Direction, CarpetColor> correspondingColors = Map.of(
+            NORTH, CarpetColor.WHITE,
+            SOUTH, CarpetColor.GREEN,
+            WEST, CarpetColor.BLUE,
+            EAST, CarpetColor.RED
+    );
 
     Direction(String key, String cn) {
         translationKey = key;
