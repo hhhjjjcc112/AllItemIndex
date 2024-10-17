@@ -141,7 +141,7 @@ public class PFindCommand {
         // 输出结果
         sender.sendMessage(Text.of(String.format("前 %s 个搜索 %s 的结果为:", limit, query)));
         for(int i = 0;i < results.size();i++) {
-            sender.sendMessage(genText(i + 1, results.get(i)));
+            sender.sendMessage(genText(i + 1, results.get(i), sender.hasPermissionLevel(2)));
         }
 
         return Command.SINGLE_SUCCESS;
@@ -165,9 +165,12 @@ public class PFindCommand {
         return keys.stream().sorted(comparator).flatMap(k -> map.get(k).stream()).distinct().limit(limit).toList();
     }
 
-    private static MutableText genText(int index, ItemInfo info) {
+    private static MutableText genText(int index, ItemInfo info, boolean showId) {
         // 编号 + 中文名称
         MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName));
+        if(showId) {
+            text.append(Text.of(String.format("id=%d ", info.id.id)));
+        }
         // 层灯光
         text.append(Text.translatable(info.floorLight.item.getTranslationKey()).setStyle(info.floorLight.colorStyle));
         text.append(" ");

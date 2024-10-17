@@ -31,6 +31,7 @@ import java.util.stream.Collectors;
 public class PRemoveCommand {
     /**
      * 注册/premove /pr指令
+     *
      * @param dispatcher 用于注册、解析和执行命令
      */
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
@@ -47,42 +48,40 @@ public class PRemoveCommand {
                                                 StringArgumentType.getString(ctx, "alias"),
                                                 StringArgumentType.getString(ctx, "chineseName"))
                                         )
-                        ))
+                                ))
 
         );
 
-        var pRemoveItem = CommandManager.literal("item").then(
-                CommandManager.argument("chineseName", StringArgumentType.string())
-                        .suggests(new SuggestionProviders.ChineseNameSuggestionProvider())
-                        .executes(ctx -> removeItem(
-                                ctx,
-                                StringArgumentType.getString(ctx, "chineseName"),
-                                false
-                        ))
-                        .then(CommandManager.literal("all")
+        var pRemoveItem = CommandManager.literal("item")
+                .then(CommandManager.literal("name").then(
+                        CommandManager.argument("chineseName", StringArgumentType.string())
+                                .suggests(new SuggestionProviders.ChineseNameSuggestionProvider())
                                 .executes(ctx -> removeItem(
                                         ctx,
                                         StringArgumentType.getString(ctx, "chineseName"),
-                                        true
+                                        false
                                 ))
-                        )
-                        .then(CommandManager.literal("index")
-                                .then(CommandManager.argument("index", IntegerArgumentType.integer(0))
-                                    .executes(ctx -> removeItemAtIndex(
-                                            ctx,
-                                            StringArgumentType.getString(ctx, "chineseName"),
-                                            IntegerArgumentType.getInteger(ctx, "index")
-                                    ))
-                        )).then(CommandManager.literal("id")
-                                .then(CommandManager.argument("id", LongArgumentType.longArg(0))
-                                    .executes(ctx -> removeItemAtId(
-                                            ctx,
-                                            StringArgumentType.getString(ctx, "chineseName"),
-                                            LongArgumentType.getLong(ctx, "id")
-                                    ))
+                                .then(CommandManager.literal("all")
+                                        .executes(ctx -> removeItem(
+                                                ctx,
+                                                StringArgumentType.getString(ctx, "chineseName"),
+                                                true
+                                        ))
+                                )
+                                .then(CommandManager.literal("index")
+                                        .then(CommandManager.argument("index", IntegerArgumentType.integer(0))
+                                                .executes(ctx -> removeItemAtIndex(
+                                                        ctx,
+                                                        StringArgumentType.getString(ctx, "chineseName"),
+                                                        IntegerArgumentType.getInteger(ctx, "index")
+                                                )))
+                                ))
+                ).then(CommandManager.literal("id").then(CommandManager.argument("id", LongArgumentType.longArg(0))
+                        .executes(ctx -> removeItemAtId(
+                                ctx,
+                                LongArgumentType.getLong(ctx, "id")
                         ))
-
-        );
+                ));
 
         pRemove.then(pRemoveAlias).then(pRemoveItem);
 
@@ -99,22 +98,21 @@ public class PRemoveCommand {
     ) {
         Set<ItemInfo> infos = IndexJsonManager.getInfosInstance(context);
         Set<ItemInfo> items = infos.stream().filter(info -> chineseName.equals(info.chineseName)).collect(Collectors.toSet());
-        if(items.isEmpty()) {
+        if (items.isEmpty()) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
             return -1;
         }
         // 取第一个物品的别名
         Set<String> aliases = items.iterator().next().chineseAlias;
-        if(!aliases.contains(alias)) {
+        if (!aliases.contains(alias)) {
             MyExceptionHandler.error(context, new Throwable("该物品没有对应别名"), "未找到别名" + alias);
             return -2;
         }
         try {
-            if(IndexJsonManager.removeAlias(context, alias, chineseName)) {
+            if (IndexJsonManager.removeAlias(context, alias, chineseName)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("成功删除%s的别名%s", chineseName, alias)));
-            }
-            else {
+            } else {
                 MyExceptionHandler.error(context, new Throwable("删除别名失败"), "删除别名失败");
                 return -3;
             }
@@ -131,18 +129,17 @@ public class PRemoveCommand {
             boolean removeAll
     ) {
         Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if(items.isEmpty()) {
+        if (items.isEmpty()) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
             return -1;
         }
         // 删除全部
-        if(removeAll) {
+        if (removeAll) {
             try {
-                if(IndexJsonManager.removeItems(context, items)) {
+                if (IndexJsonManager.removeItems(context, items)) {
                     ServerCommandSource source = context.getSource();
                     source.sendMessage(Text.of(String.format("成功删除%s的全部单片", chineseName)));
-                }
-                else {
+                } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                     return -2;
                 }
@@ -152,11 +149,11 @@ public class PRemoveCommand {
             }
         }
         // 需要指定ID或索引
-        else if(items.size() > 1) {
+        else if (items.size() > 1) {
             ServerCommandSource source = context.getSource();
             source.sendMessage(Text.of(String.format("存在多条与%s对应的物品, 请指定ID或索引", chineseName)));
             var it = items.iterator();
-            for(int i = 0;i < items.size();i++) {
+            for (int i = 0; i < items.size(); i++) {
                 ItemInfo info = it.next();
                 int index = i + 1;
 
@@ -177,16 +174,14 @@ public class PRemoveCommand {
                 // 分别提示每条记录
                 source.sendMessage(text);
             }
-        }
-        else {
+        } else {
             // 删除第一个物品
             ItemInfo item = items.iterator().next();
             try {
-                if(IndexJsonManager.removeItem(context, item)) {
+                if (IndexJsonManager.removeItem(context, item)) {
                     ServerCommandSource source = context.getSource();
                     source.sendMessage(Text.of(String.format("成功删除%s的第一个单片", chineseName)));
-                }
-                else {
+                } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                     return -4;
                 }
@@ -204,21 +199,20 @@ public class PRemoveCommand {
             int index
     ) {
         Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if(items.isEmpty()) {
+        if (items.isEmpty()) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
             return -1;
         }
-        if(index < 1 || index > items.size()) {
+        if (index < 1 || index > items.size()) {
             MyExceptionHandler.error(context, new Throwable("索引超出范围"), "索引超出范围");
             return -2;
         }
         ItemInfo item = items.stream().skip(index - 1).findFirst().orElseThrow();
         try {
-            if(IndexJsonManager.removeItem(context, item)) {
+            if (IndexJsonManager.removeItem(context, item)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("成功删除%s的第%d个单片", chineseName, index)));
-            }
-            else {
+            } else {
                 MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                 return -3;
             }
@@ -231,21 +225,15 @@ public class PRemoveCommand {
 
     private static int removeItemAtId(
             CommandContext<ServerCommandSource> context,
-            String chineseName,
             long id
     ) {
-        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if(items.isEmpty()) {
-            MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
-            return -1;
-        }
+        Set<ItemInfo> items = IndexJsonManager.getInfosInstance(context);
         try {
             ItemInfo item = items.stream().filter(info -> info.id.id == id).findFirst().orElseThrow();
-            if(IndexJsonManager.removeItem(context, item)) {
+            if (IndexJsonManager.removeItem(context, item)) {
                 ServerCommandSource source = context.getSource();
-                source.sendMessage(Text.of(String.format("成功删除%s的id为%d的单片", chineseName, id)));
-            }
-            else {
+                source.sendMessage(Text.of(String.format("成功删除%s的id为%d的单片", item.chineseName, id)));
+            } else {
                 MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                 return -2;
             }
@@ -271,10 +259,9 @@ public class PRemoveCommand {
         public CompletableFuture<Suggestions> getSuggestions(CommandContext<ServerCommandSource> context, SuggestionsBuilder builder) throws CommandSyntaxException {
             String str = builder.getInput();
             StringReader reader;
-            if(str.startsWith("/premove alias ")) {
+            if (str.startsWith("/premove alias ")) {
                 reader = new StringReader(str.substring("/premove alias ".length()));
-            }
-            else {
+            } else {
                 reader = new StringReader(str.substring("/pr alias ".length()));
             }
             String alias = reader.readString();
@@ -282,7 +269,7 @@ public class PRemoveCommand {
             System.out.println(alias);
             String input = builder.getRemaining().replace("\"", "");
             ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
-            if(!indexes.cnIndex.containsKey(alias)) {
+            if (!indexes.cnIndex.containsKey(alias)) {
                 throw NO_SUCH_ALIAS.create(alias);
             }
             indexes.cnIndex.get(alias).stream().map(info -> info.chineseName).distinct().filter(name -> name.startsWith(input)).forEach(s -> builder.suggest(String.format("\"%s\"", s)));
