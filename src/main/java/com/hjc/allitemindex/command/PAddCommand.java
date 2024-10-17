@@ -12,6 +12,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
@@ -121,6 +122,8 @@ public class PAddCommand {
                 ServerCommandSource source = context.getSource();
                 // 唉, 懒得再搞翻译键了
                 source.sendMessage(Text.of(String.format("成功添加新物品单片: %s", chineseName)));
+                // 展示添加成功的给用户看
+                source.sendMessage(genDescription(info));
             }
             else {
                 MyExceptionHandler.error(context, new RuntimeException("添加新物品单片失败"), "添加新物品单片失败");
@@ -161,6 +164,8 @@ public class PAddCommand {
             if(IndexJsonManager.addItem(context, newInfo)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("添加物品单片成功: %s", chineseName)));
+                // 展示添加成功的给用户看
+                source.sendMessage(genDescription(newInfo));
             }
             else {
                 MyExceptionHandler.error(context, new RuntimeException("添加物品单片失败"), "添加物品单片失败");
@@ -203,4 +208,21 @@ public class PAddCommand {
     private static Set<ItemInfo> getItemsWithChineseName(CommandContext<ServerCommandSource> context, String chineseName) {
         return IndexJsonManager.getInfosInstance(context).stream().filter(info -> chineseName.equals(info.chineseName)).collect(LinkedHashSet::new, Set::add, Set::addAll);
     }
+    private static MutableText genDescription(ItemInfo item) {
+        // 编号 + 中文名称
+        MutableText text = Text.literal(String.format("%s id: %d 位置: ", item.chineseName, item.id.id));
+        // 层灯光
+        text.append(Text.translatable(item.floorLight.item.getTranslationKey()).setStyle(item.floorLight.colorStyle));
+        text.append(" ");
+        // 表示方向的地毯
+        text.append(Text.translatable(item.directionColor.item.getTranslationKey()).setStyle(item.directionColor.colorStyle));
+        text.append(" ");
+        // 方向
+        text.append(Text.of(item.direction.cn));
+        text.append(" ");
+        // 具体位置的地毯
+        text.append(Text.translatable(item.carpetColor.item.getTranslationKey()).setStyle(item.carpetColor.colorStyle));
+        return text;
+    }
+
 }

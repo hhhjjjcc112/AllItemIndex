@@ -139,6 +139,12 @@ public class PRemoveCommand {
                 if (IndexJsonManager.removeItems(context, items)) {
                     ServerCommandSource source = context.getSource();
                     source.sendMessage(Text.of(String.format("成功删除%s的全部单片", chineseName)));
+                    // 把所有删除成功的展示给用户
+                    var it = items.iterator();
+                    for (int i = 1; it.hasNext(); i++) {
+                        ItemInfo item = it.next();
+                        source.sendMessage(genDescription(i, item));
+                    }
                 } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                     return -2;
@@ -152,35 +158,22 @@ public class PRemoveCommand {
         else if (items.size() > 1) {
             ServerCommandSource source = context.getSource();
             source.sendMessage(Text.of(String.format("存在多条与%s对应的物品, 请指定ID或索引", chineseName)));
+            // 把所有记录展示给用户
             var it = items.iterator();
-            for (int i = 0; i < items.size(); i++) {
-                ItemInfo info = it.next();
-                int index = i + 1;
-
-                // 编号 + 中文名称
-                MutableText text = Text.literal(String.format("%s 索引: %d id: %d 位置: ", info.chineseName, index, info.id.id));
-                // 层灯光
-                text.append(Text.translatable(info.floorLight.item.getTranslationKey()).setStyle(info.floorLight.colorStyle));
-                text.append(" ");
-                // 表示方向的地毯
-                text.append(Text.translatable(info.directionColor.item.getTranslationKey()).setStyle(info.directionColor.colorStyle));
-                text.append(" ");
-                // 方向
-                text.append(Text.of(info.direction.cn));
-                text.append(" ");
-                // 具体位置的地毯
-                text.append(Text.translatable(info.carpetColor.item.getTranslationKey()).setStyle(info.carpetColor.colorStyle));
-
-                // 分别提示每条记录
-                source.sendMessage(text);
+            for (int i = 1; it.hasNext(); i++) {
+                ItemInfo item = it.next();
+                source.sendMessage(genDescription(i, item));
             }
+
         } else {
             // 删除第一个物品
             ItemInfo item = items.iterator().next();
             try {
                 if (IndexJsonManager.removeItem(context, item)) {
                     ServerCommandSource source = context.getSource();
-                    source.sendMessage(Text.of(String.format("成功删除%s的第一个单片", chineseName)));
+                    source.sendMessage(Text.of(String.format("成功删除%s的唯一一个单片", chineseName)));
+                    // 把删除成功的展示给用户
+                    source.sendMessage(genDescription(1, item));
                 } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                     return -4;
@@ -205,6 +198,13 @@ public class PRemoveCommand {
         }
         if (index < 1 || index > items.size()) {
             MyExceptionHandler.error(context, new Throwable("索引超出范围"), "索引超出范围");
+            ServerCommandSource source = context.getSource();
+            // 把所有记录展示给用户, 这样用户好知道是什么单片
+            var it = items.iterator();
+            for (int i = 1; it.hasNext(); i++) {
+                ItemInfo item = it.next();
+                source.sendMessage(genDescription(i, item));
+            }
             return -2;
         }
         ItemInfo item = items.stream().skip(index - 1).findFirst().orElseThrow();
@@ -212,6 +212,8 @@ public class PRemoveCommand {
             if (IndexJsonManager.removeItem(context, item)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("成功删除%s的第%d个单片", chineseName, index)));
+                // 把删除成功的展示给用户
+                source.sendMessage(genDescription(index, item));
             } else {
                 MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                 return -3;
@@ -233,6 +235,8 @@ public class PRemoveCommand {
             if (IndexJsonManager.removeItem(context, item)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("成功删除%s的id为%d的单片", item.chineseName, id)));
+                // 把删除成功的展示给用户
+                source.sendMessage(genDescription(1, item));
             } else {
                 MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                 return -2;
@@ -249,6 +253,23 @@ public class PRemoveCommand {
 
     private static Set<ItemInfo> getItemsWithChineseName(CommandContext<ServerCommandSource> context, String chineseName) {
         return IndexJsonManager.getInfosInstance(context).stream().filter(info -> chineseName.equals(info.chineseName)).collect(LinkedHashSet::new, Set::add, Set::addAll);
+    }
+
+    private static MutableText genDescription(int index, ItemInfo item) {
+            // 编号 + 中文名称
+            MutableText text = Text.literal(String.format("%s 索引: %d id: %d 位置: ", item.chineseName, index, item.id.id));
+            // 层灯光
+            text.append(Text.translatable(item.floorLight.item.getTranslationKey()).setStyle(item.floorLight.colorStyle));
+            text.append(" ");
+            // 表示方向的地毯
+            text.append(Text.translatable(item.directionColor.item.getTranslationKey()).setStyle(item.directionColor.colorStyle));
+            text.append(" ");
+            // 方向
+            text.append(Text.of(item.direction.cn));
+            text.append(" ");
+            // 具体位置的地毯
+            text.append(Text.translatable(item.carpetColor.item.getTranslationKey()).setStyle(item.carpetColor.colorStyle));
+            return text;
     }
 
     private static final class ChineseNameOfAliasSuggestionProvider implements SuggestionProvider<ServerCommandSource> {
