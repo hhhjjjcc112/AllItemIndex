@@ -1,16 +1,15 @@
 package com.hjc.allitemindex.command;
 
 import com.hjc.allitemindex.exception.MyExceptionHandler;
-import com.hjc.allitemindex.model.*;
+import com.hjc.allitemindex.model.CarpetColor;
+import com.hjc.allitemindex.model.Direction;
+import com.hjc.allitemindex.model.FloorLight;
+import com.hjc.allitemindex.model.ItemInfo;
 import com.hjc.allitemindex.repository.IndexJsonManager;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.mojang.brigadier.suggestion.SuggestionProvider;
-import com.mojang.brigadier.suggestion.Suggestions;
-import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
@@ -19,7 +18,6 @@ import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombi
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 
 public class PAddCommand {
 
@@ -35,7 +33,7 @@ public class PAddCommand {
             CommandManager.argument("alias", StringArgumentType.string())
                 .then(CommandManager.literal("for")
                     .then(CommandManager.argument("chineseName", StringArgumentType.string())
-                    .suggests(new ChineseNameSuggestionProvider())
+                    .suggests(new SuggestionProviders.ChineseNameSuggestionProvider())
                     .executes(context -> addAlias(
                         context,
                         StringArgumentType.getString(context, "alias"),
@@ -48,8 +46,10 @@ public class PAddCommand {
         var pAddItemNew = CommandManager.literal("new");
         var pAddItemExist = CommandManager.literal("exist");
         var pAddItemNewEn = CommandManager.argument("englishName", StringArgumentType.string());
-        var pAddItemExistCn = CommandManager.argument("chineseName", StringArgumentType.string()).suggests(new ChineseNameSuggestionProvider());
+        var pAddItemExistCn = CommandManager.argument("chineseName", StringArgumentType.string()).suggests(new SuggestionProviders.ChineseNameSuggestionProvider());
         for(var floorLight: FloorLight.values()) {
+            // 相比于让用户输入字符串然后我去判断是否合法, 或者自定义一种参数类型, 这种方法或许更好
+            // 只要是可预知数量参数的枚举, 理论上都能用这种方式实现
             var existFloorLight = CommandManager.literal(floorLight.cn);
             var newFloorLight = CommandManager.literal(floorLight.cn);
             for(var direction: Direction.values()) {
@@ -79,6 +79,8 @@ public class PAddCommand {
                 newFloorLight.then(newDirection);
                 existFloorLight.then(existDirection);
             }
+            // 为什么then要放在最后呢? 因为then会调用其参数builder的build方法(会导致builder被复制一份), 此时再对其参数builder进行修改将不会被反映到最后的结果里
+            // 顺带一提, 可以看到.then方法会返回自身, 所以不需要再次给自己赋值
             pAddItemNewEn.then(newFloorLight);
             pAddItemExistCn.then(existFloorLight);
         }
@@ -99,8 +101,9 @@ public class PAddCommand {
             Direction direction,
             CarpetColor carpetColor
     ) {
-        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
-        if (indexes.cnIndex.containsKey(chineseName)) {
+        Set<ItemInfo> infos = IndexJsonManager.getInfosInstance(context);
+        boolean hasItem = infos.stream().anyMatch(info -> info.chineseName.equals(chineseName));
+        if (hasItem) {
             MyExceptionHandler.error(context, new IllegalArgumentException("中文名称已存在"), "中文名称已存在");
         }
         ItemInfo info = new ItemInfo();
@@ -109,7 +112,9 @@ public class PAddCommand {
         info.floorLight = floorLight;
         info.direction = direction;
         info.carpetColor = carpetColor;
+        // 创建一个空的别名集合
         info.chineseAlias = new LinkedHashSet<>();
+        // 计算方向对应的颜色
         info.directionColor = Direction.correspondingColors.get(direction);
         try {
             if(IndexJsonManager.addItem(context, info)) {
@@ -133,12 +138,11 @@ public class PAddCommand {
             Direction direction,
             CarpetColor carpetColor
     ) {
-        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
-        if (!indexes.cnIndex.containsKey(chineseName)) {
+        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
+        if (items.isEmpty()) {
             MyExceptionHandler.error(context, new IllegalArgumentException("中文名称不存在"), "中文名称不存在");
         }
-        Set<ItemInfo> infos = indexes.cnIndex.get(chineseName);
-        Iterator<ItemInfo> iterator = infos.iterator();
+        Iterator<ItemInfo> iterator = items.iterator();
         // 可以保证iterator里一定有一个对象
         ItemInfo info = iterator.next();
         if(info.floorLight == floorLight && info.direction == direction && info.carpetColor == carpetColor) {
@@ -150,6 +154,7 @@ public class PAddCommand {
         newInfo.floorLight = floorLight;
         newInfo.direction = direction;
         newInfo.carpetColor = carpetColor;
+        // 直接使用已有单片的别名集合, 反正是集合, 不用担心添加两次同一别名
         newInfo.chineseAlias = info.chineseAlias;
         newInfo.directionColor = Direction.correspondingColors.get(direction);
         try {
@@ -171,12 +176,11 @@ public class PAddCommand {
             String alias,
             String chineseName
     ) {
-        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
-        if (!indexes.cnIndex.containsKey(chineseName)) {
+        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
+        if (items.isEmpty()) {
             MyExceptionHandler.error(context, new IllegalArgumentException("中文名称不存在"), "中文名称不存在");
         }
-        Set<ItemInfo> infos = indexes.cnIndex.get(chineseName);
-        Iterator<ItemInfo> iterator = infos.iterator();
+        Iterator<ItemInfo> iterator = items.iterator();
         ItemInfo info = iterator.next();
         if(info.chineseAlias.contains(alias)) {
             MyExceptionHandler.error(context, new IllegalArgumentException("中文别称已存在"), "中文别称已存在");
@@ -196,19 +200,7 @@ public class PAddCommand {
         return Command.SINGLE_SUCCESS;
     }
 
-    private static class ChineseNameSuggestionProvider implements SuggestionProvider<ServerCommandSource> {
-
-        @Override
-        public CompletableFuture<Suggestions> getSuggestions(CommandContext<ServerCommandSource> context, SuggestionsBuilder builder) throws CommandSyntaxException {
-            ItemIndexes itemIndexes = IndexJsonManager.getIndexesInstance(context);
-            Set<String> keys = itemIndexes.cnKeys;
-            String input = builder.getRemaining().replace("\"", "");
-            for(String key: keys) {
-                if(key.startsWith(input)) {
-                    builder.suggest(key);
-                }
-            }
-            return builder.buildFuture();
-        }
+    private static Set<ItemInfo> getItemsWithChineseName(CommandContext<ServerCommandSource> context, String chineseName) {
+        return IndexJsonManager.getInfosInstance(context).stream().filter(info -> chineseName.equals(info.chineseName)).collect(LinkedHashSet::new, Set::add, Set::addAll);
     }
 }

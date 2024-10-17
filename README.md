@@ -18,7 +18,7 @@ limit: 输出的结果数, 可选, 默认为5
 该指令只能由管理员调用
 
 # padd/pa
-由3条子指令组成, 分别如下
+由3条子指令组成, 均只能由管理员执行, 分别如下
 
 ## 1./padd alias
 为指定的中文词语添加别名 \
@@ -43,7 +43,7 @@ carpetColor: 单片地面地毯颜色(这我就不罗列了吧...) \
 注意: 如果当前全物品中没有对应名称的物品, 会拒绝执行. 
 
 ## 3./padd item new
-为尚不存在于全物品分类中的物品添加一个单片信息
+为尚不存在于全物品分类中的物品添加一个单片信息 \
 形式为
 ```
 /padd item new <chineseName> <englishName> [floorLight] [direction] [carpetColor]

@@ -198,7 +198,7 @@ public class PFindCommand {
                 String input = builder.getRemainingLowerCase().trim().replace("\"", "");
                 switch(lang) {
                     case en -> keys = itemIndexes.enIndex.keySet();
-                    case cn -> keys = itemIndexes.cnKeys;
+                    case cn -> keys = itemIndexes.cnIndex.keySet();
                     case pinyin -> keys = itemIndexes.pinyinIndex.keySet();
                     case py -> keys = itemIndexes.pinyinAbbrIndex.keySet();
                     case none -> keys = itemIndexes.allIndex.keySet();
@@ -206,7 +206,12 @@ public class PFindCommand {
                 }
                 for(var k : keys) {
                     if(k.toLowerCase().startsWith(input)) {
-                        builder.suggest(k);
+                        if(lang == Language.cn || lang == Language.none) {
+                            builder.suggest(String.format("\"%s\"", k));
+                        }
+                        else {
+                            builder.suggest(k);
+                        }
                     }
                 }
                 return builder.buildFuture();

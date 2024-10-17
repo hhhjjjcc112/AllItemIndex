@@ -1,12 +1,13 @@
 package com.hjc.allitemindex.model;
 
 import com.google.gson.annotations.SerializedName;
+import com.hjc.allitemindex.util.ID;
 
 import java.util.Objects;
 import java.util.Set;
 
 public class ItemInfo {
-
+    public ID id = new ID(); // 物品ID
     @SerializedName("en")
     public String englishName; // 英文名称(非官方?)
     @SerializedName("cn")
@@ -24,28 +25,29 @@ public class ItemInfo {
 
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ItemInfo itemInfo)) return false;
+        return Objects.equals(id, itemInfo.id) && Objects.equals(englishName, itemInfo.englishName) && Objects.equals(chineseName, itemInfo.chineseName) && Objects.equals(chineseAlias, itemInfo.chineseAlias) && carpetColor == itemInfo.carpetColor && direction == itemInfo.direction && directionColor == itemInfo.directionColor && floorLight == itemInfo.floorLight;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, englishName, chineseName, chineseAlias, carpetColor, direction, directionColor, floorLight);
+    }
+
+    @Override
     public String toString() {
         return "ItemInfo{" +
-                "englishName='" + englishName + '\'' +
-                ", chineseName=" + chineseName +
-                ", ChineseAlias=" + chineseAlias +
+                "id=" + id +
+                ", englishName='" + englishName + '\'' +
+                ", chineseName='" + chineseName + '\'' +
+                ", chineseAlias=" + chineseAlias +
                 ", carpetColor=" + carpetColor +
                 ", direction=" + direction +
                 ", directionColor=" + directionColor +
                 ", floorLight=" + floorLight +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ItemInfo itemInfo)) return false;
-        return Objects.equals(englishName, itemInfo.englishName) && Objects.equals(chineseName, itemInfo.chineseName) && Objects.equals(chineseAlias, itemInfo.chineseAlias) && carpetColor == itemInfo.carpetColor && direction == itemInfo.direction && directionColor == itemInfo.directionColor && floorLight == itemInfo.floorLight;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(englishName, chineseName, chineseAlias, carpetColor, direction, directionColor, floorLight);
     }
 
     /**

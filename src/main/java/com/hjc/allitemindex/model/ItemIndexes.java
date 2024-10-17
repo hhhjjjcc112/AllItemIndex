@@ -9,8 +9,6 @@ import java.util.*;
 public class ItemIndexes {
     // map的value一定不能为null
     public final Map<String, Set<ItemInfo>> enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex;
-    // 仅仅是为了作为输入补全而加上前后引号
-    public final Set<String> cnKeys;
     // 全部index
     public final Map<String, Set<ItemInfo>> allIndex;
 
@@ -19,7 +17,6 @@ public class ItemIndexes {
         this.cnIndex = new HashMap<>();
         this.pinyinIndex = new HashMap<>();
         this.pinyinAbbrIndex = new HashMap<>();
-        this.cnKeys = new LinkedHashSet<>();
         this.allIndex = new HashMap<>();
     }
 
@@ -27,9 +24,6 @@ public class ItemIndexes {
         ItemIndexes indexes = new ItemIndexes();
         for (ItemInfo info : infos) {
             indexes.add(info);
-        }
-        for(var key: indexes.cnIndex.keySet()) {
-            indexes.cnKeys.add(String.format("\"%s\"", key));
         }
         return indexes;
     }
@@ -84,12 +78,12 @@ public class ItemIndexes {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ItemIndexes that)) return false;
-        return Objects.equals(enIndex, that.enIndex) && Objects.equals(cnIndex, that.cnIndex) && Objects.equals(pinyinIndex, that.pinyinIndex) && Objects.equals(pinyinAbbrIndex, that.pinyinAbbrIndex) && Objects.equals(cnKeys, that.cnKeys);
+        return Objects.equals(enIndex, that.enIndex) && Objects.equals(cnIndex, that.cnIndex) && Objects.equals(pinyinIndex, that.pinyinIndex) && Objects.equals(pinyinAbbrIndex, that.pinyinAbbrIndex);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex, cnKeys);
+        return Objects.hash(enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex);
     }
 
     @Override
@@ -99,7 +93,6 @@ public class ItemIndexes {
                 ", cnIndex=" + cnIndex +
                 ", pinyinIndex=" + pinyinIndex +
                 ", pinyinAbbrIndex=" + pinyinAbbrIndex +
-                ", cnKeys=" + cnKeys +
                 '}';
     }
 }
