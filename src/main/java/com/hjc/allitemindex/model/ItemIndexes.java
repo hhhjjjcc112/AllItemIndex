@@ -1,5 +1,6 @@
 package com.hjc.allitemindex.model;
 
+import com.hjc.allitemindex.exception.ConflictIdException;
 import com.hjc.allitemindex.util.PinYin;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 import org.jetbrains.annotations.NotNull;
@@ -7,20 +8,23 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 
 public class ItemIndexes {
-    // map的value一定不能为null
-    public final Map<String, Set<ItemInfo>> enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex;
-    // 全部index
-    public final Map<String, Set<ItemInfo>> allIndex;
+    // 每个map对应一种语言的索引
+    public final Map<String, Set<ItemInfo>> enIndex, cnIndex, pinyinIndex, pinyinAbbrIndex, noneIndex;
+    // 两个主键索引
+    public final Map<String, Set<ItemInfo>> chineseIndex;
+    public final Map<Long, ItemInfo> idIndex;
 
     public ItemIndexes() {
         this.enIndex = new HashMap<>();
         this.cnIndex = new HashMap<>();
         this.pinyinIndex = new HashMap<>();
         this.pinyinAbbrIndex = new HashMap<>();
-        this.allIndex = new HashMap<>();
+        this.noneIndex = new HashMap<>();
+        this.chineseIndex = new HashMap<>();
+        this.idIndex = new HashMap<>();
     }
 
-    public static @NotNull ItemIndexes from(@NotNull Set<ItemInfo> infos) throws BadHanyuPinyinOutputFormatCombination {
+    public static @NotNull ItemIndexes from(@NotNull Set<ItemInfo> infos) throws BadHanyuPinyinOutputFormatCombination, ConflictIdException {
         ItemIndexes indexes = new ItemIndexes();
         for (ItemInfo info : infos) {
             indexes.add(info);
@@ -28,31 +32,39 @@ public class ItemIndexes {
         return indexes;
     }
 
-    private void add(@NotNull ItemInfo info) throws BadHanyuPinyinOutputFormatCombination {
+    private void add(@NotNull ItemInfo info) throws BadHanyuPinyinOutputFormatCombination, ConflictIdException {
+        // 主键1
+        if(idIndex.containsKey(info.id.id)) {
+            throw new ConflictIdException(info, idIndex.get(info.id.id));
+        }
+        idIndex.put(info.id.id, info);
+        // 英文
         String enKey = info.englishName;
         insertOrCreate(enIndex, enKey, info);
-        insertOrCreate(allIndex, enKey, info);
+        insertOrCreate(noneIndex, enKey, info);
         // 获取并插入中文名称对应的中文, 拼音全称和拼音缩写
         String cnKey = info.chineseName;
-        insertOrCreate(cnIndex, cnKey, info);
-        insertOrCreate(allIndex, cnKey, info);
-        // 拼音
-        insertAllOrCreate(pinyinIndex, PinYin.toPinYinSet(cnKey), info);
-        insertAllOrCreate(allIndex, PinYin.toPinYinSet(cnKey), info);
-        // 拼音缩写
-        insertAllOrCreate(pinyinAbbrIndex, PinYin.toPinYinAbbrSet(cnKey), info);
-        insertAllOrCreate(allIndex, PinYin.toPinYinAbbrSet(cnKey), info);
+        addCnKey(info, cnKey);
+        // 主键2
+        insertOrCreate(chineseIndex, cnKey, info);
         // 获取并插入中文别名对应的中文, 拼音全称和拼音缩写
         Set<String> cnAliases = info.chineseAlias;
         for(String cnAlias : cnAliases) {
-            insertOrCreate(cnIndex, cnAlias, info);
-
-            insertAllOrCreate(pinyinIndex, PinYin.toPinYinSet(cnAlias), info);
-            insertAllOrCreate(allIndex, PinYin.toPinYinSet(cnAlias), info);
-
-            insertAllOrCreate(pinyinAbbrIndex, PinYin.toPinYinAbbrSet(cnAlias), info);
-            insertAllOrCreate(allIndex, PinYin.toPinYinAbbrSet(cnAlias), info);
+            addCnKey(info, cnAlias);
         }
+    }
+
+    private void addCnKey(@NotNull ItemInfo info, String cn) throws BadHanyuPinyinOutputFormatCombination {
+        insertOrCreate(cnIndex, cn, info);
+        insertOrCreate(noneIndex, cn, info);
+
+        Set<String> aliasPinyinSet = PinYin.toPinYinSet(cn);
+        insertAllOrCreate(pinyinIndex, aliasPinyinSet, info);
+        insertAllOrCreate(noneIndex, aliasPinyinSet, info);
+
+        Set<String> aliasPinyinAbbrSet = PinYin.toPinYinAbbrSet(cn);
+        insertAllOrCreate(pinyinAbbrIndex, aliasPinyinAbbrSet, info);
+        insertAllOrCreate(noneIndex, aliasPinyinAbbrSet, info);
     }
 
 

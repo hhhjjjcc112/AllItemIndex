@@ -135,7 +135,7 @@ public class PFindCommand {
             case pinyin -> results = minKQueryResults(itemIndexes.pinyinIndex, lowercaseComparator, limit);
             // 拼音全称查询
             case py -> results = minKQueryResults(itemIndexes.pinyinAbbrIndex, lowercaseComparator, limit);
-            case none -> results = minKQueryResults(itemIndexes.allIndex, lowercaseComparator, limit);
+            case none -> results = minKQueryResults(itemIndexes.noneIndex, lowercaseComparator, limit);
             default -> throw new IllegalStateException("unreachable code");
         }
         // 输出结果
@@ -204,7 +204,7 @@ public class PFindCommand {
                     case cn -> keys = itemIndexes.cnIndex.keySet();
                     case pinyin -> keys = itemIndexes.pinyinIndex.keySet();
                     case py -> keys = itemIndexes.pinyinAbbrIndex.keySet();
-                    case none -> keys = itemIndexes.allIndex.keySet();
+                    case none -> keys = itemIndexes.noneIndex.keySet();
                     default -> throw new IllegalStateException("unreachable code");
                 }
                 for(var k : keys) {

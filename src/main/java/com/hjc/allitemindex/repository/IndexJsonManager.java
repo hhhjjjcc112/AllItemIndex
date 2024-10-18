@@ -4,10 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import com.hjc.allitemindex.exception.AmbiguousAliasException;
-import com.hjc.allitemindex.exception.CarpetAndDirectionNotMatchException;
-import com.hjc.allitemindex.exception.EmptyValueException;
-import com.hjc.allitemindex.exception.MyExceptionHandler;
+import com.hjc.allitemindex.exception.*;
 import com.hjc.allitemindex.model.Direction;
 import com.hjc.allitemindex.model.ItemIndexes;
 import com.hjc.allitemindex.model.ItemInfo;
@@ -47,7 +44,7 @@ public class IndexJsonManager {
     private static boolean loaded = false;
 
     // gson序列化与反序列化器
-    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    private static final Gson gson = new GsonBuilder().setVersion(1.01).setPrettyPrinting().create();
 
 
     /**
@@ -199,11 +196,18 @@ public class IndexJsonManager {
             String content = Files.readString(indexFile, StandardCharsets.UTF_8);
             ID.reset(); // 重置全局ID
             infos = gson.fromJson(content, new TypeToken<Set<ItemInfo>>() {}.getType());
+            // 我真是服了为啥gson不会抛出异常, 而是返回null啊
+            if(infos == null) {
+                MyExceptionHandler.error(context, new NullPointerException("index.json加载失败"), "index.json文件加载失败");
+                return false;
+            }
             checkInfos(infos);
             indexes = ItemIndexes.from(infos);
             return true;
         } catch (EmptyValueException e) {
             MyExceptionHandler.error(context, e, "index.json包含空值");
+        } catch (ConflictIdException e) {
+            MyExceptionHandler.error(context, e, "ID冲突");
         } catch(CarpetAndDirectionNotMatchException e) {
             MyExceptionHandler.error(context, e, "方向和地毯颜色不对应");
         } catch (AmbiguousAliasException e) {
@@ -237,11 +241,11 @@ public class IndexJsonManager {
     /**
      * 检查加载的infos是否合法, 抛出错误
      */
-    private static void checkInfos(Set<ItemInfo> infos) throws EmptyValueException, CarpetAndDirectionNotMatchException {
+    private static void checkInfos(Set<ItemInfo> infos) throws EmptyValueException, CarpetAndDirectionNotMatchException, AmbiguousAliasException {
         for(var info : infos) {
             // 存在可能的空值
             if(info.anyEmpty()) {
-                throw new EmptyValueException("itemInfo " + info + " 包含空值");
+                throw new EmptyValueException(info);
             }
             // 方向和羊毛颜色是否对应(不是, 既然一定对应的话为啥俩都要啊)
             if(Direction.correspondingColors.get(info.direction) != info.directionColor) {

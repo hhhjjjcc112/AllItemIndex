@@ -1,10 +1,7 @@
 package com.hjc.allitemindex.command;
 
 import com.hjc.allitemindex.exception.MyExceptionHandler;
-import com.hjc.allitemindex.model.CarpetColor;
-import com.hjc.allitemindex.model.Direction;
-import com.hjc.allitemindex.model.FloorLight;
-import com.hjc.allitemindex.model.ItemInfo;
+import com.hjc.allitemindex.model.*;
 import com.hjc.allitemindex.repository.IndexJsonManager;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
@@ -102,10 +99,10 @@ public class PAddCommand {
             Direction direction,
             CarpetColor carpetColor
     ) {
-        Set<ItemInfo> infos = IndexJsonManager.getInfosInstance(context);
-        boolean hasItem = infos.stream().anyMatch(info -> info.chineseName.equals(chineseName));
-        if (hasItem) {
-            MyExceptionHandler.error(context, new IllegalArgumentException("中文名称已存在"), "中文名称已存在");
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if (indexes.chineseIndex.containsKey(chineseName)) {
+            MyExceptionHandler.error(context, new IllegalArgumentException(String.format("中文名称%s已存在", chineseName)), "中文名称已存在");
+            return 0;
         }
         ItemInfo info = new ItemInfo();
         info.chineseName = chineseName;
@@ -124,14 +121,16 @@ public class PAddCommand {
                 source.sendMessage(Text.of(String.format("成功添加新物品单片: %s", chineseName)));
                 // 展示添加成功的给用户看
                 source.sendMessage(genDescription(info));
+                return Command.SINGLE_SUCCESS;
             }
             else {
-                MyExceptionHandler.error(context, new RuntimeException("添加新物品单片失败"), "添加新物品单片失败");
+                MyExceptionHandler.error(context, new RuntimeException(String.format("添加新物品单片%s失败", chineseName)), "添加新物品单片失败");
+                return -1;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音转换失败");
+            return -2;
         }
-        return Command.SINGLE_SUCCESS;
     }
 
     private static int addItemExist(
@@ -141,16 +140,16 @@ public class PAddCommand {
             Direction direction,
             CarpetColor carpetColor
     ) {
-        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if (items.isEmpty()) {
-            MyExceptionHandler.error(context, new IllegalArgumentException("中文名称不存在"), "中文名称不存在");
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if (!indexes.chineseIndex.containsKey(chineseName)) {
+            MyExceptionHandler.error(context, new IllegalArgumentException(String.format("中文名称%s不存在", chineseName)), "中文名称不存在");
+            return 0;
         }
+        Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         Iterator<ItemInfo> iterator = items.iterator();
         // 可以保证iterator里一定有一个对象
         ItemInfo info = iterator.next();
-        if(info.floorLight == floorLight && info.direction == direction && info.carpetColor == carpetColor) {
-            MyExceptionHandler.error(context, new IllegalArgumentException("已存在相同的地板灯光、方向和地毯颜色"), "已存在相同的地板灯光、方向和地毯颜色");
-        }
+
         ItemInfo newInfo = new ItemInfo();
         newInfo.chineseName = chineseName;
         newInfo.englishName = info.englishName;
@@ -166,14 +165,16 @@ public class PAddCommand {
                 source.sendMessage(Text.of(String.format("添加物品单片成功: %s", chineseName)));
                 // 展示添加成功的给用户看
                 source.sendMessage(genDescription(newInfo));
+                return Command.SINGLE_SUCCESS;
             }
             else {
-                MyExceptionHandler.error(context, new RuntimeException("添加物品单片失败"), "添加物品单片失败");
+                MyExceptionHandler.error(context, new RuntimeException(String.format("添加物品单片%s失败", chineseName)), "添加物品单片失败");
+                return -1;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音转换失败");
+            return -2;
         }
-        return Command.SINGLE_SUCCESS;
     }
 
     private static int addAlias(
@@ -181,33 +182,38 @@ public class PAddCommand {
             String alias,
             String chineseName
     ) {
-        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if (items.isEmpty()) {
-            MyExceptionHandler.error(context, new IllegalArgumentException("中文名称不存在"), "中文名称不存在");
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if (!indexes.chineseIndex.containsKey(chineseName)) {
+            MyExceptionHandler.error(context, new IllegalArgumentException(String.format("中文名称%s不存在", chineseName)), "中文名称不存在");
+            return 0;
         }
+        else if(indexes.chineseIndex.containsKey(alias)) {
+            MyExceptionHandler.error(context, new IllegalArgumentException(String.format("请不要使用此别称: %s, 因为存在与该名称相同的中文名称", alias)), "中文名称已存在");
+            return 0;
+        }
+        Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         Iterator<ItemInfo> iterator = items.iterator();
         ItemInfo info = iterator.next();
         if(info.chineseAlias.contains(alias)) {
-            MyExceptionHandler.error(context, new IllegalArgumentException("中文别称已存在"), "中文别称已存在");
+            MyExceptionHandler.error(context, new IllegalArgumentException(String.format("%s的别名%s已存在",chineseName, alias)), "中文别称已存在");
+            return 0;
         }
         try {
             if(IndexJsonManager.addAlias(context, alias, chineseName)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("添加物品\"%s\"的别名\"%s\"成功", chineseName, alias)));
+                return Command.SINGLE_SUCCESS;
             }
             else {
-                MyExceptionHandler.error(context, new RuntimeException("添加别名失败"), "添加别名失败");
+                MyExceptionHandler.error(context, new RuntimeException(String.format("为中文名称%s添加别名%s失败", chineseName, alias)), "添加别名失败");
+                return -1;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音转换失败");
+            return -2;
         }
-
-        return Command.SINGLE_SUCCESS;
     }
 
-    private static Set<ItemInfo> getItemsWithChineseName(CommandContext<ServerCommandSource> context, String chineseName) {
-        return IndexJsonManager.getInfosInstance(context).stream().filter(info -> chineseName.equals(info.chineseName)).collect(LinkedHashSet::new, Set::add, Set::addAll);
-    }
     private static MutableText genDescription(ItemInfo item) {
         // 编号 + 中文名称
         MutableText text = Text.literal(String.format("%s id: %d 位置: ", item.chineseName, item.id.id));

@@ -22,11 +22,8 @@ import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
-import java.util.LinkedHashSet;
-import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
-import java.util.stream.Collectors;
 
 public class PRemoveCommand {
     /**
@@ -96,12 +93,12 @@ public class PRemoveCommand {
             String alias,
             String chineseName
     ) {
-        Set<ItemInfo> infos = IndexJsonManager.getInfosInstance(context);
-        Set<ItemInfo> items = infos.stream().filter(info -> chineseName.equals(info.chineseName)).collect(Collectors.toSet());
-        if (items.isEmpty()) {
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if (!indexes.chineseIndex.containsKey(chineseName)) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
             return -1;
         }
+        Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         // 取第一个物品的别名
         Set<String> aliases = items.iterator().next().chineseAlias;
         if (!aliases.contains(alias)) {
@@ -112,6 +109,7 @@ public class PRemoveCommand {
             if (IndexJsonManager.removeAlias(context, alias, chineseName)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("成功删除%s的别名%s", chineseName, alias)));
+                return Command.SINGLE_SUCCESS;
             } else {
                 MyExceptionHandler.error(context, new Throwable("删除别名失败"), "删除别名失败");
                 return -3;
@@ -120,7 +118,6 @@ public class PRemoveCommand {
             MyExceptionHandler.error(context, e, "删除别名时出现错误");
             return -4;
         }
-        return Command.SINGLE_SUCCESS;
     }
 
     private static int removeItem(
@@ -128,11 +125,12 @@ public class PRemoveCommand {
             String chineseName,
             boolean removeAll
     ) {
-        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if (items.isEmpty()) {
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if (!indexes.chineseIndex.containsKey(chineseName)) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
             return -1;
         }
+        Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         // 删除全部
         if (removeAll) {
             try {
@@ -145,6 +143,7 @@ public class PRemoveCommand {
                         ItemInfo item = it.next();
                         source.sendMessage(genDescription(i, item));
                     }
+                    return Command.SINGLE_SUCCESS;
                 } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                     return -2;
@@ -164,6 +163,7 @@ public class PRemoveCommand {
                 ItemInfo item = it.next();
                 source.sendMessage(genDescription(i, item));
             }
+            return Command.SINGLE_SUCCESS;
 
         } else {
             // 删除第一个物品
@@ -174,6 +174,7 @@ public class PRemoveCommand {
                     source.sendMessage(Text.of(String.format("成功删除%s的唯一一个单片", chineseName)));
                     // 把删除成功的展示给用户
                     source.sendMessage(genDescription(1, item));
+                    return Command.SINGLE_SUCCESS;
                 } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
                     return -4;
@@ -183,7 +184,6 @@ public class PRemoveCommand {
                 return -5;
             }
         }
-        return Command.SINGLE_SUCCESS;
     }
 
     private static int removeItemAtIndex(
@@ -191,11 +191,12 @@ public class PRemoveCommand {
             String chineseName,
             int index
     ) {
-        Set<ItemInfo> items = getItemsWithChineseName(context, chineseName);
-        if (items.isEmpty()) {
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if (!indexes.chineseIndex.containsKey(chineseName)) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
             return -1;
         }
+        Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         if (index < 1 || index > items.size()) {
             MyExceptionHandler.error(context, new Throwable("索引超出范围"), "索引超出范围");
             ServerCommandSource source = context.getSource();
@@ -214,45 +215,42 @@ public class PRemoveCommand {
                 source.sendMessage(Text.of(String.format("成功删除%s的第%d个单片", chineseName, index)));
                 // 把删除成功的展示给用户
                 source.sendMessage(genDescription(index, item));
+                return Command.SINGLE_SUCCESS;
             } else {
-                MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
+                MyExceptionHandler.error(context, new Throwable(String.format("删除物品%s失败", item.chineseName)), "删除物品失败");
                 return -3;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "删除物品时出现错误");
             return -4;
         }
-        return Command.SINGLE_SUCCESS;
     }
 
     private static int removeItemAtId(
             CommandContext<ServerCommandSource> context,
             long id
     ) {
-        Set<ItemInfo> items = IndexJsonManager.getInfosInstance(context);
+        ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
+        if(!indexes.idIndex.containsKey(id)) {
+            MyExceptionHandler.error(context, new Throwable("未找到id为" + id + "的物品"), "未找到id为" + id + "的物品");
+            return -1;
+        }
         try {
-            ItemInfo item = items.stream().filter(info -> info.id.id == id).findFirst().orElseThrow();
+            ItemInfo item = indexes.idIndex.get(id);
             if (IndexJsonManager.removeItem(context, item)) {
                 ServerCommandSource source = context.getSource();
                 source.sendMessage(Text.of(String.format("成功删除%s的id为%d的单片", item.chineseName, id)));
                 // 把删除成功的展示给用户
                 source.sendMessage(genDescription(1, item));
+                return Command.SINGLE_SUCCESS;
             } else {
-                MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
+                MyExceptionHandler.error(context, new Throwable(String.format("删除物品%s失败", item.chineseName)), "删除物品失败");
                 return -2;
             }
-        } catch (NoSuchElementException e) {
-            MyExceptionHandler.error(context, e, "未找到id为" + id + "的物品");
-            return -3;
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "删除物品时出现错误");
-            return -4;
+            return -3;
         }
-        return Command.SINGLE_SUCCESS;
-    }
-
-    private static Set<ItemInfo> getItemsWithChineseName(CommandContext<ServerCommandSource> context, String chineseName) {
-        return IndexJsonManager.getInfosInstance(context).stream().filter(info -> chineseName.equals(info.chineseName)).collect(LinkedHashSet::new, Set::add, Set::addAll);
     }
 
     private static MutableText genDescription(int index, ItemInfo item) {
@@ -286,8 +284,8 @@ public class PRemoveCommand {
                 reader = new StringReader(str.substring("/pr alias ".length()));
             }
             String alias = reader.readString();
-            System.out.println(builder.getInput());
-            System.out.println(alias);
+//            System.out.println(builder.getInput());
+//            System.out.println(alias);
             String input = builder.getRemaining().replace("\"", "");
             ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
             if (!indexes.cnIndex.containsKey(alias)) {
