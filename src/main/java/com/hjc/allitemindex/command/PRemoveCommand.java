@@ -88,6 +88,13 @@ public class PRemoveCommand {
 
     }
 
+    /**
+     * 删除别名
+     * @param context     调用时的指令上下文
+     * @param alias       别名
+     * @param chineseName 中文名
+     * @return 指令返回值
+     */
     private static int removeAlias(
             CommandContext<ServerCommandSource> context,
             String alias,
@@ -120,6 +127,13 @@ public class PRemoveCommand {
         }
     }
 
+    /**
+     * 删除物品, 如果有多个同名单片且不删除全部则提示用户选择
+     * @param context     调用时的指令上下文
+     * @param chineseName 中文名
+     * @param removeAll   是否删除全部
+     * @return 指令返回值
+     */
     private static int removeItem(
             CommandContext<ServerCommandSource> context,
             String chineseName,
@@ -186,6 +200,13 @@ public class PRemoveCommand {
         }
     }
 
+    /**
+     * 删除指定索引(取决于排序)的物品
+     * @param context     调用时的指令上下文
+     * @param chineseName 中文名
+     * @param index       索引
+     * @return 指令返回值
+     */
     private static int removeItemAtIndex(
             CommandContext<ServerCommandSource> context,
             String chineseName,
@@ -226,6 +247,12 @@ public class PRemoveCommand {
         }
     }
 
+    /**
+     * 删除指定ID的物品
+     * @param context 调用时的指令上下文
+     * @param id      ID
+     * @return 指令返回值
+     */
     private static int removeItemAtId(
             CommandContext<ServerCommandSource> context,
             long id

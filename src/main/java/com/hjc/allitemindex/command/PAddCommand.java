@@ -91,6 +91,16 @@ public class PAddCommand {
         dispatcher.register(CommandManager.literal("pa").requires(ctx -> ctx.hasPermissionLevel(2)).redirect(command));
     }
 
+    /**
+     * 添加新物品单片, 当且仅当物品不存在于索引中
+     * @param context 调用时的指令上下文
+     * @param chineseName 中文名称
+     * @param englishName 英文名称
+     * @param floorLight 层灯光
+     * @param direction 方向
+     * @param carpetColor 地毯颜色
+     * @return 指令返回值
+     */
     private static int addItemNew(
             CommandContext<ServerCommandSource> context,
             String chineseName,
@@ -133,6 +143,15 @@ public class PAddCommand {
         }
     }
 
+    /**
+     * 添加已存在的物品的新单片, 当且仅当物品存在于索引中
+     * @param context 调用时的指令上下文
+     * @param chineseName 中文名称
+     * @param floorLight 层灯光
+     * @param direction 方向
+     * @param carpetColor 地毯颜色
+     * @return 指令返回值
+     */
     private static int addItemExist(
             CommandContext<ServerCommandSource> context,
             String chineseName,
@@ -177,6 +196,13 @@ public class PAddCommand {
         }
     }
 
+    /**
+     * 为物品添加别名
+     * @param context 调用时的指令上下文
+     * @param alias 别名
+     * @param chineseName 中文名称
+     * @return 指令返回值
+     */
     private static int addAlias(
             CommandContext<ServerCommandSource> context,
             String alias,
