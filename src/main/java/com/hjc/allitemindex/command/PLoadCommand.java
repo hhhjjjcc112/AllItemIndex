@@ -35,10 +35,11 @@ public class PLoadCommand {
         boolean success = IndexJsonManager.reload(context);
         if (success) {
             source.sendMessage(Text.of("重新加载index.json成功!"));
+            return Command.SINGLE_SUCCESS;
         }
         else {
             MyExceptionHandler.error(context, new RuntimeException("重新加载index.json失败"), "重新加载index.json失败");
+            return 0;
         }
-        return Command.SINGLE_SUCCESS;
     }
 }

@@ -169,7 +169,7 @@ public class PFindCommand {
         // 编号 + 中文名称
         MutableText text = Text.literal(String.format("%d. %s: ", index, info.chineseName));
         if(showId) {
-            text.append(Text.of(String.format("id=%d ", info.id.id)));
+            text.append(Text.of(String.format("id=%d ", info.id.value)));
         }
         // 层灯光
         text.append(Text.translatable(info.floorLight.item.getTranslationKey()).setStyle(info.floorLight.colorStyle));

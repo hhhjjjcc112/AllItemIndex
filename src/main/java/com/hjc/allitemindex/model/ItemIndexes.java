@@ -34,10 +34,10 @@ public class ItemIndexes {
 
     private void add(@NotNull ItemInfo info) throws BadHanyuPinyinOutputFormatCombination, ConflictIdException {
         // 主键1
-        if(idIndex.containsKey(info.id.id)) {
-            throw new ConflictIdException(info, idIndex.get(info.id.id));
+        if(idIndex.containsKey(info.id.value)) {
+            throw new ConflictIdException(info, idIndex.get(info.id.value));
         }
-        idIndex.put(info.id.id, info);
+        idIndex.put(info.id.value, info);
         // 英文
         String enKey = info.englishName;
         insertOrCreate(enIndex, enKey, info);

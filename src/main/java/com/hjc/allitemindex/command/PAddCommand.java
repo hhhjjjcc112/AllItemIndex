@@ -135,11 +135,11 @@ public class PAddCommand {
             }
             else {
                 MyExceptionHandler.error(context, new RuntimeException(String.format("添加新物品单片%s失败", chineseName)), "添加新物品单片失败");
-                return -1;
+                return 0;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音转换失败");
-            return -2;
+            return 0;
         }
     }
 
@@ -188,11 +188,11 @@ public class PAddCommand {
             }
             else {
                 MyExceptionHandler.error(context, new RuntimeException(String.format("添加物品单片%s失败", chineseName)), "添加物品单片失败");
-                return -1;
+                return 0;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音转换失败");
-            return -2;
+            return 0;
         }
     }
 
@@ -232,17 +232,17 @@ public class PAddCommand {
             }
             else {
                 MyExceptionHandler.error(context, new RuntimeException(String.format("为中文名称%s添加别名%s失败", chineseName, alias)), "添加别名失败");
-                return -1;
+                return 0;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音转换失败");
-            return -2;
+            return 0;
         }
     }
 
     private static MutableText genDescription(ItemInfo item) {
         // 编号 + 中文名称
-        MutableText text = Text.literal(String.format("%s id: %d 位置: ", item.chineseName, item.id.id));
+        MutableText text = Text.literal(String.format("%s id: %d 位置: ", item.chineseName, item.id.value));
         // 层灯光
         text.append(Text.translatable(item.floorLight.item.getTranslationKey()).setStyle(item.floorLight.colorStyle));
         text.append(" ");

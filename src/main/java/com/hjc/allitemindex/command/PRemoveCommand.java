@@ -6,16 +6,10 @@ import com.hjc.allitemindex.model.ItemInfo;
 import com.hjc.allitemindex.repository.IndexJsonManager;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.LongArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.mojang.brigadier.exceptions.DynamicCommandExceptionType;
-import com.mojang.brigadier.suggestion.SuggestionProvider;
-import com.mojang.brigadier.suggestion.Suggestions;
-import com.mojang.brigadier.suggestion.SuggestionsBuilder;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.MutableText;
@@ -23,7 +17,6 @@ import net.minecraft.text.Text;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 
 public class PRemoveCommand {
     /**
@@ -39,7 +32,7 @@ public class PRemoveCommand {
                         .suggests(new SuggestionProviders.AliasSuggestionProvider())
                         .then(CommandManager.literal("from")
                                 .then(CommandManager.argument("chineseName", StringArgumentType.string())
-                                        .suggests(new ChineseNameOfAliasSuggestionProvider())
+                                        .suggests(new SuggestionProviders.ChineseNameOfAliasSuggestionProvider(2))
                                         .executes(ctx -> removeAlias(
                                                 ctx,
                                                 StringArgumentType.getString(ctx, "alias"),
@@ -73,7 +66,8 @@ public class PRemoveCommand {
                                                         IntegerArgumentType.getInteger(ctx, "index")
                                                 )))
                                 ))
-                ).then(CommandManager.literal("id").then(CommandManager.argument("id", LongArgumentType.longArg(0))
+                ).then(CommandManager.literal("id").then(CommandManager.argument("id", LongArgumentType.longArg(1))
+                        .suggests(new SuggestionProviders.IdSuggestionProvider())
                         .executes(ctx -> removeItemAtId(
                                 ctx,
                                 LongArgumentType.getLong(ctx, "id")
@@ -102,15 +96,15 @@ public class PRemoveCommand {
     ) {
         ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
         if (!indexes.chineseIndex.containsKey(chineseName)) {
-            MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
-            return -1;
+            MyExceptionHandler.error(context, new Throwable("未找到中文名称为" + chineseName + "的物品"), "没有对应中文的物品");
+            return 0;
         }
         Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         // 取第一个物品的别名
         Set<String> aliases = items.iterator().next().chineseAlias;
         if (!aliases.contains(alias)) {
-            MyExceptionHandler.error(context, new Throwable("该物品没有对应别名"), "未找到别名" + alias);
-            return -2;
+            MyExceptionHandler.error(context, new Throwable(String.format("%s没有别名%s", chineseName, alias)), "该物品没有对应别名");
+            return 0;
         }
         try {
             if (IndexJsonManager.removeAlias(context, alias, chineseName)) {
@@ -119,11 +113,11 @@ public class PRemoveCommand {
                 return Command.SINGLE_SUCCESS;
             } else {
                 MyExceptionHandler.error(context, new Throwable("删除别名失败"), "删除别名失败");
-                return -3;
+                return 0;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "删除别名时出现错误");
-            return -4;
+            return 0;
         }
     }
 
@@ -142,7 +136,7 @@ public class PRemoveCommand {
         ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
         if (!indexes.chineseIndex.containsKey(chineseName)) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
-            return -1;
+            return 0;
         }
         Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         // 删除全部
@@ -160,11 +154,11 @@ public class PRemoveCommand {
                     return Command.SINGLE_SUCCESS;
                 } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
-                    return -2;
+                    return 0;
                 }
             } catch (BadHanyuPinyinOutputFormatCombination e) {
                 MyExceptionHandler.error(context, e, "删除物品时出现错误");
-                return -3;
+                return 0;
             }
         }
         // 需要指定ID或索引
@@ -191,11 +185,11 @@ public class PRemoveCommand {
                     return Command.SINGLE_SUCCESS;
                 } else {
                     MyExceptionHandler.error(context, new Throwable("删除物品失败"), "删除物品失败");
-                    return -4;
+                    return 0;
                 }
             } catch (BadHanyuPinyinOutputFormatCombination e) {
                 MyExceptionHandler.error(context, e, "删除物品时出现错误");
-                return -5;
+                return 0;
             }
         }
     }
@@ -215,7 +209,7 @@ public class PRemoveCommand {
         ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
         if (!indexes.chineseIndex.containsKey(chineseName)) {
             MyExceptionHandler.error(context, new Throwable("没有对应中文的物品"), "未找到中文名称为" + chineseName + "的物品");
-            return -1;
+            return 0;
         }
         Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         if (index < 1 || index > items.size()) {
@@ -227,7 +221,7 @@ public class PRemoveCommand {
                 ItemInfo item = it.next();
                 source.sendMessage(genDescription(i, item));
             }
-            return -2;
+            return 0;
         }
         ItemInfo item = items.stream().skip(index - 1).findFirst().orElseThrow();
         try {
@@ -239,11 +233,11 @@ public class PRemoveCommand {
                 return Command.SINGLE_SUCCESS;
             } else {
                 MyExceptionHandler.error(context, new Throwable(String.format("删除物品%s失败", item.chineseName)), "删除物品失败");
-                return -3;
+                return 0;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "删除物品时出现错误");
-            return -4;
+            return 0;
         }
     }
 
@@ -260,7 +254,7 @@ public class PRemoveCommand {
         ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
         if(!indexes.idIndex.containsKey(id)) {
             MyExceptionHandler.error(context, new Throwable("未找到id为" + id + "的物品"), "未找到id为" + id + "的物品");
-            return -1;
+            return 0;
         }
         try {
             ItemInfo item = indexes.idIndex.get(id);
@@ -272,17 +266,17 @@ public class PRemoveCommand {
                 return Command.SINGLE_SUCCESS;
             } else {
                 MyExceptionHandler.error(context, new Throwable(String.format("删除物品%s失败", item.chineseName)), "删除物品失败");
-                return -2;
+                return 0;
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "删除物品时出现错误");
-            return -3;
+            return 0;
         }
     }
 
     private static MutableText genDescription(int index, ItemInfo item) {
             // 编号 + 中文名称
-            MutableText text = Text.literal(String.format("%s 索引: %d id: %d 位置: ", item.chineseName, index, item.id.id));
+            MutableText text = Text.literal(String.format("%s 索引: %d id: %d 位置: ", item.chineseName, index, item.id.value));
             // 层灯光
             text.append(Text.translatable(item.floorLight.item.getTranslationKey()).setStyle(item.floorLight.colorStyle));
             text.append(" ");
@@ -295,32 +289,6 @@ public class PRemoveCommand {
             // 具体位置的地毯
             text.append(Text.translatable(item.carpetColor.item.getTranslationKey()).setStyle(item.carpetColor.colorStyle));
             return text;
-    }
-
-    private static final class ChineseNameOfAliasSuggestionProvider implements SuggestionProvider<ServerCommandSource> {
-
-        private static final DynamicCommandExceptionType NO_SUCH_ALIAS = new DynamicCommandExceptionType((alias) -> Text.of("未找到别名" + alias));
-
-        @Override
-        public CompletableFuture<Suggestions> getSuggestions(CommandContext<ServerCommandSource> context, SuggestionsBuilder builder) throws CommandSyntaxException {
-            String str = builder.getInput();
-            StringReader reader;
-            if (str.startsWith("/premove alias ")) {
-                reader = new StringReader(str.substring("/premove alias ".length()));
-            } else {
-                reader = new StringReader(str.substring("/pr alias ".length()));
-            }
-            String alias = reader.readString();
-//            System.out.println(builder.getInput());
-//            System.out.println(alias);
-            String input = builder.getRemaining().replace("\"", "");
-            ItemIndexes indexes = IndexJsonManager.getIndexesInstance(context);
-            if (!indexes.cnIndex.containsKey(alias)) {
-                throw NO_SUCH_ALIAS.create(alias);
-            }
-            indexes.cnIndex.get(alias).stream().map(info -> info.chineseName).distinct().filter(name -> name.startsWith(input)).forEach(s -> builder.suggest(String.format("\"%s\"", s)));
-            return builder.buildFuture();
-        }
     }
 
 }

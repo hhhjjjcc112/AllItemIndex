@@ -5,9 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 import com.hjc.allitemindex.exception.*;
-import com.hjc.allitemindex.model.Direction;
-import com.hjc.allitemindex.model.ItemIndexes;
-import com.hjc.allitemindex.model.ItemInfo;
+import com.hjc.allitemindex.model.*;
 import com.hjc.allitemindex.util.ID;
 import com.mojang.brigadier.context.CommandContext;
 import net.fabricmc.loader.api.FabricLoader;
@@ -186,6 +184,74 @@ public class IndexJsonManager {
         }
     }
 
+    public static boolean moveItem(
+            CommandContext<ServerCommandSource> context,
+            ItemInfo item,
+            FloorLight toFloor,
+            Direction toDirection,
+            CarpetColor toCarpetColor
+    ) throws BadHanyuPinyinOutputFormatCombination {
+        synchronized (IndexJsonManager.class) {
+            if(!loaded) {
+                loaded = loadFromLocal(context);
+            }
+            if(loaded) {
+                item.floorLight = toFloor;
+                item.direction = toDirection;
+                item.directionColor = toCarpetColor;
+                indexes = ItemIndexes.from(infos);
+                return saveToLocal(context);
+            }
+            return false;
+        }
+    }
+
+    public static boolean modifyEnglishName(
+            CommandContext<ServerCommandSource> context,
+            String chineseName,
+            String newEnglishName
+    ) throws BadHanyuPinyinOutputFormatCombination {
+        synchronized (IndexJsonManager.class) {
+            if(!loaded) {
+                loaded = loadFromLocal(context);
+            }
+            if(loaded) {
+                for(var info: infos) {
+                    if(info.chineseName.equals(chineseName)) {
+                        info.englishName = newEnglishName;
+                    }
+                }
+                indexes = ItemIndexes.from(infos);
+                return saveToLocal(context);
+            }
+            return false;
+        }
+    }
+
+    public static boolean modifyAlias(
+            CommandContext<ServerCommandSource> context,
+            String chineseName,
+            String oldAlias,
+            String newAlias
+    ) throws BadHanyuPinyinOutputFormatCombination {
+        synchronized (IndexJsonManager.class) {
+            if(!loaded) {
+                loaded = loadFromLocal(context);
+            }
+            if(loaded) {
+                for(var info: infos) {
+                    if(info.chineseName.equals(chineseName)) {
+                        info.chineseAlias.remove(oldAlias);
+                        info.chineseAlias.add(newAlias);
+                    }
+                }
+                indexes = ItemIndexes.from(infos);
+                return saveToLocal(context);
+            }
+            return false;
+        }
+    }
+
     /**
      * 从本地加载index.json中的内容
      * @param context 调用时的指令上下文
@@ -210,7 +276,7 @@ public class IndexJsonManager {
             MyExceptionHandler.error(context, e, "ID冲突");
         } catch(CarpetAndDirectionNotMatchException e) {
             MyExceptionHandler.error(context, e, "方向和地毯颜色不对应");
-        } catch (AmbiguousAliasException e) {
+        } catch (AmbiguousValuesException e) {
             MyExceptionHandler.error(context, e, "别名不一致");
         } catch (BadHanyuPinyinOutputFormatCombination e) {
             MyExceptionHandler.error(context, e, "拼音计算失败");
@@ -241,7 +307,7 @@ public class IndexJsonManager {
     /**
      * 检查加载的infos是否合法, 抛出错误
      */
-    private static void checkInfos(Set<ItemInfo> infos) throws EmptyValueException, CarpetAndDirectionNotMatchException, AmbiguousAliasException {
+    private static void checkInfos(Set<ItemInfo> infos) throws EmptyValueException, CarpetAndDirectionNotMatchException, AmbiguousValuesException {
         for(var info : infos) {
             // 存在可能的空值
             if(info.anyEmpty()) {
@@ -259,7 +325,10 @@ public class IndexJsonManager {
                     .collect(Collectors.toSet());
             for(var item: items) {
                 if(!first.chineseAlias.equals(item.chineseAlias)) {
-                    throw new AmbiguousAliasException(first.chineseName + "的别名不一致, 分别有" + first.chineseAlias + "和" + item.chineseAlias);
+                    throw new AmbiguousValuesException(first.chineseName + "的别名不一致, 分别有" + first.chineseAlias + "和" + item.chineseAlias);
+                }
+                else if(!first.englishName.equals(item.englishName)) {
+                    throw new AmbiguousValuesException(first.chineseName + "的英文名不一致, 分别有" + first.englishName + "和" + item.englishName);
                 }
                 set.remove(item);
             }

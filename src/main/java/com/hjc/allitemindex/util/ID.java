@@ -3,12 +3,12 @@ package com.hjc.allitemindex.util;
 import java.util.Objects;
 
 public class ID {
-    public long id;
+    public long value;
     private static long nextID = 0;
 
     public ID() {
         synchronized (ID.class) {
-            id = ++nextID;
+            value = ++nextID;
         }
     }
 
@@ -22,16 +22,16 @@ public class ID {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ID id1)) return false;
-        return id == id1.id;
+        return value == id1.value;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return Objects.hashCode(value);
     }
 
     @Override
     public String toString() {
-        return "id=" + id;
+        return "id=" + value;
     }
 }

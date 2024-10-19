@@ -1,0 +1,9233 @@
+[
+  {
+    "en": "anvil",
+    "cn": "铁砧",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "emerald_block",
+    "cn": "绿宝石块",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "redstone_block",
+    "cn": "红石块",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "iron_block",
+    "cn": "铁块",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "coal_block",
+    "cn": "煤炭块",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "sand",
+    "cn": "沙子",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "obsidian",
+    "cn": "黑曜石",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "bone_block",
+    "cn": "骨块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "bamboo",
+    "cn": "竹子",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "bamboo_block",
+    "cn": "竹块",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "slime_block",
+    "cn": "粘液块",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "green_concrete",
+    "cn": "绿色混凝土",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "cyan_concrete",
+    "cn": "青色混凝土",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "light_blue_concrete",
+    "cn": "淡蓝色混凝土",
+    "alias": [
+      "浅蓝色混凝土"
+    ],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "blue_concrete",
+    "cn": "蓝色混凝土",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "yellow_green_concrete",
+    "cn": "黄绿色混凝土",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "purple_concrete",
+    "cn": "紫色混凝土",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "yellow_concrete",
+    "cn": "黄色混凝土",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "magenta_concrete",
+    "cn": "品红色混凝土",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "orange_concrete",
+    "cn": "橙色混凝土",
+    "alias": [
+      "橘色混凝土",
+      "橘黄色混凝土"
+    ],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "pink_concrete",
+    "cn": "粉红色混凝土",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "red_concrete",
+    "cn": "红色混凝土",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "sugar",
+    "cn": "糖",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "brown_concrete",
+    "cn": "棕色混凝土",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "stick",
+    "cn": "木棍",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "black_concrete",
+    "cn": "黑色混凝土",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "pearlescent_froglight",
+    "cn": "珠光蛙明灯",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "gray_concrete",
+    "cn": "灰色混凝土",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "verdant_froglight",
+    "cn": "青翠蛙明灯",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "light_grey_concrete",
+    "cn": "淡灰色混凝土",
+    "alias": [
+      "浅灰色混凝土"
+    ],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "ochre_froglight",
+    "cn": "赭黄蛙明灯",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "white_concrete",
+    "cn": "白色混凝土",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "prismarine_shard",
+    "cn": "海晶碎片",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "slime_ball",
+    "cn": "粘液球",
+    "alias": [
+      "爷爷球"
+    ],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "prismarine_crystals",
+    "cn": "海晶砂粒",
+    "alias": [
+      "海晶砂砾",
+      "海晶沙砾",
+      "海晶沙粒"
+    ],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "gold_block",
+    "cn": "金块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "nautilus_shell",
+    "cn": "鹦鹉螺壳",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "iron_ingot",
+    "cn": "铁锭",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "gold_ingot",
+    "cn": "金锭",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "leather",
+    "cn": "皮革",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "oak_log",
+    "cn": "橡木原木",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "quartz",
+    "cn": "下界石英",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "spruce_log",
+    "cn": "云杉原木",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "spectral_arrow",
+    "cn": "光灵箭",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "birch_log",
+    "cn": "白桦原木",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "jungle_log",
+    "cn": "丛林原木",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "wither_rose",
+    "cn": "凋零玫瑰",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "acacia_log",
+    "cn": "金合欢原木",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "gunpowder",
+    "cn": "火药",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "mangrove_log",
+    "cn": "红树原木",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "magma_cream",
+    "cn": "岩浆膏",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "cherry_log",
+    "cn": "樱花原木",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "wither_skeleton_skull",
+    "cn": "凋零骷髅头颅",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "dark_oak_log",
+    "cn": "深色橡木原木",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "dragon_egg",
+    "cn": "龙蛋",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "emerald",
+    "cn": "绿宝石",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "salmon",
+    "cn": "生鲑鱼",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "glass",
+    "cn": "玻璃",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "cod",
+    "cn": "生鳕鱼",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "rail",
+    "cn": "铁轨",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "activator_rail",
+    "cn": "激活铁轨",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "detector_rail",
+    "cn": "探测铁轨",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "powered_rail",
+    "cn": "动力铁轨",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "glass_bottle",
+    "cn": "玻璃瓶",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "cobblestone",
+    "cn": "圆石",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "stone",
+    "cn": "石头",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "iron_block",
+    "cn": "铁块",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "glow_stone_dust",
+    "cn": "萤石粉",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "spider_eye",
+    "cn": "蜘蛛眼",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "coal",
+    "cn": "煤炭",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "string",
+    "cn": "线",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "cooked_porkchop",
+    "cn": "熟猪排",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "golden_carrot",
+    "cn": "金胡萝卜",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "青翠蛙明灯"
+  },
+  {
+    "en": "birch_fence",
+    "cn": "白桦木栅栏",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_fence_gate",
+    "cn": "白桦木栅栏门",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_door",
+    "cn": "白桦木门",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_trapdoor",
+    "cn": "白桦木活板门",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_pressure_plate",
+    "cn": "白桦木压力板",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_button",
+    "cn": "白桦木按钮",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_wood",
+    "cn": "丛林木",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_jungle_log",
+    "cn": "去皮丛林原木",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_jungle_wood",
+    "cn": "去皮丛林木",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_planks",
+    "cn": "丛林木板",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_stairs",
+    "cn": "白桦木楼梯",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_slab",
+    "cn": "白桦木台阶",
+    "alias": [
+      "白桦木半砖"
+    ],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_stairs",
+    "cn": "丛林木楼梯",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_slab",
+    "cn": "丛林木台阶",
+    "alias": [
+      "丛林木半砖"
+    ],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_birch_wood",
+    "cn": "去皮白桦木",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_planks",
+    "cn": "白桦木板",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_fence",
+    "cn": "丛林木栅栏",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_fence_gate",
+    "cn": "丛林木栅栏门",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "birch_wood",
+    "cn": "白桦木",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_birch_log",
+    "cn": "去皮白桦原木",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_door",
+    "cn": "丛林木门",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_trapdoor",
+    "cn": "丛林木活板门",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_pressure_plate",
+    "cn": "云杉木压力板",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_button",
+    "cn": "云杉木按钮",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_pressure_plate",
+    "cn": "丛林木压力板",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "jungle_button",
+    "cn": "丛林木按钮",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_door",
+    "cn": "云杉木门",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_trapdoor",
+    "cn": "云杉木活板门",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_wood",
+    "cn": "金合欢木",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_acacia_log",
+    "cn": "去皮金合欢原木",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_fence",
+    "cn": "云杉栅栏",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_fence_gate",
+    "cn": "云杉栅栏门",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_acacia_wood",
+    "cn": "去皮金合欢木",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_planks",
+    "cn": "金合欢木板",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_slab",
+    "cn": "云杉木台阶",
+    "alias": [
+      "云杉木半砖"
+    ],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_stairs",
+    "cn": "云山木楼梯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_slab",
+    "cn": "金合欢木台阶",
+    "alias": [
+      "金合欢木半砖"
+    ],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_stairs",
+    "cn": "金合欢木楼梯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_spruce_wood",
+    "cn": "去皮云杉木",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_planks",
+    "cn": "云杉木板",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_fence",
+    "cn": "金合欢栅栏",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_fence_gate",
+    "cn": "金合欢栅栏门",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "spruce_wood",
+    "cn": "云杉木",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_spruce_log",
+    "cn": "去皮云杉原木",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_door",
+    "cn": "金合欢木门",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_trapdoor",
+    "cn": "金合欢木活板门",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_pressure_plate",
+    "cn": "橡木压力板",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_button",
+    "cn": "橡木按钮",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_pressure_plate",
+    "cn": "金合欢木压力板",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "acacia_button",
+    "cn": "金合欢木按钮",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_wood",
+    "cn": "深色橡木",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_dark_oak_log",
+    "cn": "去皮深色橡木原木",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_door",
+    "cn": "橡木门",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_trapdoor",
+    "cn": "橡木活板门",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_dark_oak_wood",
+    "cn": "去皮深色橡木",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_planks",
+    "cn": "深色橡木木板",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_fence",
+    "cn": "橡木栅栏",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_fence_gate",
+    "cn": "橡木栅栏门",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_stairs",
+    "cn": "深色橡木楼梯",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_slab",
+    "cn": "深色橡木台阶",
+    "alias": [
+      "深色橡木半砖"
+    ],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_stairs",
+    "cn": "橡木楼梯",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_slab",
+    "cn": "橡木台阶",
+    "alias": [
+      "橡木半砖"
+    ],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_oak_wood",
+    "cn": "去皮橡木",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_planks",
+    "cn": "橡木木板",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_fence",
+    "cn": "深色橡木栅栏",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_fence_gate",
+    "cn": "深色橡木栅栏门",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "oak_wood",
+    "cn": "橡木",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_oak_log",
+    "cn": "去皮橡木原木",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_door",
+    "cn": "深色橡木门",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_trapdoor",
+    "cn": "深色橡木活板门",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_mosaic_slab",
+    "cn": "竹马赛克台阶",
+    "alias": [
+      "竹马赛克半砖"
+    ],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_stairs",
+    "cn": "竹楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_mosaic_stairs",
+    "cn": "竹马赛克楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_fence",
+    "cn": "竹栅栏",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_fence_gate",
+    "cn": "竹栅栏门",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_door",
+    "cn": "竹门",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_trapdoor",
+    "cn": "竹活板门",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_pressure_plate",
+    "cn": "竹压力板",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_button",
+    "cn": "竹按钮",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_stem",
+    "cn": "绯红菌柄",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_hyphae",
+    "cn": "绯红菌核",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_crimson_stem",
+    "cn": "去皮绯红菌柄",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_mosaic",
+    "cn": "竹马赛克",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_slab",
+    "cn": "竹台阶",
+    "alias": [
+      "竹半砖"
+    ],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_crimson_hyphae",
+    "cn": "去皮绯红菌核",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_planks",
+    "cn": "绯红木板",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_bamboo",
+    "cn": "去皮竹块",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bamboo_planks",
+    "cn": "竹板",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_stairs",
+    "cn": "绯红木楼梯",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_slab",
+    "cn": "绯红木台阶",
+    "alias": [
+      "绯红木半砖"
+    ],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_pressure_plate",
+    "cn": "樱花木压力板",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_button",
+    "cn": "樱花木按钮",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_fence",
+    "cn": "绯红木栅栏",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_fence_gate",
+    "cn": "绯红木栅栏门",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_door",
+    "cn": "樱花木门",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_trapdoor",
+    "cn": "樱花木活板门",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_door",
+    "cn": "绯红木门",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_trapdoor",
+    "cn": "绯红木活板门",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_fence",
+    "cn": "樱花木栅栏",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_fence_gate",
+    "cn": "樱花木栅栏门",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_pressure_plate",
+    "cn": "绯红木压力板",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "crimson_button",
+    "cn": "绯红木按钮",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_slab",
+    "cn": "樱花木台阶",
+    "alias": [
+      "樱花木半砖"
+    ],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_stairs",
+    "cn": "樱花木楼梯",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_stem",
+    "cn": "诡异菌柄",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_hyphae",
+    "cn": "诡异菌核",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_cherry_wood",
+    "cn": "去皮樱花木",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_planks",
+    "cn": "樱花木板",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_warped_stem",
+    "cn": "去皮诡异菌柄",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_warped_hyphae",
+    "cn": "去皮诡异菌核",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cherry_wood",
+    "cn": "樱花木",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_cherry_log",
+    "cn": "去皮樱花原木",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_planks",
+    "cn": "诡异木板",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_stairs",
+    "cn": "诡异木楼梯",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_pressure_plate",
+    "cn": "红树木压力板",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_button",
+    "cn": "红树木按钮",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_slab",
+    "cn": "诡异木台阶",
+    "alias": [
+      "诡异木半砖"
+    ],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_fence",
+    "cn": "诡异木栅栏",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_door",
+    "cn": "红树木门",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_trapdoor",
+    "cn": "红树木活板门",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_fence_gate",
+    "cn": "诡异木栅栏门",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_door",
+    "cn": "诡异木门",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_fence",
+    "cn": "红树木栅栏",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_fence_gate",
+    "cn": "红树木栅栏门",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_trapdoor",
+    "cn": "诡异木活板门",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_pressure_plate",
+    "cn": "诡异木压力板",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_slab",
+    "cn": "红树木台阶",
+    "alias": [
+      "红树木半砖"
+    ],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_stairs",
+    "cn": "红树木楼梯",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "warped_button",
+    "cn": "诡异木按钮",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone",
+    "cn": "石头",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_mangrove_wood",
+    "cn": "去皮红树木",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_planks",
+    "cn": "红树木板",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_stairs",
+    "cn": "石头楼梯",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_slab",
+    "cn": "石头台阶",
+    "alias": [
+      "石头半砖"
+    ],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mangrove_wood",
+    "cn": "红树木",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stripped_mangrove_log",
+    "cn": "去皮红树原木",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_pressure_plate",
+    "cn": "石头压力板",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_button",
+    "cn": "石头按钮",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_pressure_plate",
+    "cn": "深色橡木压力板",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_oak_button",
+    "cn": "深色橡木按钮",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_diorite",
+    "cn": "磨制闪长岩",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_diorite_stairs",
+    "cn": "磨制闪长岩楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_diorite_slab",
+    "cn": "磨制闪长岩台阶",
+    "alias": [
+      "磨制闪长岩半砖"
+    ],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "andesite",
+    "cn": "安山岩",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "andesite_stairs",
+    "cn": "安山岩楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "andesite_slab",
+    "cn": "安山岩台阶",
+    "alias": [
+      "安山岩半砖"
+    ],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "andesite_wall",
+    "cn": "安山岩墙",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_andesite",
+    "cn": "磨制安山岩",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_andesite_stairs",
+    "cn": "磨制安山岩楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_andesite_slab",
+    "cn": "磨制安山岩台阶",
+    "alias": [
+      "磨制安山岩半砖"
+    ],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "diorite_slab",
+    "cn": "闪长岩台阶",
+    "alias": [
+      "闪长岩半砖"
+    ],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "diorite_wall",
+    "cn": "闪长岩墙",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate",
+    "cn": "深板岩",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobbled_deepslate",
+    "cn": "深板岩圆石",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "diorite",
+    "cn": "闪长岩",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "diorite_stairs",
+    "cn": "闪长岩楼梯",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobbled_deepslate_stairs",
+    "cn": "深板岩圆石楼梯",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobbled_deepslate_slab",
+    "cn": "深板岩圆石台阶",
+    "alias": [
+      "深板岩圆石半砖"
+    ],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_granite_stairs",
+    "cn": "磨制花岗岩楼梯",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_granite_slab",
+    "cn": "磨制花岗岩台阶",
+    "alias": [
+      "磨制花岗岩半砖"
+    ],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobbled_deepslate_wall",
+    "cn": "深板岩圆石墙",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "chiseled_deepslate",
+    "cn": "雕纹深板岩",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "granite_wall",
+    "cn": "花岗岩墙",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_granite",
+    "cn": "磨制花岗岩",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_deepslate",
+    "cn": "磨制深板岩",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_deepslate_stairs",
+    "cn": "磨制深板岩楼梯",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "granite_stairs",
+    "cn": "花岗岩楼梯",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "granite_slab",
+    "cn": "花岗岩台阶",
+    "alias": [
+      "花岗岩半砖"
+    ],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_deepslate_slab",
+    "cn": "磨制深板岩台阶",
+    "alias": [
+      "磨制深板岩半砖"
+    ],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_deepslate_wall",
+    "cn": "磨制深板岩墙",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_stone_brick_wall",
+    "cn": "苔石砖墙",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "granite",
+    "cn": "花岗岩",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_bricks",
+    "cn": "深板岩砖",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cracked_deepslate_bricks",
+    "cn": "裂纹深板岩砖",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_stone_brick_stairs",
+    "cn": "苔石砖楼梯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_stone_brick_slab",
+    "cn": "苔石砖台阶",
+    "alias": [
+      "苔石砖半砖"
+    ],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_brick_stairs",
+    "cn": "深板岩砖楼梯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_brick_slab",
+    "cn": "深板岩砖台阶",
+    "alias": [
+      "深板岩砖半砖"
+    ],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "chiseled_stone_bricks",
+    "cn": "雕纹石砖",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_stone_bricks",
+    "cn": "苔石砖",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_brick_wall",
+    "cn": "深板岩砖墙",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_tiles",
+    "cn": "深板岩瓦",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_brick_slab",
+    "cn": "石砖台阶",
+    "alias": [
+      "石砖半砖"
+    ],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_brick_wall",
+    "cn": "石砖墙",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cracked_deepslate_tiles",
+    "cn": "裂纹深板岩瓦",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_tile_stairs",
+    "cn": "深板岩瓦楼梯",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cracked_stone_bricks",
+    "cn": "裂纹石砖",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_brick_stairs",
+    "cn": "石砖楼梯",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_tile_slab",
+    "cn": "深板岩瓦台阶",
+    "alias": [
+      "深板岩瓦半砖"
+    ],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "deepslate_tile_wall",
+    "cn": "深板岩瓦墙",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_stone_slab",
+    "cn": "平滑石头台阶",
+    "alias": [
+      "平滑石头半砖"
+    ],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "stone_bricks",
+    "cn": "石砖",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "bricks",
+    "cn": "红砖块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "brick_slab",
+    "cn": "红砖台阶",
+    "alias": [
+      "红砖半砖"
+    ],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_cobblestone_wall",
+    "cn": "苔石墙",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_stone",
+    "cn": "平滑石头",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "brick_stairs",
+    "cn": "红砖楼梯",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "brick_wall",
+    "cn": "红砖墙",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_cobblestone_slab",
+    "cn": "苔石台阶",
+    "alias": [
+      "苔石半砖"
+    ],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_cobblestone_stairs",
+    "cn": "苔石楼梯",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "packed_mud",
+    "cn": "泥胚",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mud_bricks",
+    "cn": "泥砖",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobblestone_wall",
+    "cn": "圆石墙",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mossy_cobblestone",
+    "cn": "苔石",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mud_brick_slab",
+    "cn": "泥砖台阶",
+    "alias": [
+      "泥砖半砖"
+    ],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mud_brick_stairs",
+    "cn": "泥砖楼梯",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobblestone_stairs",
+    "cn": "圆石楼梯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cobblestone_slab",
+    "cn": "圆石台阶",
+    "alias": [
+      "圆石半砖"
+    ],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "mud_brick_wall",
+    "cn": "泥砖墙",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "sandstone",
+    "cn": "砂岩",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "nether_wart_block",
+    "cn": "下界疣块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "nether_bricks",
+    "cn": "下界砖块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cracked_nether_bricks",
+    "cn": "裂纹下界砖块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "nether_brick_stairs",
+    "cn": "下界砖楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "nether_brick_slab",
+    "cn": "下界砖台阶",
+    "alias": [
+      "下界砖半砖"
+    ],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "nether_brick_fence",
+    "cn": "下界砖栅栏",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "nether_brick_wall",
+    "cn": "下界砖墙",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "chiseled_nether_bricks",
+    "cn": "雕纹下界砖块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_nether_bricks",
+    "cn": "红色下界砖块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_nether_brick_stairs",
+    "cn": "红色下界砖楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_prismarine_slab",
+    "cn": "暗海晶石台阶",
+    "alias": [
+      "暗海晶石半砖"
+    ],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_prismarine_stairs",
+    "cn": "暗海晶石楼梯",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_nether_brick_slab",
+    "cn": "红色下界砖台阶",
+    "alias": [
+      "红色下界砖半砖"
+    ],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_nether_brick_wall",
+    "cn": "红色下界砖墙",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine_bricks_stairs",
+    "cn": "海晶石砖楼梯",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "dark_prismarine",
+    "cn": "暗海晶石",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "basalt",
+    "cn": "玄武岩",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_basalt",
+    "cn": "平滑玄武岩",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine_bricks",
+    "cn": "海晶石砖",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine_bricks_slab",
+    "cn": "海晶石砖台阶",
+    "alias": [
+      "海晶石砖半砖"
+    ],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_basalt",
+    "cn": "磨制玄武岩",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "blackstone",
+    "cn": "黑石",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine_slab",
+    "cn": "海晶石台阶",
+    "alias": [
+      "海晶石半砖"
+    ],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine_wall",
+    "cn": "海晶石墙",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "gilded_blackstone",
+    "cn": "镶金黑石",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "blackstone_stairs",
+    "cn": "黑石楼梯",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine",
+    "cn": "海晶石",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "prismarine_stairs",
+    "cn": "海晶石楼梯",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "blackstone_slab",
+    "cn": "黑石台阶",
+    "alias": [
+      "黑石半砖"
+    ],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "blackstone_wall",
+    "cn": "黑石墙",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cut_red_sandstone_slab",
+    "cn": "切制红砂岩台阶",
+    "alias": [
+      "切制红砂岩半砖"
+    ],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "sea_lantern",
+    "cn": "海晶灯",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "chiseled_polished_blackstone",
+    "cn": "雕纹磨制黑石",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone",
+    "cn": "磨制黑石",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_red_sandstone_slab",
+    "cn": "平滑红砂岩台阶",
+    "alias": [
+      "平滑红砂岩半砖"
+    ],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cut_red_sandstone",
+    "cn": "切制红砂岩",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_brick_stairs",
+    "cn": "磨制黑石砖楼梯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_brick_slab",
+    "cn": "磨制黑石砖台阶",
+    "alias": [
+      "磨制黑石砖半砖"
+    ],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_red_sandstone",
+    "cn": "平滑红砂岩",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_red_sandstone_stairs",
+    "cn": "平滑红砂岩楼梯",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_brick_wall",
+    "cn": "磨制黑石砖墙",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_pressure_plate",
+    "cn": "磨制黑石压力板",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_sandstone_wall",
+    "cn": "红砂岩墙",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "chiseled_red_sandstone",
+    "cn": "雕纹红砂岩",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_button",
+    "cn": "磨制黑石按钮",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_bricks",
+    "cn": "磨制黑石砖",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_sandstone_stairs",
+    "cn": "红砂岩楼梯",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_sandstone_slab",
+    "cn": "红砂岩台阶",
+    "alias": [
+      "红砂岩半砖"
+    ],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cracked_polished_blackstone_bricks",
+    "cn": "裂纹磨制黑石砖",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_balckstone_stairs",
+    "cn": "磨制黑石楼梯",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cut_sandstone_slab",
+    "cn": "切制砂岩台阶",
+    "alias": [
+      "切制砂岩半砖"
+    ],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "red_sandstone",
+    "cn": "红砂岩",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_slab",
+    "cn": "磨制黑石台阶",
+    "alias": [
+      "磨制黑石半砖"
+    ],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "polished_blackstone_wall",
+    "cn": "磨制黑石墙",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_sandstone_stairs",
+    "cn": "平滑砂岩楼梯",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "cut_sandstone",
+    "cn": "切制砂岩",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "end_stone",
+    "cn": "末地石",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "end_stone_bricks",
+    "cn": "末地石砖",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_sandstone",
+    "cn": "平滑砂岩",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "smooth_sandstone_slab",
+    "cn": "平滑砂岩台阶",
+    "alias": [
+      "平滑砂岩半砖"
+    ],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "end_stone_brick_slab",
+    "cn": "末地石砖台阶",
+    "alias": [
+      "末地石砖半砖"
+    ],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "end_stone_brick_stairs",
+    "cn": "末地石砖楼梯",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "sandstone_wall",
+    "cn": "砂岩墙",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "chiseled_sandstone",
+    "cn": "雕纹砂岩",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "end_stone_brick_wall",
+    "cn": "末地石砖墙",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "purpur_block",
+    "cn": "紫珀块",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "sandstone_stairs",
+    "cn": "砂岩楼梯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "sandstone_slab",
+    "cn": "砂岩台阶",
+    "alias": [
+      "砂岩半砖"
+    ],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "purpur_pillar",
+    "cn": "紫珀柱",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "purpur_stairs",
+    "cn": "紫珀楼梯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "赭黄蛙明灯"
+  },
+  {
+    "en": "weathered_cut_copper_stairs",
+    "cn": "锈蚀的切制铜楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "weathered_cut_copper_slab",
+    "cn": "锈蚀的切制铜台阶",
+    "alias": [
+      "锈蚀的切制铜半砖"
+    ],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "oxidized_copper",
+    "cn": "氧化的铜块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "oxidized_cut_copper",
+    "cn": "氧化的切制铜块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "oxidized_cut_copper_stairs",
+    "cn": "氧化的切制铜楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "oxidized_cut_copper_slab",
+    "cn": "氧化的切制铜台阶",
+    "alias": [
+      "氧化的切制铜半砖"
+    ],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_copper_block",
+    "cn": "涂蜡铜块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_cut_copper",
+    "cn": "涂蜡切制铜块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_cut_copper_stairs",
+    "cn": "涂蜡切制铜楼梯",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_cut_copper_slab",
+    "cn": "涂蜡切制铜台阶",
+    "alias": [
+      "涂蜡切制铜半砖"
+    ],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "weathered_copper",
+    "cn": "锈蚀的铜块",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "weathered_cut_copper",
+    "cn": "锈蚀的切制铜块",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_exposed_copper",
+    "cn": "斑驳的涂蜡铜块",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_exposed_cut_copper",
+    "cn": "斑驳的涂蜡切制铜块",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "exposed_cut_coppper_stairs",
+    "cn": "斑驳的切制铜楼梯",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "exposed_cut_copper_slab",
+    "cn": "斑驳的切制铜台阶",
+    "alias": [
+      "斑驳的切制铜半砖"
+    ],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_exposed_cut_copper_stairs",
+    "cn": "斑驳的涂蜡切制铜楼梯",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_exposed_cut_copper_slab",
+    "cn": "斑驳的涂蜡切制铜台阶",
+    "alias": [
+      "斑驳的涂蜡切制铜半砖"
+    ],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "exposed_copper",
+    "cn": "斑驳的铜块",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "exposed_cut_copper",
+    "cn": "斑驳的切制铜块",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_weathered_copper",
+    "cn": "锈蚀的涂蜡铜块",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_weathered_cut_copper",
+    "cn": "锈蚀的涂蜡切制铜块",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cut_copper_stairs",
+    "cn": "切制铜楼梯",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cut_copper_slab",
+    "cn": "切制铜台阶",
+    "alias": [
+      "切制铜半砖"
+    ],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_weathered_cut_copper_stairs",
+    "cn": "锈蚀的涂蜡切制铜楼梯",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_weathered_cut_copper_slab",
+    "cn": "锈蚀的涂蜡切制铜台阶",
+    "alias": [
+      "锈蚀的涂蜡切制铜半砖"
+    ],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "copper_block",
+    "cn": "铜块",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cut_copper",
+    "cn": "切制铜块",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_oxidized_copper",
+    "cn": "氧化的涂蜡铜块",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_oxidized_cut_copper",
+    "cn": "氧化的涂蜡切制铜块",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "smooth_quartz_slab",
+    "cn": "平滑石英台阶",
+    "alias": [
+      "平滑石英半砖"
+    ],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "amethyst_block",
+    "cn": "紫水晶块",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_oxidized_cut_copper_stairs",
+    "cn": "氧化的涂蜡切制铜楼梯",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "waxed_oxidized_cut_copper_slab",
+    "cn": "氧化的涂蜡切制铜台阶",
+    "alias": [
+      "氧化的涂蜡切制铜半砖"
+    ],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "smooth_quartz",
+    "cn": "平滑石英块",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "smooth_quartz_stairs",
+    "cn": "平滑石英楼梯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_wool",
+    "cn": "白色羊毛",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_wool",
+    "cn": "淡灰色羊毛",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "quartz_pillar",
+    "cn": "石英柱",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "redstone",
+    "cn": "红石粉",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_wool",
+    "cn": "灰色羊毛",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_wool",
+    "cn": "黑色羊毛",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "dragon_head",
+    "cn": "龙首",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "ender_eye",
+    "cn": "末影之眼",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_wool",
+    "cn": "棕色羊毛",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_wool",
+    "cn": "红色羊毛",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "ender_chest",
+    "cn": "末影箱",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "respawn_anchor",
+    "cn": "重生锚",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_wool",
+    "cn": "橙色羊毛",
+    "alias": [
+      "橘黄色羊毛"
+    ],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_wool",
+    "cn": "黄色羊毛",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "chest",
+    "cn": "箱子",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "barrel",
+    "cn": "木桶",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_wool",
+    "cn": "黄绿色羊毛",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_wool",
+    "cn": "绿色羊毛",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "warped_sign",
+    "cn": "诡异木告示牌",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "warped_hanging_sign",
+    "cn": "悬挂式诡异木告示牌",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_wool",
+    "cn": "青色羊毛",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_wool",
+    "cn": "蓝色羊毛",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "crimson_sign",
+    "cn": "绯红木告示牌",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "crimson_hanging_sign",
+    "cn": "悬挂式绯红木告示牌",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_wool",
+    "cn": "淡蓝色羊毛",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_wool",
+    "cn": "紫色羊毛",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "bamboo_sign",
+    "cn": "竹告示牌",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "bamboo_hanging_sign",
+    "cn": "悬挂式竹告示牌",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_wool",
+    "cn": "品红色羊毛",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_wool",
+    "cn": "粉红色羊毛",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cherry_sign",
+    "cn": "樱花木告示牌",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cherry_hanging_sign",
+    "cn": "悬挂式樱花木告示牌",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_carpet",
+    "cn": "白色地毯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_carpet",
+    "cn": "淡灰色地毯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_terracotta",
+    "cn": "粉红色陶瓦",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_concrete_powder",
+    "cn": "白色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_concrete_powder",
+    "cn": "淡灰色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_concrete_powder",
+    "cn": "灰色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_concrete_powder",
+    "cn": "黑色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_concrete_powder",
+    "cn": "棕色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_concrete_powder",
+    "cn": "红色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_concrete_powder",
+    "cn": "橙色混凝土粉末",
+    "alias": [
+      "橘黄色混凝土粉末"
+    ],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_concrete_powder",
+    "cn": "黄色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_concrete_powder",
+    "cn": "黄绿色混凝土粉末",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_terracotta",
+    "cn": "紫色陶瓦",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_terracotta",
+    "cn": "品红色陶瓦",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_concrete_powder",
+    "cn": "绿色混凝土粉末",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_concrete_powder",
+    "cn": "青色混凝土粉末",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_terracotta",
+    "cn": "淡蓝色陶瓦",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_terracotta",
+    "cn": "蓝色陶瓦",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_concrete_powder",
+    "cn": "淡蓝色混凝土粉末",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_concrete_powder",
+    "cn": "蓝色混凝土粉末",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_terracotta",
+    "cn": "绿色陶瓦",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_terracotta",
+    "cn": "青色陶瓦",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_concrete_powder",
+    "cn": "紫色混凝土粉末",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_concrete_powder",
+    "cn": "品红色混凝土粉末",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_terracotta",
+    "cn": "黄绿色陶瓦",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_terracotta",
+    "cn": "黄色陶瓦",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_concrete_powder",
+    "cn": "粉红色混凝土粉末",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_glazed_terracotta",
+    "cn": "白色带釉陶瓦",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_terracotta",
+    "cn": "橙色陶瓦",
+    "alias": [
+      "橘黄色陶瓦"
+    ],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_terracotta",
+    "cn": "红色陶瓦",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_glazed_terracotta",
+    "cn": "淡灰色带釉陶瓦",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_glazed_terracotta",
+    "cn": "灰色带釉陶瓦",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_terracotta",
+    "cn": "棕色陶瓦",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_terracotta",
+    "cn": "黑色陶瓦",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_glazed_terracotta",
+    "cn": "黑色带釉陶瓦",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_glazed_terracotta",
+    "cn": "棕色带釉陶瓦",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_terracotta",
+    "cn": "淡灰色陶瓦",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_terracotta",
+    "cn": "灰色陶瓦",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_glazed_terracotta",
+    "cn": "红色带釉陶瓦",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_glazed_terracotta",
+    "cn": "橙色带釉陶瓦",
+    "alias": [
+      "橘黄色带釉陶瓦"
+    ],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "terracotta",
+    "cn": "陶瓦",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_terracotta",
+    "cn": "白色陶瓦",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_glazed_terracotta",
+    "cn": "黄色带釉陶瓦",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_glazed_terracotta",
+    "cn": "黄绿色带釉陶瓦",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_carpet",
+    "cn": "品红色地毯",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_carpet",
+    "cn": "粉红色地毯",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_glazed_terracotta",
+    "cn": "绿色带釉陶瓦",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_glazed_terracotta",
+    "cn": "青色带釉陶瓦",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_carpet",
+    "cn": "蓝色地毯",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_carpet",
+    "cn": "紫色地毯",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_glazed_terracotta",
+    "cn": "淡蓝色带釉陶瓦",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_glazed_terracotta",
+    "cn": "蓝色带釉陶瓦",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_carpet",
+    "cn": "青色地毯",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_carpet",
+    "cn": "淡蓝色地毯",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_glazed_terracotta",
+    "cn": "紫色带釉陶瓦",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_glazed_terracotta",
+    "cn": "品红色带釉陶瓦",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_carpet",
+    "cn": "黄绿色地毯",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_carpet",
+    "cn": "绿色地毯",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_glazed_terracotta",
+    "cn": "粉红色带釉陶瓦",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "glass",
+    "cn": "玻璃",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_carpet",
+    "cn": "橙色地毯",
+    "alias": [
+      "橘黄色地毯"
+    ],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_carpet",
+    "cn": "黄色地毯",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "tinted_glass",
+    "cn": "遮光玻璃",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_stained_glass",
+    "cn": "白色染色玻璃",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_carpet",
+    "cn": "棕色地毯",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_carpet",
+    "cn": "红色地毯",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_stained_glass",
+    "cn": "淡灰色染色玻璃",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_stained_glass",
+    "cn": "灰色染色玻璃",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_carpet",
+    "cn": "灰色地毯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_carpet",
+    "cn": "黑色地毯",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_stained_glass",
+    "cn": "黑色染色玻璃",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_stained_glass",
+    "cn": "棕色染色玻璃",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_candle",
+    "cn": "淡灰色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_candle",
+    "cn": "灰色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_candle",
+    "cn": "黑色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_candle",
+    "cn": "棕色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_candle",
+    "cn": "红色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_candle",
+    "cn": "橙色蜡烛",
+    "alias": [
+      "橘黄色蜡烛"
+    ],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_candle",
+    "cn": "黄色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_candle",
+    "cn": "黄绿色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_candle",
+    "cn": "绿色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_candle",
+    "cn": "青色蜡烛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "candle",
+    "cn": "蜡烛",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_candle",
+    "cn": "白色蜡烛",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_candle",
+    "cn": "淡蓝色蜡烛",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_candle",
+    "cn": "蓝色蜡烛",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_stained_glass_pane",
+    "cn": "品红色染色玻璃板",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_stained_glass_pane",
+    "cn": "粉红色染色玻璃板",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_candle",
+    "cn": "紫色蜡烛",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_candle",
+    "cn": "品红色蜡烛",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_stained_glass_pane",
+    "cn": "淡蓝色染色玻璃板",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_stained_glass_pane",
+    "cn": "紫色染色玻璃板",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_candle",
+    "cn": "粉红色蜡烛",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_banner",
+    "cn": "白色旗帜",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_stained_glass_pane",
+    "cn": "青色染色玻璃板",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_stained_glass_pane",
+    "cn": "蓝色染色玻璃板",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_banner",
+    "cn": "淡灰色旗帜",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_banner",
+    "cn": "灰色旗帜",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_stained_glass_pane",
+    "cn": "黄绿色染色玻璃板",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_stained_glass_pane",
+    "cn": "绿色染色玻璃板",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_banner",
+    "cn": "黑色旗帜",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_banner",
+    "cn": "棕色旗帜",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_stained_glass_pane",
+    "cn": "橙色染色玻璃板",
+    "alias": [
+      "橘黄色染色玻璃板"
+    ],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_stained_glass_pane",
+    "cn": "黄色染色玻璃板",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_banner",
+    "cn": "红色旗帜",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_banner",
+    "cn": "橙色旗帜",
+    "alias": [
+      "橘黄色旗帜"
+    ],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brown_stained_glass_pane",
+    "cn": "棕色染色玻璃板",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_stained_glass_pane",
+    "cn": "红色染色玻璃板",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_banner",
+    "cn": "黄色旗帜",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_banner",
+    "cn": "黄绿色旗帜",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gray_stained_glass_pane",
+    "cn": "灰色染色玻璃板",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "black_stained_glass_pane",
+    "cn": "黑色染色玻璃板",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_banner",
+    "cn": "绿色旗帜",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_banner",
+    "cn": "青色旗帜",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "white_stained_glass_pane",
+    "cn": "白色染色玻璃板",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_gray_stained_glass_pane",
+    "cn": "淡灰色染色玻璃板",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_banner",
+    "cn": "淡蓝色旗帜",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pruple_banner",
+    "cn": "紫色旗帜",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_stained_glass",
+    "cn": "粉红色染色玻璃",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "glass_pane",
+    "cn": "玻璃板",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_banner",
+    "cn": "品红色旗帜",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "pink_banner",
+    "cn": "粉红色旗帜",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "purple_stained_glass",
+    "cn": "紫色染色玻璃",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "magenta_stained_glass",
+    "cn": "品红色染色玻璃",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_banner",
+    "cn": "蓝色旗帜",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "grass_block",
+    "cn": "草方块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_blue_stained_glass",
+    "cn": "淡蓝色染色玻璃",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blue_stained_glass",
+    "cn": "蓝色染色玻璃",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "podzol",
+    "cn": "灰化土",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "mycelium",
+    "cn": "菌丝体",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "green_stained_glass",
+    "cn": "绿色染色玻璃",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cyan_stained_glass",
+    "cn": "青色染色玻璃",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "dirt",
+    "cn": "泥土",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "coarse_dirt",
+    "cn": "砂土",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "yellow_stained_glass",
+    "cn": "黄色染色玻璃",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lime_stained_glass",
+    "cn": "黄绿色染色玻璃",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "rooted_dirt",
+    "cn": "缠根泥土",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "mud",
+    "cn": "泥巴",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "red_stained_glass",
+    "cn": "红色染色玻璃",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "orange_stained_glass",
+    "cn": "橙色染色玻璃",
+    "alias": [
+      "橘黄色染色玻璃"
+    ],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "clay",
+    "cn": "黏土块",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "gravel",
+    "cn": "砂砾",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "damaged_anvil",
+    "cn": "损坏的铁砧",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "composter",
+    "cn": "堆肥桶",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "note_block",
+    "cn": "音符盒",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "jukebox",
+    "cn": "唱片机",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "enchanting_table",
+    "cn": "附魔台",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "end_crystal",
+    "cn": "末地水晶",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "brewing_stand",
+    "cn": "酿造台",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cauldron",
+    "cn": "炼药锅",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "bell",
+    "cn": "钟",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "beacon",
+    "cn": "信标",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "soul_campfire",
+    "cn": "灵魂营火",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "chipped_anvil",
+    "cn": "开裂的铁砧",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "conduit",
+    "cn": "潮涌核心",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lodestone",
+    "cn": "磁石",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "blast_furnace",
+    "cn": "高炉",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "campfire",
+    "cn": "营火",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "ladder",
+    "cn": "梯子",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "scaffolding",
+    "cn": "脚手架",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "furnace",
+    "cn": "熔炉",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "smoker",
+    "cn": "烟熏炉",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "suspicious_sand",
+    "cn": "可疑的沙子",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "suspicious_gravel",
+    "cn": "可疑的砂砾",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "grindstone",
+    "cn": "砂轮",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "loom",
+    "cn": "织布机",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lightning_rod",
+    "cn": "避雷针",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "flower_pot",
+    "cn": "花盆",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "fletching_table",
+    "cn": "制箭台",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "smithing_table",
+    "cn": "锻造台",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "armor_stand",
+    "cn": "盔甲架",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "item_frame",
+    "cn": "物品展示框",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "stone_cutter",
+    "cn": "切石机",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "cartography_table",
+    "cn": "制图台",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "glow_item_frame",
+    "cn": "荧光物品展示框",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "painting",
+    "cn": "画",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "redstone_lamp",
+    "cn": "红石灯",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "crafting_table",
+    "cn": "工作台",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "bookshelf",
+    "cn": "书架",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "chiseled_bookshelf",
+    "cn": "雕纹书架",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "quartz_bricks",
+    "cn": "石英砖",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "end_rod",
+    "cn": "末地烛",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lectern",
+    "cn": "讲台",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "ominous_banner",
+    "cn": "灾厄旗帜",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "quartz_slab",
+    "cn": "石英台阶",
+    "alias": [
+      "石英半砖"
+    ],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "chiseled_quartz_block",
+    "cn": "雕纹石英块",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "oak_hanging_sign",
+    "cn": "悬挂式橡木告示牌",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "oak_sign",
+    "cn": "橡木告示牌",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "quartz_block",
+    "cn": "石英块",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "quartz_staits",
+    "cn": "石英楼梯",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "spruce_sign",
+    "cn": "云杉木告示牌",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "spruce_hanging_sign",
+    "cn": "悬挂式云杉木告示牌",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "diamond_block",
+    "cn": "钻石块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "netherite_block",
+    "cn": "下界合金块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "birch_sign",
+    "cn": "白桦木告示牌",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "birch_hanging_sign",
+    "cn": "悬挂式白桦木告示牌",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "light_weighted_pressure_plate",
+    "cn": "轻质测重压力板",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lapis_block",
+    "cn": "青金石块",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "jungle_sign",
+    "cn": "丛林木告示牌",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "jungle_hanging_sign",
+    "cn": "悬挂式丛林木告示牌",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "heavy_weighted_pressure_plate",
+    "cn": "重质测重压力板",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "chain",
+    "cn": "锁链",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "acacia_sign",
+    "cn": "金合欢木告示牌",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "acacia_hanging_sign",
+    "cn": "悬挂式金合欢木告示牌",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "iron_door",
+    "cn": "铁门",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "iron_trapdoor",
+    "cn": "铁活板门",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "dark_oak_sign",
+    "cn": "深色橡木告示牌",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "dark_oak_hanging_sign",
+    "cn": "悬挂式深色橡木告示牌",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "prupur_slab",
+    "cn": "紫珀台阶",
+    "alias": [
+      "紫珀半砖"
+    ],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "iron_bars",
+    "cn": "铁栏杆",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "mangrove_sign",
+    "cn": "红树木告示牌",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "mangrove_hanging_sign",
+    "cn": "悬挂式红树木告示牌",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "珠光蛙明灯"
+  },
+  {
+    "en": "lapis_ore",
+    "cn": "青金石矿石",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_lapis_ore",
+    "cn": "深层青金石矿石",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "diamond_ore",
+    "cn": "钻石矿石",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_diamond_ore",
+    "cn": "深层钻石矿石",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "nether_gold_ore",
+    "cn": "下界金矿石",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "nether_quartz_ore",
+    "cn": "下界石英矿石",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "ancient_debris",
+    "cn": "远古残骸",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "raw_iron_block",
+    "cn": "粗铁块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "raw_copper_block",
+    "cn": "粗铜块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "raw_gold_block",
+    "cn": "粗金块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "emerald_ore",
+    "cn": "绿宝石矿石",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_emerald_ore",
+    "cn": "深层绿宝石矿石",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "glowstone",
+    "cn": "萤石",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "small_amethyst_bud",
+    "cn": "小型紫晶芽",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "redstone_ore",
+    "cn": "红石矿石",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_redstone_ore",
+    "cn": "深层红石矿石",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "medium_amethyst_bud",
+    "cn": "中型紫晶芽",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "large_amethyst_bud",
+    "cn": "大型紫晶芽",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "gold_ore",
+    "cn": "金矿石",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_gold_ore",
+    "cn": "深层金矿石",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "amethyst_cluster",
+    "cn": "紫水晶簇",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "mangrove_roots",
+    "cn": "红树根",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "copper_ore",
+    "cn": "铜矿石",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_copper_ore",
+    "cn": "深层铜矿石",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "muddy_mangrove_roots",
+    "cn": "沾泥的红树根",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "mushroom_stem",
+    "cn": "蘑菇柄",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "oak_leaves",
+    "cn": "橡树树叶",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "spruce_leaves",
+    "cn": "云杉树叶",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "iron_ore",
+    "cn": "铁矿石",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_iron_ore",
+    "cn": "深层铁矿石",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "birch_leaves",
+    "cn": "白桦树叶",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "jungle_leaves",
+    "cn": "丛林树叶",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "coal_ore",
+    "cn": "煤矿石",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "deepslate_coal_ore",
+    "cn": "深层煤矿石",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "acacia_leaves",
+    "cn": "金合欢树叶",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dark_oak_leaves",
+    "cn": "深色橡树树叶",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "soul_sand",
+    "cn": "灵魂沙",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "soul_soil",
+    "cn": "灵魂土",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "mangrove_leaves",
+    "cn": "红树树叶",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cherry_leaves",
+    "cn": "樱花树叶",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "crimson_nylium",
+    "cn": "绯红菌岩",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "warped_nylium",
+    "cn": "诡异菌岩",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "azalea_leaves",
+    "cn": "杜鹃树叶",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "flowering_azalea_leaves",
+    "cn": "盛开的杜鹃树叶",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "magma_block",
+    "cn": "岩浆块",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "crying_obsidian",
+    "cn": "哭泣的黑曜石",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "brown_mushroom_block",
+    "cn": "棕色蘑菇方块",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "red_mushroom_block",
+    "cn": "红色蘑菇方块",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dripstone_block",
+    "cn": "滴水石块",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pointed_dripstone",
+    "cn": "滴水石锥",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "nether_wart_block",
+    "cn": "下界疣块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "warped_wart_block",
+    "cn": "诡异疣块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "calcite",
+    "cn": "方解石",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tuff",
+    "cn": "凝灰岩",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "shroomlight",
+    "cn": "菌光体",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "oak_sapling",
+    "cn": "橡树树苗",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "moss_block",
+    "cn": "苔藓块",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "moss_carpet",
+    "cn": "覆地苔藓",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "spruce_sapling",
+    "cn": "云杉树苗",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "birch_sapling",
+    "cn": "白桦树苗",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "snow_block",
+    "cn": "雪块",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "snow",
+    "cn": "雪",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "jungle_sapling",
+    "cn": "丛林树苗",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "acacia_sapling",
+    "cn": "金合欢树苗",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "packed_ice",
+    "cn": "浮冰",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "blue_ice",
+    "cn": "蓝冰",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dark_oak_sapling",
+    "cn": "深色橡树树苗",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "mangrove_propagule",
+    "cn": "红树胎生苗",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "red_sand",
+    "cn": "红沙",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "ice",
+    "cn": "冰",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "海晶灯"
+  },
+  {
+    "en": "weeping_vines",
+    "cn": "垂泪藤",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "twisting_vines",
+    "cn": "缠怨藤",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "vine",
+    "cn": "藤蔓",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tall_grass",
+    "cn": "高草丛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "large_fern",
+    "cn": "大型蕨",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sunflower",
+    "cn": "向日葵",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "lilac",
+    "cn": "丁香",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "rose_bush",
+    "cn": "玫瑰丛",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "peony",
+    "cn": "牡丹",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pitcher_plant",
+    "cn": "瓶子草",
+    "alias": [],
+    "carpet": "白",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "big_dripleaf",
+    "cn": "大型垂滴叶",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "small_dripleaf",
+    "cn": "小型垂滴叶",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "warped_root",
+    "cn": "诡异菌索",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "nether_sprout",
+    "cn": "下界苗",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cactus",
+    "cn": "仙人掌",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "crimson_roots",
+    "cn": "绯红菌索",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "chorus_flower",
+    "cn": "紫颂花",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "glow_lichen",
+    "cn": "发光地衣",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "hanging_roots",
+    "cn": "垂根",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "turtle_egg",
+    "cn": "海龟蛋",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "spore_blossom",
+    "cn": "孢子花",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "suger_cane",
+    "cn": "甘蔗",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sniffer_egg",
+    "cn": "嗅探兽蛋",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "wheat_seeds",
+    "cn": "小麦种子",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "torch_flower",
+    "cn": "火把花",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pink_petals",
+    "cn": "粉红色花簇",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cocoa_beans",
+    "cn": "可可豆",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pumpkin_seeds",
+    "cn": "南瓜种子",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cornflower",
+    "cn": "矢车菊",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "lily_of_the_valley",
+    "cn": "铃兰",
+    "alias": [],
+    "carpet": "红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "melon_seeds",
+    "cn": "西瓜种子",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "beetroot_seeds",
+    "cn": "甜菜种子",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pink_tulip",
+    "cn": "粉红色郁金香",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "oxeye_daisy",
+    "cn": "滨菊",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "torchflower_seeds",
+    "cn": "火把花种子",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pitcher_pod",
+    "cn": "瓶子草荚果",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "orange_tulip",
+    "cn": "橙色郁金香",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "white_tulip",
+    "cn": "白色郁金香",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "glow_berries",
+    "cn": "发光浆果",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sweet_berries",
+    "cn": "甜浆果",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "azure_bluet",
+    "cn": "蓝花美耳草",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "red_tulip",
+    "cn": "红色郁金香",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "nether_wart",
+    "cn": "下界疣",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "lily_pad",
+    "cn": "睡莲",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "blue_orchid",
+    "cn": "兰花",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "allium",
+    "cn": "绒球葱",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sea_grass",
+    "cn": "海草",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sea_pickel",
+    "cn": "海泡菜",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dandelion",
+    "cn": "蒲公英",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "poppy",
+    "cn": "虞美人",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "kelp",
+    "cn": "海带",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dried_kelp_block",
+    "cn": "干海带块",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "fern",
+    "cn": "蕨",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_bush",
+    "cn": "枯萎的灌木",
+    "alias": [],
+    "carpet": "青",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tube_coral_block",
+    "cn": "管珊瑚块",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "brain_coral_block",
+    "cn": "脑纹珊瑚块",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "warped_fungus",
+    "cn": "诡异菌",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "grass",
+    "cn": "草",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "bubble_coral_block",
+    "cn": "气泡珊瑚块",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "fire_coral_block",
+    "cn": "火珊瑚块",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "red_mushroom",
+    "cn": "红色蘑菇",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "crimson_fungus",
+    "cn": "绯红菌",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "horn_coral_block",
+    "cn": "鹿角珊瑚块",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_tube_coral_block",
+    "cn": "失活的管珊瑚块",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "flowering_azalea",
+    "cn": "盛开的杜鹃花丛",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "brown_mushroom",
+    "cn": "棕色蘑菇",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_brain_coral_block",
+    "cn": "失活的脑纹珊瑚块",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_bubble_coral_block",
+    "cn": "失活的气泡珊瑚块",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cherry_sapling",
+    "cn": "樱花树苗",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "azalea",
+    "cn": "杜鹃花丛",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "西",
+    "direction_color": "蓝",
+    "light": "海晶灯"
+  },
+  {
+    "en": "honey_block",
+    "cn": "蜂蜜块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sculk",
+    "cn": "幽匿块",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sculk_vein",
+    "cn": "幽匿脉络",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sculk_catalyst",
+    "cn": "幽匿催发体",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sculk_shrieker",
+    "cn": "幽匿尖啸体",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sculk_sensor",
+    "cn": "幽匿感测体",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cobweb",
+    "cn": "蜘蛛网",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "torch",
+    "cn": "火把",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "soul_torch",
+    "cn": "灵魂火把",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "redstone_torch",
+    "cn": "红石火把",
+    "alias": [],
+    "carpet": "白",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "lantern",
+    "cn": "灯笼",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "soul_lantern",
+    "cn": "灵魂灯笼",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "hay_block",
+    "cn": "干草捆",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "honeycomb_block",
+    "cn": "蜜脾块",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "repeater",
+    "cn": "红石中继器",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "comparator",
+    "cn": "红石比较器",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "carved_pumpkin",
+    "cn": "雕刻南瓜",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "jack_o_lantern",
+    "cn": "南瓜灯",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "target",
+    "cn": "标靶",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "lever",
+    "cn": "拉杆",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "melon",
+    "cn": "西瓜",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pumpkin",
+    "cn": "南瓜",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tripwire_hook",
+    "cn": "绊线钩",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "daylight_detector",
+    "cn": "阳光探测器",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sponge",
+    "cn": "海绵",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "wet_sponge",
+    "cn": "湿海绵",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "piston",
+    "cn": "活塞",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "sticky_piston",
+    "cn": "粘性活塞",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_fire_coral_fan",
+    "cn": "失活的火珊瑚扇",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_horn_coral_fan",
+    "cn": "失活的鹿角珊瑚扇",
+    "alias": [],
+    "carpet": "红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dispenser",
+    "cn": "发射器",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dropper",
+    "cn": "投掷器",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_brain_coral_fan",
+    "cn": "失活的脑纹珊瑚扇",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_bubble_coral_fan",
+    "cn": "失活的气泡珊瑚扇",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "hopper",
+    "cn": "漏斗",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "observer",
+    "cn": "侦测器",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "horn_coral_fan",
+    "cn": "鹿角珊瑚扇",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_tube_coral_fan",
+    "cn": "失活的管珊瑚扇",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "TNT",
+    "cn": "TNT",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "bucket",
+    "cn": "铁桶",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "bubble_coral_fan",
+    "cn": "气泡珊瑚扇",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "fire_coral_fan",
+    "cn": "火珊瑚扇",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "fire_charge",
+    "cn": "火焰弹",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "bone_meal",
+    "cn": "骨粉",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tube_coral_fan",
+    "cn": "管珊瑚扇",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "brain_coral_fan",
+    "cn": "脑纹珊瑚扇",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "white_concrete",
+    "cn": "白色混凝土",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "calibrated_sculk_senser",
+    "cn": "校频幽匿感测体",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_fire_coral",
+    "cn": "失活的火珊瑚",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_horn_coral",
+    "cn": "失活的鹿角珊瑚",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "name_tag",
+    "cn": "命名牌",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "lead",
+    "cn": "栓绳",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_brain_coral",
+    "cn": "失活的脑纹珊瑚",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_bubble_coral",
+    "cn": "失活的气泡珊瑚",
+    "alias": [],
+    "carpet": "青",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "compass",
+    "cn": "指南针",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "recovery_compass",
+    "cn": "追溯指南针",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "horn_coral",
+    "cn": "鹿角珊瑚",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_tube_coral",
+    "cn": "失活的管珊瑚",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "clock",
+    "cn": "时钟",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "map",
+    "cn": "空地图",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "bubble_coral",
+    "cn": "气泡珊瑚",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "fire_coral",
+    "cn": "火珊瑚",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "ender_pearl",
+    "cn": "末影珍珠",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tube_coral",
+    "cn": "管珊瑚",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "brain_coral",
+    "cn": "脑纹珊瑚",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "snowball",
+    "cn": "雪球",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "phantom_membrane",
+    "cn": "幻翼膜",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_fire_coral_block",
+    "cn": "失活的火珊瑚块",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dead_horn_coral_block",
+    "cn": "失活的鹿角珊瑚块",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "北",
+    "direction_color": "白",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_harming2",
+    "cn": "伤害之箭2",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_poison_short",
+    "cn": "剧毒之箭短",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_poison_long",
+    "cn": "剧毒之箭长",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_poison2",
+    "cn": "剧毒之箭2",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_regeneration_short",
+    "cn": "再生之箭短",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_regeneration_long",
+    "cn": "再生之箭长",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_regeneration2",
+    "cn": "再生之箭2",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_strength_short",
+    "cn": "力量之箭短",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_strength_long",
+    "cn": "力量之箭长",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_strength2",
+    "cn": "力量之箭2",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_weakness_short",
+    "cn": "虚弱之箭短",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_weakness_long",
+    "cn": "虚弱之箭长",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_healing2",
+    "cn": "治疗之箭2",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_harming",
+    "cn": "伤害之箭",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_slow_falling",
+    "cn": "缓降之箭",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_slow_falling2",
+    "cn": "缓降之箭2",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_water_breathing_long",
+    "cn": "水肺之箭长",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_healing",
+    "cn": "治疗之箭",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "melon_slice",
+    "cn": "西瓜片",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "chorus_fruit",
+    "cn": "紫颂果",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_turtle_master2",
+    "cn": "神龟之箭2",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_water_breathing_short",
+    "cn": "水肺之箭短",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "carrot",
+    "cn": "胡萝卜",
+    "alias": [
+      "胡萝贝"
+    ],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "potato",
+    "cn": "马铃薯",
+    "alias": [
+      "土豆"
+    ],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_turtle_master_short",
+    "cn": "神龟之箭短",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_turtle_master_long",
+    "cn": "神龟之箭长",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "baked_potato",
+    "cn": "烤马铃薯",
+    "alias": [
+      "烤土豆"
+    ],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "poisonous_potato",
+    "cn": "毒马铃薯",
+    "alias": [
+      "毒土豆"
+    ],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_slowness_long",
+    "cn": "迟缓之箭长",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_slowness2",
+    "cn": "迟缓之箭2",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "beetroot",
+    "cn": "甜菜根",
+    "alias": [
+      "天才根"
+    ],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "dried_kelp",
+    "cn": "干海带",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_swiftness2",
+    "cn": "迅捷之箭2",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_slowness_short",
+    "cn": "迟缓之箭短",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "beef",
+    "cn": "生牛肉",
+    "alias": [
+      "生牛排"
+    ],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cooked_beef",
+    "cn": "牛排",
+    "alias": [
+      "熟牛肉"
+    ],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_swiftness_short",
+    "cn": "迅捷之箭短",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_swiftness_long",
+    "cn": "迅捷之箭长",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "porkchop",
+    "cn": "生猪排",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "mutton",
+    "cn": "生羊肉",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_fire_resistance_short",
+    "cn": "抗火之箭短",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_fire_resistance_long",
+    "cn": "抗火之箭长",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cooked_mutton",
+    "cn": "熟羊肉",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "chicken",
+    "cn": "生鸡肉",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_leaping_long",
+    "cn": "跳跃之箭长",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_leaping2",
+    "cn": "跳跃之箭2",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cooked_chicken",
+    "cn": "熟鸡肉",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "rabbit",
+    "cn": "生兔肉",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_invisibility_long",
+    "cn": "隐身之箭长",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_leaping_short",
+    "cn": "跳跃之箭短",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cooked_rabbit",
+    "cn": "熟兔肉",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cooked_cod",
+    "cn": "熟鳕鱼",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_night_vision_long",
+    "cn": "夜视之箭长",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_invisibility_short",
+    "cn": "隐身之箭短",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cooked_salmon",
+    "cn": "熟鲑鱼",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "tropical_fish",
+    "cn": "热带鱼",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow",
+    "cn": "箭",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "arrow_of_night_vision_short",
+    "cn": "夜视之箭短",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pufferfish",
+    "cn": "河豚",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "bread",
+    "cn": "面包",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "golden_apple",
+    "cn": "金苹果",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "enchanted_golden_apple",
+    "cn": "附魔金苹果",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "cookie",
+    "cn": "曲奇",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "pumpkin_pie",
+    "cn": "南瓜派",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "firework_rocket3",
+    "cn": "烟花火箭3",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "apple",
+    "cn": "苹果",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "rotten_flesh",
+    "cn": "腐肉",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "egg",
+    "cn": "鸡蛋",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "firework_rocket2",
+    "cn": "烟花火箭2",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "firework_rocket1",
+    "cn": "烟花火箭1",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "海晶灯"
+  },
+  {
+    "en": "light_gray_dye",
+    "cn": "淡灰色染料",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "white_dye",
+    "cn": "白色染料",
+    "alias": [],
+    "carpet": "白",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "black_dye",
+    "cn": "黑色染料",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "gray_dye",
+    "cn": "灰色染料",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "red_dye",
+    "cn": "红色染料",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "brown_dye",
+    "cn": "棕色染料",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "disc_fragment_5",
+    "cn": "唱片残片",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "echo_shard",
+    "cn": "回响碎片",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "yellow_dye",
+    "cn": "黄色染料",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "orange_dye",
+    "cn": "橙色染料",
+    "alias": [
+      "橘黄色染料"
+    ],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "popped_chorus_fruit",
+    "cn": "爆裂紫颂果",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "shulker_shell",
+    "cn": "潜影壳",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "green_dye",
+    "cn": "绿色染料",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "lime_dye",
+    "cn": "黄绿色染料",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "nether_star",
+    "cn": "下界之星",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "blaze_rod",
+    "cn": "烈焰棒",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "blue_dye",
+    "cn": "蓝色染料",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "cyan_dye",
+    "cn": "青色染料",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "heart_of_the_sea",
+    "cn": "海洋之心",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "clay_ball",
+    "cn": "黏土球",
+    "alias": [],
+    "carpet": "红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "purple_dye",
+    "cn": "紫色染料",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "light_blue_dye",
+    "cn": "淡蓝色染料",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "glow_ink_sac",
+    "cn": "荧光墨囊",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "ink_sac",
+    "cn": "墨囊",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "pink_dye",
+    "cn": "粉红色染料",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "magenta_dye",
+    "cn": "品红色染料",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "honeycomb",
+    "cn": "蜜脾",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "rabbit_hide",
+    "cn": "兔子皮",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "brick",
+    "cn": "红砖",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "bowl",
+    "cn": "碗",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "feather",
+    "cn": "羽毛",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "wheat",
+    "cn": "小麦",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "paper",
+    "cn": "纸",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "nether_brick",
+    "cn": "下界砖",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "flint",
+    "cn": "燧石",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "netherite_ignot",
+    "cn": "下界合金锭",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "dragon_breath",
+    "cn": "龙息",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "book",
+    "cn": "书",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "netherite_scrap",
+    "cn": "下界合金碎片",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "copper_ignot",
+    "cn": "铜锭",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "blaze_powder",
+    "cn": "烈焰粉",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "fermented_spider_eye",
+    "cn": "发酵蛛眼",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "golden_nugget",
+    "cn": "金粒",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "iron_nugget",
+    "cn": "铁粒",
+    "alias": [],
+    "carpet": "青",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "glistering_melon_slice",
+    "cn": "闪烁的西瓜片",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "rabbit_foot",
+    "cn": "兔子脚",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "amethyst_shard",
+    "cn": "紫水晶碎片",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "diamond",
+    "cn": "钻石",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "netherrack",
+    "cn": "下界岩",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "ghast_tear",
+    "cn": "恶魂之泪",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "lapis_lazuli",
+    "cn": "青金石",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "raw_gold",
+    "cn": "粗金",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "bone",
+    "cn": "骨头",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "raw_copper",
+    "cn": "粗铜",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "raw_iron",
+    "cn": "粗铁",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "charcoal",
+    "cn": "木炭",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "honey_bottle",
+    "cn": "蜂蜜瓶",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "南",
+    "direction_color": "绿",
+    "light": "菌光体"
+  },
+  {
+    "en": "sentry_armor_trim_smithing_template",
+    "cn": "锻造模板哨兵盔甲纹饰",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "netherite_upgrade_smithing_template",
+    "cn": "锻造模板下界合金升级",
+    "alias": [],
+    "carpet": "白",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "wild_armor_trim_smithing_template",
+    "cn": "锻造模板荒野盔甲纹饰",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "vex_armor_trim_smithing_template",
+    "cn": "锻造模板恼鬼盔甲纹饰",
+    "alias": [],
+    "carpet": "淡灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "dune_armor_trim_smithing_template",
+    "cn": "锻造模板沙丘盔甲纹饰",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "coast_armor_trim_smithing_template",
+    "cn": "锻造模板海岸盔甲纹饰",
+    "alias": [],
+    "carpet": "灰",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "raiser_armor_trim_smithing_template",
+    "cn": "锻造模板牧民盔甲纹饰",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "wayfinder_armor_trim_smithing_template",
+    "cn": "锻造模板向导盔甲纹饰",
+    "alias": [],
+    "carpet": "黑",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "host_armor_trim_smithing_template",
+    "cn": "锻造模板雇主盔甲纹饰",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "shaper_armor_trim_smithing_template",
+    "cn": "锻造模板塑造盔甲纹饰",
+    "alias": [],
+    "carpet": "棕",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "silence_armor_trim_smithing_template",
+    "cn": "锻造模板幽静盔甲纹饰",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "warden_armor_trim_smithing_template",
+    "cn": "锻造模板坚守盔甲纹饰",
+    "alias": [],
+    "carpet": "红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "snout_armor_trim_smithing_template",
+    "cn": "锻造模板猪鼻盔甲纹饰",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "tide_armor_trim_smithing_template",
+    "cn": "锻造模板潮汐盔甲纹饰",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "snort_pottery_sherd",
+    "cn": "嗅探纹样陶片",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "skull_pottery_sherd",
+    "cn": "头颅纹样陶片",
+    "alias": [],
+    "carpet": "橙",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "eye_armor_trim_smithing_template",
+    "cn": "锻造模板眼眸盔甲纹饰",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "rib_armor_trim_smithing_template",
+    "cn": "锻造模板肋骨盔甲纹饰",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "shelter_pottery_sherd",
+    "cn": "树荫纹样陶片",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "sheaf_pottery_sherd",
+    "cn": "麦捆纹样陶片",
+    "alias": [],
+    "carpet": "黄",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "experience_bottle",
+    "cn": "附魔之瓶",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "spire_armor_trim_smithing_template",
+    "cn": "锻造模板尖塔盔甲纹饰",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "prize_pottery_sherd",
+    "cn": "珍宝纹样陶片",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "plenty_pottery_sherd",
+    "cn": "富饶纹样陶片",
+    "alias": [],
+    "carpet": "黄绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "ominous_banner",
+    "cn": "灾厄旗帜",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "mourner_pottery_sherd",
+    "cn": "悲恸纹样陶片",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "miner_pottery_sherd",
+    "cn": "采矿纹样陶片",
+    "alias": [],
+    "carpet": "绿",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "howl_pottery_sherd",
+    "cn": "狼嚎纹样陶片",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "heartbreak_pottery_sherd",
+    "cn": "心碎纹样陶片",
+    "alias": [],
+    "carpet": "淡蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "heart_pottery_sherd",
+    "cn": "爱心纹样陶片",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "friend_pottery_sherd",
+    "cn": "挚友纹样陶片",
+    "alias": [],
+    "carpet": "青",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "explorer_pottery_sherd",
+    "cn": "探险纹样陶片",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "danger_pottery_sherd",
+    "cn": "危机纹样陶片",
+    "alias": [],
+    "carpet": "蓝",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "burn_pottery_sherd",
+    "cn": "烈焰纹样陶片",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "brewer_pottery_sherd",
+    "cn": "佳酿纹样陶片",
+    "alias": [],
+    "carpet": "紫",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "blade_pottery_sherd",
+    "cn": "利刃纹样陶片",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "arms_up_pottery_sherd",
+    "cn": "举臂纹样陶片",
+    "alias": [],
+    "carpet": "品红",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "archer_pottery_sherd",
+    "cn": "弓箭纹样陶片",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  },
+  {
+    "en": "angler_pottery_sherd",
+    "cn": "垂钓纹样陶片",
+    "alias": [],
+    "carpet": "粉",
+    "direction": "东",
+    "direction_color": "红",
+    "light": "菌光体"
+  }
+]
