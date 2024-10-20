@@ -32,4 +32,9 @@ public enum CarpetColor {
     public final Item item;
     public final Style colorStyle;
     public final String cn;
+
+    @Override
+    public String toString() {
+        return cn;
+    }
 }

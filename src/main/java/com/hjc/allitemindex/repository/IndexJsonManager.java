@@ -198,7 +198,8 @@ public class IndexJsonManager {
             if(loaded) {
                 item.floorLight = toFloor;
                 item.direction = toDirection;
-                item.directionColor = toCarpetColor;
+                item.directionColor = Direction.correspondingColors.get(toDirection);
+                item.carpetColor = toCarpetColor;
                 indexes = ItemIndexes.from(infos);
                 return saveToLocal(context);
             }

@@ -48,13 +48,13 @@ public class PAddCommand {
         for(var floorLight: FloorLight.values()) {
             // 相比于让用户输入字符串然后我去判断是否合法, 或者自定义一种参数类型, 这种方法或许更好
             // 只要是可预知数量参数的枚举, 理论上都能用这种方式实现
-            var existFloorLight = CommandManager.literal(floorLight.cn);
-            var newFloorLight = CommandManager.literal(floorLight.cn);
+            var existFloorLight = CommandManager.literal(floorLight.toString());
+            var newFloorLight = CommandManager.literal(floorLight.toString());
             for(var direction: Direction.values()) {
-                var existDirection = CommandManager.literal(direction.cn);
-                var newDirection = CommandManager.literal(direction.cn);
+                var existDirection = CommandManager.literal(direction.toString());
+                var newDirection = CommandManager.literal(direction.toString());
                 for(var carpetColor: CarpetColor.values()) {
-                    var existCarpetColor = CommandManager.literal(carpetColor.cn)
+                    var existCarpetColor = CommandManager.literal(carpetColor.toString())
                             .executes(context -> addItemExist(
                                 context,
                                 StringArgumentType.getString(context, "chineseName"),
@@ -62,7 +62,7 @@ public class PAddCommand {
                                 direction,
                                 carpetColor
                             ));
-                    var newCarpetColor = CommandManager.literal(carpetColor.cn)
+                    var newCarpetColor = CommandManager.literal(carpetColor.toString())
                             .executes(context -> addItemNew(
                                 context,
                                 StringArgumentType.getString(context, "chineseName"),
@@ -250,7 +250,7 @@ public class PAddCommand {
         text.append(Text.translatable(item.directionColor.item.getTranslationKey()).setStyle(item.directionColor.colorStyle));
         text.append(" ");
         // 方向
-        text.append(Text.of(item.direction.cn));
+        text.append(Text.of(item.direction.toString()));
         text.append(" ");
         // 具体位置的地毯
         text.append(Text.translatable(item.carpetColor.item.getTranslationKey()).setStyle(item.carpetColor.colorStyle));

@@ -28,5 +28,8 @@ public enum Direction {
     public final String translationKey;
     public final String cn;
 
-
+    @Override
+    public String toString() {
+        return cn;
+    }
 }

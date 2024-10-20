@@ -284,7 +284,7 @@ public class PRemoveCommand {
             text.append(Text.translatable(item.directionColor.item.getTranslationKey()).setStyle(item.directionColor.colorStyle));
             text.append(" ");
             // 方向
-            text.append(Text.of(item.direction.cn));
+            text.append(Text.of(item.direction.toString()));
             text.append(" ");
             // 具体位置的地毯
             text.append(Text.translatable(item.carpetColor.item.getTranslationKey()).setStyle(item.carpetColor.colorStyle));

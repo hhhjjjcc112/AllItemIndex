@@ -27,4 +27,9 @@ public enum FloorLight {
         this.colorStyle = Style.EMPTY.withColor(rgb);
         this.cn = cnName;
     }
+
+    @Override
+    public String toString() {
+        return cn;
+    }
 }

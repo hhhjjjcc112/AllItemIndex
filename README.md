@@ -97,7 +97,7 @@
 
 第1种形式用于修改指定的中文词语对应的指定单片的位置
 ```
-/pmodify moveitem name <chineseName> <floorLight> <direction> <carpetColor> (<index>)
+/pmodify moveitem name <chineseName> to <floorLight> <direction> <carpetColor> (<index>)
 ```
 `chineseName` 中文名(不支持别名) \
 `floorLight` 单片所在楼层的灯光方块 \
@@ -108,7 +108,7 @@
 
 第2种形式用于修改指定的id对应的所有单片的位置
 ```
-/pmodify moveitem id <id> <floorLight> <direction> <carpetColor>
+/pmodify moveitem id <id> to <floorLight> <direction> <carpetColor>
 ```
 `id` 单片的id \
 `floorLight` 单片所在楼层的灯光方块 \

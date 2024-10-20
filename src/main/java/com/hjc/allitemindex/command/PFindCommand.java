@@ -178,7 +178,7 @@ public class PFindCommand {
         text.append(Text.translatable(info.directionColor.item.getTranslationKey()).setStyle(info.directionColor.colorStyle));
         text.append(" ");
         // 方向
-        text.append(Text.of(info.direction.cn));
+        text.append(Text.of(info.direction.toString()));
 
         text.append(" ");
         // 具体位置的地毯

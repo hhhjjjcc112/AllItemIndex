@@ -37,16 +37,16 @@ public class PModifyCommand {
         var n12 = CommandManager.argument("id", LongArgumentType.longArg(1))
                 .suggests(new SuggestionProviders.IdSuggestionProvider());
         for(FloorLight floor : FloorLight.values()) {
-            var n21 = CommandManager.literal(floor.cn);
-            var n22 = CommandManager.literal(floor.cn);
+            var n21 = CommandManager.literal(floor.toString());
+            var n22 = CommandManager.literal(floor.toString());
             for(Direction direction : Direction.values()) {
-                var n31 = CommandManager.literal(direction.cn);
-                var n32 = CommandManager.literal(direction.cn);
+                var n31 = CommandManager.literal(direction.toString());
+                var n32 = CommandManager.literal(direction.toString());
                 for(CarpetColor carpetColor : CarpetColor.values()) {
-                    var n41 = CommandManager.literal(carpetColor.cn).executes(ctx -> moveItem(ctx, StringArgumentType.getString(ctx, "chineseName"), floor, direction, carpetColor))
-                            .then(CommandManager.literal("index")
-                                    .then(CommandManager.argument("index", IntegerArgumentType.integer(1)).executes(ctx -> moveItemAtIndex(ctx, StringArgumentType.getString(ctx, "chineseName"), IntegerArgumentType.getInteger(ctx, "index"), floor, direction, carpetColor))));
-                    var n42 = CommandManager.literal(carpetColor.cn).executes(ctx -> moveItemAtId(ctx, LongArgumentType.getLong(ctx, "id"), floor, direction, carpetColor));
+                    var n41 = CommandManager.literal(carpetColor.toString()).executes(ctx -> moveItem(ctx, StringArgumentType.getString(ctx, "chineseName"), floor, direction, carpetColor))
+                            .then(CommandManager.argument("index", IntegerArgumentType.integer(1))
+                                    .executes(ctx -> moveItemAtIndex(ctx, StringArgumentType.getString(ctx, "chineseName"), IntegerArgumentType.getInteger(ctx, "index"), floor, direction, carpetColor)));
+                    var n42 = CommandManager.literal(carpetColor.toString()).executes(ctx -> moveItemAtId(ctx, LongArgumentType.getLong(ctx, "id"), floor, direction, carpetColor));
 
                     n31.then(n41);
                     n32.then(n42);
@@ -54,8 +54,8 @@ public class PModifyCommand {
                 n21.then(n31);
                 n22.then(n32);
             }
-            n11.then(n21);
-            n12.then(n22);
+            n11.then(CommandManager.literal("to").then(n21));
+            n12.then(CommandManager.literal("to").then(n22));
         }
         pMoveItem.then(pMoveCn.then(n11)).then(pMoveId.then(n12));
         // 组装modify子指令
@@ -159,6 +159,11 @@ public class PModifyCommand {
         Set<ItemInfo> items = indexes.chineseIndex.get(chineseName);
         if(index < 1 || index > items.size()) {
             MyExceptionHandler.error(context, new RuntimeException(String.format("%s不存在索引为%d的物品", chineseName, index)), "索引不存在");
+            ServerCommandSource source = context.getSource();
+            Iterator<ItemInfo> iterator = items.iterator();
+            for(int i = 1; iterator.hasNext(); i++) {
+                source.sendMessage(genDescription(i, iterator.next()));
+            }
             return 0;
         }
         ItemInfo item = items.stream().skip(index - 1).findFirst().orElseThrow();
@@ -312,7 +317,7 @@ public class PModifyCommand {
         text.append(Text.translatable(item.directionColor.item.getTranslationKey()).setStyle(item.directionColor.colorStyle));
         text.append(" ");
         // 方向
-        text.append(Text.of(item.direction.cn));
+        text.append(Text.of(item.direction.toString()));
         text.append(" ");
         // 具体位置的地毯
         text.append(Text.translatable(item.carpetColor.item.getTranslationKey()).setStyle(item.carpetColor.colorStyle));
