@@ -34,7 +34,8 @@ public class PModifyCommand {
         var pMoveCn = CommandManager.literal("cn");
         var pMoveId = CommandManager.literal("id");
         var n11 = CommandManager.argument("chineseName", StringArgumentType.string()).suggests(new SuggestionProviders.ChineseNameSuggestionProvider());
-        var n12 = CommandManager.argument("id", LongArgumentType.longArg(1)).suggests(new SuggestionProviders.IdSuggestionProvider());
+        var n12 = CommandManager.argument("id", LongArgumentType.longArg(1))
+                .suggests(new SuggestionProviders.IdSuggestionProvider());
         for(FloorLight floor : FloorLight.values()) {
             var n21 = CommandManager.literal(floor.cn);
             var n22 = CommandManager.literal(floor.cn);
